@@ -64,9 +64,9 @@ public class UIController : MonoBehaviour
         textPanel = GameObject.FindGameObjectWithTag("Explanation");
         CanvasGroup = textPanel.GetComponent<CanvasGroup>();
 
-        title = textPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
-        subtitle = textPanel.transform.GetChild(1).gameObject.GetComponent<Text>(); ;
-        description = textPanel.transform.GetChild(2).gameObject.GetComponent<Text>(); ;
+        title = textPanel.transform.GetChild(1).gameObject.GetComponent<Text>();
+        subtitle = textPanel.transform.GetChild(2).gameObject.GetComponent<Text>(); ;
+        description = textPanel.transform.GetChild(3).gameObject.GetComponent<Text>(); ;
 
         panelButton = textPanel.GetComponentInChildren<Button>();
         buttonDescription = panelButton.GetComponentInChildren<Text>();

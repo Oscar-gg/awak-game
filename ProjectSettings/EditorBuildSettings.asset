@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MemoryScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlatformScene.unity
+    guid: 89b697b45c6355b4f8ca4438d3713b86
   m_configObjects: {}

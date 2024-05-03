@@ -6,11 +6,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.VFX;
 
-public class GameController : MonoBehaviour
+public class MemoryGameController : MonoBehaviour
 {
 
-    static public GameController Instance;
+    static public MemoryGameController Instance;
     public UIController uiController;
+    public MemoryGameUI memoryGameUI;
 
     [SerializeField]
     private Sprite skill;
@@ -46,6 +47,10 @@ private void Awake()
         {
             uiController = FindObjectOfType<UIController>();
         }
+        if (memoryGameUI == null)
+        {
+            memoryGameUI = FindAnyObjectByType<MemoryGameUI>();
+        }
     }
 
     void Start()
@@ -55,6 +60,8 @@ private void Awake()
         AddGamePuzzles();
         Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
+
+        memoryGameUI.SetText(0, gameGuesses);
     }
 
     void GetButtons()
@@ -138,10 +145,15 @@ private void Awake()
             cards[firstGuessIndex].image.color = new Color(0, 0, 0, 0);
             cards[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
 
+            memoryGameUI.SetText(countCorrectGuesses+1, gameGuesses);
+
             yield return new WaitForSeconds(1.5f);
 
             int powerIndex = int.Parse(cards[firstGuessIndex].name);
+
+            Debug.Log(uiController);
             uiController.ShowPanel(powerInfo[powerIndex][0], powerInfo[powerIndex][1], powerInfo[powerIndex][2], powerInfo[powerIndex][3]);
+
 
             CheckGameFinished();
         } else
@@ -187,5 +199,7 @@ private void Awake()
             powerInfo[i] = new string[] { "Titulo "  + (i+1), "Etica", "La etica tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
         }
     }
+
+    //void flipAllCards() { }
 
 }
