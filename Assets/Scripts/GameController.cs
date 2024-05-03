@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +28,8 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        puzzles = Resources.LoadAll<Sprite>("Sprites/Skills"); 
+        puzzles = Resources.LoadAll<Sprite>("Sprites/Skills");
+        puzzles = puzzles.Skip(1).ToArray();
     }
 
     void Start()
@@ -68,8 +70,6 @@ public class GameController : MonoBehaviour
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
 
             firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
-
-            Debug.Log(cards[firstGuessIndex].transform);
 
             StartCoroutine(cards[firstGuessIndex].gameObject.GetComponent<Rotate>().FlipCard(gamePuzzles[firstGuessIndex]));
 
