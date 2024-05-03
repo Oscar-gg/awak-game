@@ -61,17 +61,4 @@ public class Rotate : MonoBehaviour
 
         rotatingCoro = StartCoroutine(DoRotation(0.05f, 90f, rotateDir));
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

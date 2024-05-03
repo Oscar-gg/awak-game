@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|c:\\users\\oscar\\files\\escuela\\4to semestre\\bloque 2\\unity\\awakgame\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|c:\\users\\oscar\\files\\escuela\\4to semestre\\bloque 2\\unity\\awakgame\\assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\assets\\scripts\\rotate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rotate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\assets\\scripts\\addcards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\addcards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|c:\\users\\oscar\\files\\escuela\\4to semestre\\bloque 2\\unity\\awakgame\\assets\\scripts\\rotate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7878412F-855C-F16D-9EF9-244A9ED4CC2D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rotate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UIController.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\Assets\\Scripts\\UIController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIController.cs",
+              "ToolTip": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\Assets\\Scripts\\UIController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T05:41:10.103Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -32,7 +49,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Rotate.cs",
               "ToolTip": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\Assets\\Scripts\\Rotate.cs",
               "RelativeToolTip": "Assets\\Scripts\\Rotate.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCEAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwD4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T18:13:58.086Z",
               "EditorCaption": ""
@@ -45,14 +62,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameController.cs",
               "ToolTip": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\Assets\\Scripts\\GameController.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwCIAAAAQAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAwwGwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-02T17:30:10.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AddCards.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Files\\Escuela\\4to semestre\\Bloque 2\\Unity\\AwakGame\\Assets\\Scripts\\AddCards.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AddCards.cs",

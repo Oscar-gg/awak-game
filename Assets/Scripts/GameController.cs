@@ -4,9 +4,13 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public class GameController : MonoBehaviour
 {
+
+    static public GameController Instance;
+    public UIController uiController;
 
     [SerializeField]
     private Sprite skill;
@@ -25,11 +29,23 @@ public class GameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
+    string[][] powerInfo = new string[15][];
 
-    private void Awake()
+
+private void Awake()
     {
         puzzles = Resources.LoadAll<Sprite>("Sprites/Skills");
-        puzzles = puzzles.Skip(1).ToArray();
+        InitializeData();
+        Instance = this;
+        Instance.SetReferences();
+    }
+
+    void SetReferences()
+    {
+        if (uiController == null)
+        {
+            uiController = FindObjectOfType<UIController>();
+        }
     }
 
     void Start()
@@ -122,6 +138,11 @@ public class GameController : MonoBehaviour
             cards[firstGuessIndex].image.color = new Color(0, 0, 0, 0);
             cards[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
 
+            yield return new WaitForSeconds(1.5f);
+
+            int powerIndex = int.Parse(cards[firstGuessIndex].name);
+            uiController.ShowPanel(powerInfo[powerIndex][0], powerInfo[powerIndex][1], powerInfo[powerIndex][2], powerInfo[powerIndex][3]);
+
             CheckGameFinished();
         } else
         {
@@ -158,10 +179,13 @@ public class GameController : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
+    void InitializeData()
     {
-        
+        // Assigning arrays to each element
+        for (int i = 0; i < powerInfo.Length; i++)
+        {
+            powerInfo[i] = new string[] { "Titulo "  + (i+1), "Etica", "La etica tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
+        }
     }
+
 }
