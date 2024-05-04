@@ -14,7 +14,7 @@ public class LoseScript : MonoBehaviour
     void Start()
     {
         setLoseAnimation();
-        resultText.text = "Better luck next time";
+        resultText.text = "Suerte en tu próximo intento";
     }
     void setLoseAnimation()
     {
@@ -29,8 +29,8 @@ public class LoseScript : MonoBehaviour
 
     public void ExitGame()
     {
-        //UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
+        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
 
     // Update is called once per frame

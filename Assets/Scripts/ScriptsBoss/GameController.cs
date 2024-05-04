@@ -12,9 +12,12 @@ public class GameController : MonoBehaviour
     public BossController bossController;
     public PlayerControllerAna playerControllerAna;
 
+    public int bosslife;
+
     private void Awake()
     {
         StopAllCoroutines();
+        bosslife = 10;
         PlayerPrefs.SetInt("lives", 5);
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
@@ -55,6 +58,20 @@ public class GameController : MonoBehaviour
         playerControllerAna.UpdateAnimation(nameAnimation);
         Debug.Log("AnaHurt3");
 
+    }
+
+    public void HitBoss(int dmg)
+    {
+        bosslife -= dmg;
+        CheckWin();
+    }
+
+    public void CheckWin()
+    {
+        if(bosslife <= 0)
+        {
+            ActivateEndWinScene();
+        }
     }
 
     public void checkGameOver()

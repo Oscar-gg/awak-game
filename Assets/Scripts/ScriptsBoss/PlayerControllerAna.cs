@@ -27,6 +27,7 @@ public class PlayerControllerAna : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 UpdateAnimation(PlayerAnimation.AnaFight);
+                playerAttack();
             }
 
             if (Input.GetKeyDown(KeyCode.S))
@@ -49,6 +50,11 @@ public class PlayerControllerAna : MonoBehaviour
     public enum PlayerAnimation
     {
         AnaIdle, AnaFight, AnaHurt, AnaLose, AnaWin
+    }
+
+    public void playerAttack()
+    {
+        GameController.Instance.HitBoss(4);
     }
 
 
