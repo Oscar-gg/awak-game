@@ -66,6 +66,7 @@ private void Awake()
         gameGuesses = gamePuzzles.Count / 2;
 
         memoryGameUI.SetText(0, gameGuesses);
+        uiController.HidePanelInstantly();
     }
 
     void GetButtons()
@@ -203,7 +204,5 @@ private void Awake()
             powerInfo[i] = new string[] { "Titulo "  + (i+1), "Etica", "La etica tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
         }
     }
-
-    //void flipAllCards() { }
 
 }

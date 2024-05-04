@@ -6,6 +6,7 @@ public class PopupController : MonoBehaviour
 {
     public GameObject popupPanel;
     public Text popupMessageText;
+    private GameObject parentPanel;
 
     private void Start()
     {
@@ -30,8 +31,6 @@ public class PopupController : MonoBehaviour
         popupPanel.SetActive(true);
     }
 
-
-
     public void OnEnterButtonClicked()
     {
         Debug.Log("Opción 'Entrar' seleccionada");
@@ -45,7 +44,7 @@ public class PopupController : MonoBehaviour
 
     public void OnExitButtonClicked()
     {
-        Debug.Log("Opción 'Salir' seleccionada");
+        Debug.Log("Opción 'Salir' selecionada");
 
         // Cerrar el pop-up al seleccionar "Salir"
         ClosePopup();
@@ -53,7 +52,8 @@ public class PopupController : MonoBehaviour
 
     private void ClosePopup()
     {
-        // Cerrar el panel pop-up
+        //parentPanel.SetActive(false);
+        //this.gameObject.transform.parent.gameObject.SetActive(false);
         popupPanel.SetActive(false);
     }
 }
