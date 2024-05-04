@@ -9,6 +9,7 @@ public class PopupController : MonoBehaviour
 
     private void Start()
     {
+       
         // Desactivar el panel pop-up al inicio del juego
         popupPanel.SetActive(false);
     }
@@ -28,6 +29,8 @@ public class PopupController : MonoBehaviour
         popupMessageText.text = message;
         popupPanel.SetActive(true);
     }
+
+
 
     public void OnEnterButtonClicked()
     {

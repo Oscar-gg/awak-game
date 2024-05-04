@@ -10,6 +10,8 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject menuPausa;
     private bool juegoPausado = false;
 
+    private TextOverlayController textOverlayController;
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
