@@ -14,7 +14,7 @@ public class WinScript : MonoBehaviour
     void Start()
     {
         setWinAnimation();
-        resultText.text = "Congratulations! c;";
+        resultText.text = "¡Felicitaciones!, tu siguiente aventura aguarda";
     }
     void setWinAnimation()
     {
@@ -24,13 +24,13 @@ public class WinScript : MonoBehaviour
 
     public void StartToPlay()
     {
-        SceneManager.LoadScene("BossScene"); //llamar a la escena de juego
+        SceneManager.LoadScene("MenuScene"); //llamar a la escena de juego
     }
 
     public void ExitGame()
     {
-        //UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
+        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
 
     // Update is called once per frame
