@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 
 public class TextOverlayController : MonoBehaviour
@@ -27,9 +28,16 @@ public class TextOverlayController : MonoBehaviour
     }
 
     // Private to only allow self to hide
-    private void HidePanel()
+    public void HidePanel()
     {
         StartCoroutine(Fade(0.1f, 0, 0.2f, false));
+    }
+
+    public void HidePanelInstantly()
+    {
+        CanvasGroup.alpha = 0;
+        CanvasGroup.interactable = false;
+        CanvasGroup.blocksRaycasts = false;
     }
 
     IEnumerator Fade(float alphaStep, float target, float timeStep, bool increase)
