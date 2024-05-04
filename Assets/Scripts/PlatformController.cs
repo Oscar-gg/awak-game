@@ -6,7 +6,7 @@ public class PlatformController : MonoBehaviour
 {
 
     static public PlatformController Instance;
-    public UIController uiController;
+    public TextOverlayController uiController;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class PlatformController : MonoBehaviour
     {
         if (uiController == null)
         {
-            uiController = FindObjectOfType<UIController>();
+            uiController = FindObjectOfType<TextOverlayController>();
         }
     }
 

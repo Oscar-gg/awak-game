@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - MemoryCard
-  - Explanation
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,7 +12,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - SolidObjects
   - 
   - 
   - 
@@ -42,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4150261307
+    locked: 0
+  - name: Tilemap
+    uniqueID: 3664651529
+    locked: 0
+  - name: Foreground
+    uniqueID: 3631192165
     locked: 0

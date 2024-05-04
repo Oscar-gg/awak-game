@@ -33,8 +33,6 @@ public class Rotate : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         //transform.SetPositionAndRotation(initialPos, initialRotation);
-
-        StopRotating();
     }
 
     void StopRotating()

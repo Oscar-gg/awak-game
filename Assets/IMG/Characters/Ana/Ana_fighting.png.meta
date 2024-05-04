@@ -1,0 +1,1717 @@
+fileFormatVersion: 2
+guid: 8e8a8a250c7f9814baed540b377e1336
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ana_fighting_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02f833bdf2c5fa4dbbef741ec3e3a46
+      internalID: 587146884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303cc69c919ec51429203f6d97966bdd
+      internalID: -224771107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3aa9cda8bf9004baf179f44a1a73ac
+      internalID: -1032628746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85d5cebaca89174ca9f2833b8188bf7
+      internalID: -1100614620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234eea3d87a561446baa9f9f1bd1b34a
+      internalID: 1984999293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57ffda385b99984f94f88631a1cb299
+      internalID: -500560655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3014ac2eb5e419544ad2ee4919564311
+      internalID: 1571692761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b1b1a7d2372254dbe19743332c6017
+      internalID: 1119759951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1801d30826f8f42805869b9b00a1d1
+      internalID: -104130820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec2eaf3062d09141b7cac2182c256a8
+      internalID: 416186722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265b732a00e7595489e62bdb485a9c02
+      internalID: 178291110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf8b2e5e7f19ed46984dfa45d5fd54f
+      internalID: -553636147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbfc5564fc2c554b82fe2bc64792820
+      internalID: 1289153734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914cc099aabd10f4097bb61e6660edea
+      internalID: 2058554865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecad74052d92058468b9d31f5287676b
+      internalID: 1584502415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b69578682c124497573cd3cc9563e
+      internalID: 603271395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8103edc09337c4099a149fca2c4d7f
+      internalID: -1023197216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa67af19fa4bbd84c99aa4b44101b501
+      internalID: 1164181972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc52e7d667753648a61688706fcc2ab
+      internalID: -1809082107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d05d6ecbb72e674b82da0404d426308
+      internalID: -722719233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36835dbb4f7d104584e7a477d1aa83b
+      internalID: 1274543927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53969eb7c1efff245b4d166e873560ad
+      internalID: -2131290828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc6144300ea6ed45b2465b117392cb8
+      internalID: -1488609542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1c4ddcc03d2eb4db7a986f8b7d50e5
+      internalID: 798779734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b465b68ea165104b8905eef9b6ae35f
+      internalID: 94432618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47fb43abcb8a5740bb5f7aaf415d107
+      internalID: 280341070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff39cbe7853b4194788147d7181d1986
+      internalID: 990931081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73de69083ac29624fbdb762f798c2634
+      internalID: -1981768676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8902beae32c2a44ab214b1c8cfe0fc
+      internalID: 392838672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eead19f41d00e4c4ca9ef3bea2aa7f00
+      internalID: 533394785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b7632fe6e683d4888084dc86b90f21
+      internalID: -1247469918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b094640826d88499adc3fb997d5cde
+      internalID: 1984205555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10175f5c84105e44a30369c1d041bd1
+      internalID: -643698560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b51bf3f8690de64ca0efcca8348c877
+      internalID: -1515938655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c56e2125130ff408bc7558c2e42cf6
+      internalID: -801854042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befb853b57bbbde48a8f70dbd9c405e8
+      internalID: 1322122031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebaef37cd84038449374ebf3144729b
+      internalID: -1233662436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bf046628df26f4b9610d205ad7448b
+      internalID: -1296522615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480ed1076acb8da408436b7b5c61e63b
+      internalID: -1680350809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615f3c05ded64e646ab17a6564440b2d
+      internalID: -725977989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665748f21508c8f41a10eadd3152030b
+      internalID: 1186621497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f16d5aa47a8f44ba4797acde2242f8
+      internalID: 648997508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55812461e81aa84ca6cadfcbc30179f
+      internalID: -311462156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0525a75630d3e3e45a56f07fd9bbe882
+      internalID: 3846455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b81006b275b7574fb1974f801155cef
+      internalID: -1929209961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fa879a4b1ea3948a470b31c0c158a8
+      internalID: 1744909982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f03cb4d35440f41bc206e97c031b8a
+      internalID: -1748777267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10eb7bb802a3dff42875730258f67ffc
+      internalID: -1867084982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17b58647a8307941bc581e3ec838808
+      internalID: -1470113723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fbeee85b10ef34989226621811944d
+      internalID: 463957429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_50
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e0a15f110fab841a47906cb90a5fbc
+      internalID: 2055892026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3014dc5ed29bb488718cef2e8c8585
+      internalID: 1175927635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_52
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0790ea90461fb484ba259115b4dbf5c3
+      internalID: 893012072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ana_fighting_53
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35faf73fa88e99d4a9d489629b737973
+      internalID: -496069858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -276, y: -67}
+      - {x: -280, y: -101}
+      - {x: -274, y: -118}
+      - {x: -267, y: -126}
+      - {x: -261, y: -129}
+      - {x: -255, y: -127}
+      - {x: -265, y: -131}
+      - {x: -272, y: -138}
+      - {x: -281, y: -153}
+      - {x: -281, y: -188}
+      - {x: -274, y: -192}
+      - {x: -235, y: -192}
+      - {x: -222, y: -189}
+      - {x: -222, y: -95}
+      - {x: -229, y: -67}
+    - - {x: -168, y: -67}
+      - {x: -213, y: -67}
+      - {x: -217, y: -121}
+      - {x: -217, y: -122}
+      - {x: -197, y: -129}
+      - {x: -191, y: -127}
+      - {x: -201, y: -131}
+      - {x: -208, y: -138}
+      - {x: -215, y: -162}
+      - {x: -212, y: -164}
+      - {x: -217, y: -169}
+      - {x: -217, y: -184}
+      - {x: -205, y: -192}
+      - {x: -172, y: -192}
+      - {x: -159, y: -172}
+      - {x: -158, y: -168}
+      - {x: -158, y: -85}
+    - - {x: -153, y: -126}
+      - {x: -133, y: -129}
+      - {x: -127, y: -127}
+      - {x: -129, y: -128}
+      - {x: -132, y: -129}
+      - {x: -137, y: -131}
+      - {x: -140, y: -134}
+      - {x: -144, y: -141}
+      - {x: -150, y: -162}
+      - {x: -148, y: -164}
+      - {x: -146, y: -164}
+      - {x: -153, y: -167}
+      - {x: -153, y: -186}
+      - {x: -148, y: -192}
+      - {x: -98, y: -192}
+      - {x: -94, y: -186}
+      - {x: -94, y: -73}
+      - {x: -100, y: -67}
+      - {x: -149, y: -67}
+      - {x: -153, y: -89}
+    - - {x: -54, y: -2}
+      - {x: -85, y: -2}
+      - {x: -88, y: -3}
+      - {x: -88, y: -62}
+      - {x: -81, y: -65}
+      - {x: -74, y: -66}
+      - {x: -88, y: -71}
+      - {x: -88, y: -81}
+      - {x: -85, y: -131}
+      - {x: -77, y: -129}
+      - {x: -71, y: -129}
+      - {x: -68, y: -128}
+      - {x: -69, y: -128}
+      - {x: -70, y: -129}
+      - {x: -78, y: -129}
+      - {x: -88, y: -140}
+      - {x: -88, y: -158}
+      - {x: -85, y: -184}
+      - {x: -80, y: -192}
+      - {x: -45, y: -192}
+      - {x: -38, y: -189}
+      - {x: -38, y: -42}
+      - {x: -42, y: -17}
+    - - {x: -22, y: 126}
+      - {x: -26, y: 119}
+      - {x: -26, y: 29}
+      - {x: -21, y: -2}
+      - {x: -8, y: -1}
+      - {x: -3, y: 3}
+      - {x: -6, y: -1}
+      - {x: -8, y: -1}
+      - {x: -25, y: -6}
+      - {x: -26, y: -15}
+      - {x: -26, y: -183}
+      - {x: -22, y: -192}
+      - {x: 25, y: -192}
+      - {x: 33, y: -186}
+      - {x: 33, y: 126}
+    - - {x: 38, y: 126}
+      - {x: 38, y: 13}
+      - {x: 43, y: -2}
+      - {x: 56, y: -1}
+      - {x: 61, y: 3}
+      - {x: 58, y: -1}
+      - {x: 56, y: -1}
+      - {x: 39, y: -6}
+      - {x: 38, y: -15}
+      - {x: 38, y: -183}
+      - {x: 42, y: -192}
+      - {x: 89, y: -192}
+      - {x: 97, y: -186}
+      - {x: 97, y: 126}
+    - - {x: 264, y: -152}
+      - {x: 100, y: -152}
+      - {x: 94, y: -166}
+      - {x: 94, y: -192}
+      - {x: 287, y: -192}
+      - {x: 287, y: -186}
+      - {x: 276, y: -157}
+    - - {x: 116, y: -71}
+      - {x: 106, y: -75}
+      - {x: 106, y: -128}
+      - {x: 110, y: -130}
+      - {x: 154, y: -130}
+      - {x: 154, y: -73}
+      - {x: 151, y: -71}
+    - - {x: 180, y: -71}
+      - {x: 170, y: -75}
+      - {x: 170, y: -128}
+      - {x: 174, y: -130}
+      - {x: 218, y: -130}
+      - {x: 218, y: -73}
+      - {x: 215, y: -71}
+    - - {x: 271, y: -71}
+      - {x: 234, y: -71}
+      - {x: 234, y: -130}
+      - {x: 281, y: -130}
+      - {x: 282, y: -127}
+      - {x: 282, y: -84}
+      - {x: 281, y: -74}
+    - - {x: -1, y: -125}
+      - {x: -1, y: -126}
+      - {x: -4, y: -126}
+      - {x: -7, y: -128}
+      - {x: -5, y: -129}
+    - - {x: 63, y: -125}
+      - {x: 63, y: -126}
+      - {x: 60, y: -126}
+      - {x: 57, y: -128}
+      - {x: 59, y: -129}
+    - - {x: -273, y: -2}
+      - {x: -277, y: -8}
+      - {x: -277, y: -61}
+      - {x: -272, y: -66}
+      - {x: -238, y: -66}
+      - {x: -230, y: -62}
+      - {x: -230, y: -4}
+      - {x: -238, y: -2}
+    - - {x: -173, y: -2}
+      - {x: -213, y: -2}
+      - {x: -213, y: -66}
+      - {x: -169, y: -66}
+      - {x: -166, y: -63}
+      - {x: -166, y: -5}
+    - - {x: -114, y: -2}
+      - {x: -140, y: -2}
+      - {x: -149, y: -12}
+      - {x: -149, y: -66}
+      - {x: -108, y: -66}
+      - {x: -102, y: -62}
+      - {x: -102, y: -15}
+    - - {x: 139, y: -7}
+      - {x: 108, y: -7}
+      - {x: 106, y: -15}
+      - {x: 106, y: -65}
+      - {x: 110, y: -66}
+      - {x: 154, y: -66}
+      - {x: 154, y: -16}
+      - {x: 143, y: -8}
+    - - {x: 203, y: -7}
+      - {x: 172, y: -7}
+      - {x: 170, y: -15}
+      - {x: 170, y: -65}
+      - {x: 174, y: -66}
+      - {x: 218, y: -66}
+      - {x: 218, y: -16}
+      - {x: 207, y: -8}
+    - - {x: 234, y: -7}
+      - {x: 234, y: -66}
+      - {x: 280, y: -66}
+      - {x: 282, y: -65}
+      - {x: 282, y: -24}
+      - {x: 274, y: -7}
+    - - {x: -2, y: -62}
+      - {x: -1, y: -62}
+      - {x: -1, y: -63}
+      - {x: 0, y: -64}
+      - {x: -6, y: -64}
+      - {x: -5, y: -65}
+    - - {x: 62, y: -62}
+      - {x: 63, y: -62}
+      - {x: 63, y: -63}
+      - {x: 64, y: -64}
+      - {x: 58, y: -64}
+      - {x: 59, y: -65}
+    - - {x: -247, y: 126}
+      - {x: -280, y: 126}
+      - {x: -280, y: 66}
+      - {x: -272, y: 63}
+      - {x: -266, y: 63}
+      - {x: -263, y: 64}
+      - {x: -262, y: 64}
+      - {x: -270, y: 61}
+      - {x: -280, y: 52}
+      - {x: -280, y: 3}
+      - {x: -276, y: -2}
+      - {x: -241, y: -2}
+      - {x: -230, y: 0}
+      - {x: -230, y: 105}
+      - {x: -232, y: 113}
+    - - {x: -183, y: 126}
+      - {x: -210, y: 126}
+      - {x: -216, y: 125}
+      - {x: -216, y: 73}
+      - {x: -212, y: 65}
+      - {x: -208, y: 63}
+      - {x: -202, y: 63}
+      - {x: -199, y: 64}
+      - {x: -198, y: 64}
+      - {x: -206, y: 61}
+      - {x: -216, y: 50}
+      - {x: -216, y: 2}
+      - {x: -210, y: -2}
+      - {x: -166, y: -2}
+      - {x: -166, y: 104}
+      - {x: -169, y: 111}
+    - - {x: -149, y: 126}
+      - {x: -152, y: 122}
+      - {x: -152, y: 68}
+      - {x: -144, y: 63}
+      - {x: -138, y: 63}
+      - {x: -135, y: 64}
+      - {x: -142, y: 61}
+      - {x: -152, y: 52}
+      - {x: -152, y: 2}
+      - {x: -142, y: -2}
+      - {x: -105, y: -2}
+      - {x: -102, y: 0}
+      - {x: -102, y: 106}
+      - {x: -108, y: 126}
+    - - {x: -82, y: 192}
+      - {x: -87, y: 173}
+      - {x: -87, y: 148}
+      - {x: -82, y: 129}
+      - {x: -77, y: 127}
+      - {x: -71, y: 127}
+      - {x: -68, y: 128}
+      - {x: -70, y: 127}
+      - {x: -74, y: 127}
+      - {x: -84, y: 123}
+      - {x: -87, y: 111}
+      - {x: -87, y: 85}
+      - {x: -83, y: 64}
+      - {x: -77, y: 63}
+      - {x: -71, y: 63}
+      - {x: -68, y: 64}
+      - {x: -70, y: 63}
+      - {x: -74, y: 63}
+      - {x: -82, y: 57}
+      - {x: -86, y: 47}
+      - {x: -87, y: 43}
+      - {x: -87, y: -1}
+      - {x: -86, y: -2}
+      - {x: -38, y: -2}
+      - {x: -38, y: 192}
+    - - {x: 139, y: 57}
+      - {x: 108, y: 57}
+      - {x: 106, y: 49}
+      - {x: 106, y: -1}
+      - {x: 110, y: -2}
+      - {x: 154, y: -2}
+      - {x: 154, y: 48}
+      - {x: 143, y: 56}
+    - - {x: 203, y: 57}
+      - {x: 172, y: 57}
+      - {x: 170, y: 49}
+      - {x: 170, y: -1}
+      - {x: 174, y: -2}
+      - {x: 218, y: -2}
+      - {x: 218, y: 48}
+      - {x: 207, y: 56}
+    - - {x: 234, y: 57}
+      - {x: 234, y: -2}
+      - {x: 282, y: -2}
+      - {x: 282, y: 55}
+      - {x: 278, y: 57}
+    - - {x: 143, y: 127}
+      - {x: 117, y: 127}
+      - {x: 106, y: 122}
+      - {x: 106, y: 68}
+      - {x: 110, y: 62}
+      - {x: 152, y: 62}
+      - {x: 153, y: 66}
+      - {x: 153, y: 98}
+      - {x: 149, y: 121}
+    - - {x: 181, y: 192}
+      - {x: 165, y: 157}
+      - {x: 165, y: 142}
+      - {x: 170, y: 137}
+      - {x: 172, y: 136}
+      - {x: 185, y: 128}
+      - {x: 188, y: 128}
+      - {x: 182, y: 128}
+      - {x: 165, y: 119}
+      - {x: 165, y: 63}
+      - {x: 221, y: 63}
+      - {x: 221, y: 192}
+    - - {x: 236, y: 192}
+      - {x: 229, y: 174}
+      - {x: 229, y: 68}
+      - {x: 235, y: 64}
+      - {x: 280, y: 64}
+      - {x: 282, y: 68}
+      - {x: 285, y: 75}
+      - {x: 285, y: 192}
+    - - {x: -268, y: 192}
+      - {x: -278, y: 190}
+      - {x: -278, y: 128}
+      - {x: -273, y: 126}
+      - {x: -233, y: 126}
+      - {x: -233, y: 188}
+      - {x: -242, y: 192}
+    - - {x: -211, y: 191}
+      - {x: -214, y: 188}
+      - {x: -214, y: 129}
+      - {x: -209, y: 126}
+      - {x: -171, y: 126}
+      - {x: -167, y: 134}
+      - {x: -167, y: 189}
+      - {x: -175, y: 191}
+    - - {x: -100, y: 126}
+      - {x: -100, y: 159}
+      - {x: -109, y: 190}
+      - {x: -150, y: 190}
+      - {x: -150, y: 126}
+    - - {x: -21, y: 190}
+      - {x: -26, y: 189}
+      - {x: -33, y: 174}
+      - {x: -33, y: 136}
+      - {x: -28, y: 126}
+      - {x: 15, y: 126}
+      - {x: 28, y: 129}
+      - {x: 28, y: 157}
+      - {x: 17, y: 190}
+    - - {x: 81, y: 177}
+      - {x: 79, y: 182}
+      - {x: 74, y: 187}
+      - {x: 68, y: 190}
+      - {x: 44, y: 190}
+      - {x: 31, y: 173}
+      - {x: 31, y: 129}
+      - {x: 33, y: 126}
+      - {x: 78, y: 126}
+      - {x: 91, y: 130}
+      - {x: 91, y: 148}
+      - {x: 90, y: 151}
+    - - {x: 151, y: 192}
+      - {x: 117, y: 192}
+      - {x: 106, y: 168}
+      - {x: 106, y: 137}
+      - {x: 108, y: 136}
+      - {x: 121, y: 128}
+      - {x: 129, y: 126}
+      - {x: 144, y: 126}
+      - {x: 156, y: 137}
+      - {x: 157, y: 147}
+      - {x: 157, y: 180}
+    - - {x: 254, y: 129}
+      - {x: 256, y: 131}
+      - {x: 259, y: 130}
+      - {x: 260, y: 130}
+      - {x: 260, y: 129}
+      - {x: 262, y: 128}
+      - {x: 261, y: 130}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ana_fighting_0: 587146884
+      Ana_fighting_1: -224771107
+      Ana_fighting_10: 178291110
+      Ana_fighting_11: -553636147
+      Ana_fighting_12: 1289153734
+      Ana_fighting_13: 2058554865
+      Ana_fighting_14: 1584502415
+      Ana_fighting_15: 603271395
+      Ana_fighting_16: -1023197216
+      Ana_fighting_17: 1164181972
+      Ana_fighting_18: -1809082107
+      Ana_fighting_19: -722719233
+      Ana_fighting_2: -1032628746
+      Ana_fighting_20: 1274543927
+      Ana_fighting_21: -2131290828
+      Ana_fighting_22: -1488609542
+      Ana_fighting_23: 798779734
+      Ana_fighting_24: 94432618
+      Ana_fighting_25: 280341070
+      Ana_fighting_26: 990931081
+      Ana_fighting_27: -1981768676
+      Ana_fighting_28: 392838672
+      Ana_fighting_29: 533394785
+      Ana_fighting_3: -1100614620
+      Ana_fighting_30: -1247469918
+      Ana_fighting_31: 1984205555
+      Ana_fighting_32: -643698560
+      Ana_fighting_33: -1515938655
+      Ana_fighting_34: -801854042
+      Ana_fighting_35: 1322122031
+      Ana_fighting_36: -1233662436
+      Ana_fighting_37: -1296522615
+      Ana_fighting_38: -1680350809
+      Ana_fighting_39: -725977989
+      Ana_fighting_4: 1984999293
+      Ana_fighting_40: 1186621497
+      Ana_fighting_41: 648997508
+      Ana_fighting_42: -311462156
+      Ana_fighting_43: 3846455
+      Ana_fighting_44: -1929209961
+      Ana_fighting_45: 1744909982
+      Ana_fighting_46: -1748777267
+      Ana_fighting_47: -1867084982
+      Ana_fighting_48: -1470113723
+      Ana_fighting_49: 463957429
+      Ana_fighting_5: -500560655
+      Ana_fighting_50: 2055892026
+      Ana_fighting_51: 1175927635
+      Ana_fighting_52: 893012072
+      Ana_fighting_53: -496069858
+      Ana_fighting_6: 1571692761
+      Ana_fighting_7: 1119759951
+      Ana_fighting_8: -104130820
+      Ana_fighting_9: 416186722
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

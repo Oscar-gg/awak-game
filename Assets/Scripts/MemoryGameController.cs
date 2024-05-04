@@ -10,7 +10,7 @@ public class MemoryGameController : MonoBehaviour
 {
 
     static public MemoryGameController Instance;
-    public UIController uiController;
+    public TextOverlayController uiController;
     public MemoryGameUI memoryGameUI;
 
     [SerializeField]
@@ -36,6 +36,10 @@ public class MemoryGameController : MonoBehaviour
 private void Awake()
     {
         puzzles = Resources.LoadAll<Sprite>("Sprites/Skills");
+        puzzles = puzzles.Skip(1).ToArray();
+        //puzzles = Resources.LoadAll<Sprite>("Sprites/IconSet");
+        //puzzles = puzzles.Skip(148).Take(10).ToArray();
+
         InitializeData();
         Instance = this;
         Instance.SetReferences();
@@ -45,7 +49,7 @@ private void Awake()
     {
         if (uiController == null)
         {
-            uiController = FindObjectOfType<UIController>();
+            uiController = FindObjectOfType<TextOverlayController>();
         }
         if (memoryGameUI == null)
         {
