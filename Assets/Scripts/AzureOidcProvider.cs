@@ -134,6 +134,31 @@ namespace i5.Toolkit.Core.OpenIDConnectClient
             }
         }
 
+        // Override method from base class to obtain desired values. Same implementation, only changing AzureAdUserInfo to remap auth values.
+        public override async Task<IUserInfo> GetUserInfoAsync(string accessToken)
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>()
+            {
+                {"Authorization", $"Bearer {accessToken}" }
+            };
+            WebResponse<string> webResponse = await RestConnector.GetAsync(userInfoEndpoint, headers);
+            if (webResponse.Successful)
+            {
+                AzureAdUserInfo userInfo = JsonSerializer.FromJson<AzureAdUserInfo>(webResponse.Content);
+
+                if (userInfo == null)
+                {
+                    i5Debug.LogError("Could not parse user info", this);
+                }
+                return userInfo;
+            }
+            else
+            {
+                i5Debug.LogError($"Error fetching the user info: {webResponse.ErrorMessage}\n{webResponse.Content}", this);
+                return default;
+            }
+        }
+
         /// <summary>
         /// Opens the login page in the system's default Web browser, sets the required endpoints
         /// </summary>

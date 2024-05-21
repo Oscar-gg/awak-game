@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using CandyCoded.env;
+
 public class AzureAdOauth : BaseServiceBootstrapper
 {
     [SerializeField] private ClientDataObject azureAdClientDataObject;
@@ -12,9 +14,18 @@ public class AzureAdOauth : BaseServiceBootstrapper
     protected override void RegisterServices()
     {
         OpenIDConnectService oidc = new OpenIDConnectService();
-        oidc.OidcProvider = new AzureAdOidcProvider("");
-        //oidc.OidcProvider = new GoogleOidcProvider();
-        //oidc.OidcProvider = new GitHubOidcProvider();
+
+        string tenant_id = "";
+        if (env.TryParseEnvironmentVariable("TENANT_ID", out string TENANT_ID))
+        {
+            tenant_id = TENANT_ID;
+        } else
+        {
+            throw new System.Exception("Add TENANT_ID to enviroment variables file");
+
+        }
+
+        oidc.OidcProvider = new AzureAdOidcProvider(tenant_id);
 
 #if !UNITY_EDITOR
         oidc.OidcProvider.ClientData = azureAdClientDataObject.clientData;

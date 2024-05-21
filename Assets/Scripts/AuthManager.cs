@@ -8,18 +8,6 @@ using UnityEngine;
 
 public class AuthManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void SignIn()
     {
         SignInWithAzureAd();
@@ -34,8 +22,13 @@ public class AuthManager : MonoBehaviour
     private async void OnLoginCompleted(object sender, EventArgs e)
     {
         Debug.Log("Sign in done!");
-        //var a = await ServiceManager.GetService<OpenIDConnectService>().GetUserDataAsync();
-        //Debug.Log("Obtained data:");
-        //Debug.Log(a.ToString());
+        var a = await ServiceManager.GetService<OpenIDConnectService>().GetUserDataAsync();
+
+        Debug.Log("Obtained data:");
+        Debug.Log("a.Email");
+        Debug.Log(a.Email);
+        Debug.Log("a.FullName");
+        Debug.Log(a.FullName);
+        Debug.Log("a.Username");
     }
 }
