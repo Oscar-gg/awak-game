@@ -201,7 +201,7 @@ private void Awake()
         // Assigning arrays to each element
         for (int i = 0; i < powerInfo.Length; i++)
         {
-            powerInfo[i] = new string[] { "Titulo "  + (i+1), "Etica", "La etica tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
+            powerInfo[i] = new string[] { "Título "  + (i+1), "Ética", "La ética tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
         }
     }
 

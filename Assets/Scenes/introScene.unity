@@ -1011,7 +1011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.515015, y: 0.14009094}
+  m_AnchoredPosition: {x: -9.515015, y: 0.1401062}
   m_SizeDelta: {x: -19.0237, y: -42.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405082156
@@ -1581,7 +1581,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Bienvenido a AWAQ Estaciones Biol\xF3gicas. Espero te encuentres muy bien."
+  m_Text: "Bienvenido a AWAQ Estaciones Biol\xF3gicas. Espero que te encuentres muy
+    bien."
 --- !u!222 &2010444034
 CanvasRenderer:
   m_ObjectHideFlags: 0

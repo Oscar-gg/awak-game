@@ -14,7 +14,7 @@ public class WinScript : MonoBehaviour
     void Start()
     {
         setWinAnimation();
-        resultText.text = "¡Felicitaciones!, tu siguiente aventura aguarda";
+        resultText.text = "¡Felicitaciones, tu siguiente aventura aguarda!";
     }
     void setWinAnimation()
     {
