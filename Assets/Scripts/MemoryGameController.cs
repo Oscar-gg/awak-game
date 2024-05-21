@@ -201,7 +201,7 @@ private void Awake()
         // Assigning arrays to each element
         for (int i = 0; i < powerInfo.Length; i++)
         {
-            powerInfo[i] = new string[] { "Titulo "  + (i+1), "Etica", "La etica tiene que ver con. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. ", "Continuar " + (i+1) };
+            powerInfo[i] = new string[] { "Título "  + (i+1), "respeto", "Tratar a todas las personas dignamente, sin discriminación por sexo, raza, nacionalidad o religión, considerando siempre sus derechos laborales. Y colaborando e impulsando políticas inclusivas. ", "Continuar " + (i+1) };
         }
     }
 
