@@ -24,7 +24,7 @@ public class TextOverlayController : MonoBehaviour
         this.subtitle.text = subtitle;
         this.description.text = description;
         this.buttonDescription.text = buttonDescription;
-        StartCoroutine(Fade(0.1f, 1, 0.2f, true));
+        StartCoroutine(Fade(0.025f, 1, 0.05f, true));
     }
 
     // Private to only allow self to hide
@@ -71,10 +71,10 @@ public class TextOverlayController : MonoBehaviour
         // Find reference of panel
         textPanel = GameObject.FindGameObjectWithTag("Explanation");
         CanvasGroup = textPanel.GetComponent<CanvasGroup>();
-
-        title = textPanel.transform.GetChild(1).gameObject.GetComponent<Text>();
-        subtitle = textPanel.transform.GetChild(2).gameObject.GetComponent<Text>(); ;
-        description = textPanel.transform.GetChild(3).gameObject.GetComponent<Text>(); ;
+        
+        title = textPanel.transform.GetChild(2).gameObject.GetComponent<Text>();
+        subtitle = textPanel.transform.GetChild(3).gameObject.GetComponent<Text>(); ;
+        description = textPanel.transform.GetChild(4).gameObject.GetComponent<Text>(); ;
 
         panelButton = textPanel.GetComponentInChildren<Button>();
         buttonDescription = panelButton.GetComponentInChildren<Text>();
