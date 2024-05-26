@@ -29,7 +29,34 @@ public class MakeButton : MonoBehaviour
         } else if (btn.CompareTo("seguridadBtn") == 0)
         {
             hero.GetComponent<FighterAction>().SelectAttack("seguridad");
-        } else
+        } //start1
+        else if (btn.CompareTo("OutlookBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Outlook");
+        }
+        else if (btn.CompareTo("MobileBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Mobile");
+        } //start2
+        else if (btn.CompareTo("RainbowBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Rainbow");
+        }
+        else if (btn.CompareTo("MulticulturalBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Multicultural");
+        } //start3
+        else if (btn.CompareTo("SharePointBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("SharePoint");
+        }
+        else if (btn.CompareTo("JerarquiaBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Jerarquia");
+        }
+
+
+        else
         {
             Debug.Log("NormalAttack");
         }
