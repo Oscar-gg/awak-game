@@ -12,7 +12,7 @@ public class FinalPopUpMaze : MonoBehaviour
     private MinigameController completionHandler;
     private int totalCofres = 1;
     private List<string> collidedCofres = new List<string>();
-    public float delayBeforeShowingPopup = 1f; // Tiempo de espera antes de mostrar el popup final
+    public float delayBeforeShowingPopup = 1f; 
 
     //private MinigameCompletionHandler completionHandler; // Agregar a todas las funciones de los minijuegos
 
@@ -75,6 +75,5 @@ public class TempCoroutineRunner : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         popup.SetActive(true);
-        Destroy(gameObject); // Destruir el objeto temporal una vez que el trabajo esté hecho
-    }
+        Destroy(gameObject); 
 }

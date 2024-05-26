@@ -1689,8 +1689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124.63263, y: -461.19037}
-  m_SizeDelta: {x: 1065.4547, y: -63.1276}
+  m_AnchoredPosition: {x: -424.96118, y: -461.19037}
+  m_SizeDelta: {x: 464.7977, y: -63.1276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581984444
 MonoBehaviour:
@@ -3282,8 +3282,8 @@ MonoBehaviour:
   worldsUnlocked: 
   totalMinigames: 6
   currentProgress: 0
-  progressBar: {fileID: 0}
-  progressText: {fileID: 0}
+  progressBar: {fileID: 581984444}
+  progressText: {fileID: 736321516}
 --- !u!4 &1416748051
 Transform:
   m_ObjectHideFlags: 0

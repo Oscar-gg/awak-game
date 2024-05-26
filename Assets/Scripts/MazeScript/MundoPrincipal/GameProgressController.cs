@@ -5,22 +5,20 @@ public class GameProgressController : MonoBehaviour
 {
     public bool[] worldsUnlocked;
     public int totalMinigames = 6; // Total de minijuegos
-    private int initialProgress = 0;
+    public float initialProgress = 0f; // Progreso inicial
+
     public float currentProgress = 0f;
     public Image progressBar; // Barra de progreso UI
     public Text progressText; // Texto que muestra el progreso
 
     private void Start()
     {
-        PlayerPrefs.SetFloat("CurrentProgress", currentProgress);
+        Debug.Log("GameProgressController started");
         LoadProgress();
+        Debug.Log("Progress loaded: " + currentProgress);
         UpdateProgressUI();
+        Debug.Log("UI updated: " + (currentProgress * 100f).ToString("F1") + "%");
     }
-
-    //private void OnApplicationQuit()
-    //{
-    //    SaveProgress();
-    //}
 
     public void UnlockWorld(int worldIndex)
     {
@@ -33,68 +31,64 @@ public class GameProgressController : MonoBehaviour
 
     public void CompleteMinigame()
     {
-        currentProgress += 1f / totalMinigames;
-        if (currentProgress > 1f) currentProgress = 1f;
-        SaveProgress();
+        Debug.Log("Minigame completed!");
+        currentProgress += 1f;
+        if (currentProgress > totalMinigames) currentProgress = totalMinigames;
+        SaveProgress(currentProgress); // Pasamos el progreso actual como argumento
         UpdateProgressUI();
     }
 
-    //private void SaveProgress()
-    //{
-    //    for (int i = 0; i < worldsUnlocked.Length; i++)
-    //    {
-    //        PlayerPrefs.SetInt("WorldUnlocked_" + i, worldsUnlocked[i] ? 1 : 0);
-    //    }
-    //    PlayerPrefs.SetFloat("CurrentProgress", currentProgress);
-    //    PlayerPrefs.Save();
-    //}
+
+
+
+    private void SaveProgress(float progress) 
+    {
+        Debug.Log("Saving progress: " + progress);
+        PlayerPrefs.SetFloat("CurrentProgress", progress);
+        PlayerPrefs.Save();
+    }
+
 
     private void LoadProgress()
     {
+        currentProgress = PlayerPrefs.GetFloat("CurrentProgress", initialProgress);
+        Debug.Log("Loaded progress: " + currentProgress);
+
         for (int i = 0; i < worldsUnlocked.Length; i++)
         {
             worldsUnlocked[i] = PlayerPrefs.GetInt("WorldUnlocked_" + i, i == 0 ? 1 : 0) == 1;
         }
-        currentProgress = PlayerPrefs.GetFloat("CurrentProgress", 0f);
     }
-
-    private void SaveProgress()
-    {
-        // Guardar el progreso actual en PlayerPrefs
-        PlayerPrefs.SetFloat("CurrentProgress", currentProgress);
-        PlayerPrefs.Save();
-    }
-
-    //private void LoadProgress()
-    //{
-    //    // Cargar el progreso guardado de PlayerPrefs
-    //    currentProgress = PlayerPrefs.GetFloat("CurrentProgress", initialProgress);
-
-    //    // Reiniciar el progreso si es la primera vez que se ejecuta el juego
-    //    if (currentProgress == 0f)
-    //    {
-    //        ResetProgress();
-    //    }
-    //}
 
     private void ResetProgress()
     {
-        // Reiniciar el progreso a su estado inicial
-        currentProgress = initialProgress;
-        // También podrías reiniciar otros valores aquí si fuera necesario
+        Debug.Log("Resetting progress");
+        PlayerPrefs.DeleteKey("CurrentProgress");  // Borra el progreso anterior
+        for (int i = 0; i < worldsUnlocked.Length; i++)
+        {
+            PlayerPrefs.DeleteKey("WorldUnlocked_" + i);  // Borra el estado de desbloqueo de los mundos
+        }
+        PlayerPrefs.Save();
     }
 
     private void UpdateProgressUI()
     {
+        Debug.Log("Updating progress UI: " + currentProgress);
         if (progressBar != null)
         {
-            progressBar.fillAmount = currentProgress;
+            progressBar.fillAmount = currentProgress / totalMinigames;
+            Debug.Log("ProgressBar updated: " + progressBar.fillAmount);
         }
         if (progressText != null)
         {
-            progressText.text = (currentProgress * 100f).ToString("F1") + "%";
+            float percentage = (currentProgress / totalMinigames) * 100f;
+            progressText.text = percentage.ToString("F1") + "%";
+            Debug.Log("ProgressText updated: " + progressText.text);
         }
     }
+
+
+
 
     private void UpdateWorldUI()
     {
@@ -105,18 +99,6 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
-    //public void CompleteWorld(int worldIndex)
-    //{
-    //    if (worldIndex < totalMinigames)
-    //    {
-    //        currentProgress += 1f / totalMinigames;
-    //        if (currentProgress > 1f) currentProgress = 1f;
-    //        SaveProgress();
-    //        UpdateProgressUI();
-    //    }
-    //}
-
-
     public bool IsWorldUnlocked(int worldIndex)
     {
         if (worldIndex >= 0 && worldIndex < worldsUnlocked.Length)
@@ -125,5 +107,4 @@ public class GameProgressController : MonoBehaviour
         }
         return false;
     }
-
 }

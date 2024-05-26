@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoEtica.unity
     guid: f77b362a503d879459bf79212a8f510d
+  - enabled: 1
+    path: Assets/Scenes/MundoComunicacion.unity
+    guid: 7a47e1d9322893c4eadf5fd8e4474f73
   m_configObjects: {}

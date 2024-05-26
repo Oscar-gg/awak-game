@@ -8590,6 +8590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldsUnlocked: 
   totalMinigames: 6
+  initialProgress: 0
   currentProgress: 0
   progressBar: {fileID: 0}
   progressText: {fileID: 0}
