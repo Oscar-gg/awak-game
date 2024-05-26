@@ -62,7 +62,7 @@ public class LightBehaviour : MonoBehaviour
         {
             if (damageCoroutine == null)
             {
-                StartCoroutine(DamageRoutine(collision));
+                damageCoroutine = StartCoroutine(DamageRoutine(collision));
             }
             
         }

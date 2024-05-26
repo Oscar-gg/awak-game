@@ -31,7 +31,7 @@ public class MemoryGameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
-    private Dictionary<string, MemoryGameCard> cardDictionary;
+    private Dictionary<string, GameCard> cardDictionary;
 
 
     private void Awake()
@@ -153,10 +153,10 @@ public class MemoryGameController : MonoBehaviour
 
             int powerIndex = int.Parse(cards[firstGuessIndex].name);
 
-            MemoryGameCard card;
+            GameCard card;
             if (!cardDictionary.TryGetValue(firstGuessPuzzle, out card))
             {
-                card = new MemoryGameCard();
+                card = new GameCard();
             }
 
             // ShowPanel(string title, string subtitle, string description, string buttonDescription)
@@ -204,11 +204,11 @@ public class MemoryGameController : MonoBehaviour
     {
         TextAsset jsonFile = Resources.Load<TextAsset>("Data/MemoryGame");
 
-        MemoryGameCards cardJson = JsonUtility.FromJson<MemoryGameCards>(jsonFile.text);
+        GameCards cardJson = JsonUtility.FromJson<GameCards>(jsonFile.text);
 
-        cardDictionary = new Dictionary<string, MemoryGameCard>();
+        cardDictionary = new Dictionary<string, GameCard>();
 
-        foreach (MemoryGameCard card in cardJson.cardInfo)
+        foreach (GameCard card in cardJson.cardInfo)
         {
             cardDictionary.Add(card.image, card);
         }

@@ -1,15 +1,27 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformController : MonoBehaviour
 {
+
+    static public PlatformController Instance;
+
+    static public readonly string LIVES = "lives";
+    static public readonly string IS_HURT = "hurt";
+
     // Start is called before the first frame update
     public float moveSpeed = 5;
     public float jumpForce = 5;
     public Rigidbody2D rig; // referencia la Rigidbody del jugador
     private int jumpsRemaining = 2; // Cantidad de saltos que puede realizar 
     public SpriteRenderer sr;
+
+    public UIControllerPlatforms uiController;
+    private TextOverlayController textOverlayController;
+
+    private Dictionary<string, GameCard> cardDictionary;
+
 
     bool lookingLeft = false;
 
@@ -18,15 +30,31 @@ public class PlatformController : MonoBehaviour
     Vector3 initialPosition;
     private void Awake()
     {
+        StopAllCoroutines();
+        PlayerPrefs.SetInt(LIVES, 3);
+        Instance = this;
+        Instance.SetReferences();
         initialPosition = transform.position;
+        textOverlayController.HidePanelInstantly();
+        PopulateDictionary();
     }
 
-    void Start()
+    void SetReferences()
     {
         // Para modificar propiedades de animaciones
         animatorController = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        uiController = FindObjectOfType<UIControllerPlatforms>();
+        if (textOverlayController == null)
+        {
+            textOverlayController = FindObjectOfType<TextOverlayController>();
+        }
+    }
+
+    void Start()
+    {
+
     }
 
     void Update()
@@ -41,7 +69,7 @@ public class PlatformController : MonoBehaviour
             }
         }
 
-        
+
     }
 
     public void FixedUpdate()
@@ -125,7 +153,59 @@ public class PlatformController : MonoBehaviour
 
     public void collidedRay()
     {
-        transform.position = initialPosition;
+        if (PlayerPrefs.GetInt(IS_HURT, 0) == 0)
+        {
+            PlayerPrefs.SetInt(IS_HURT, 1);
+            transform.position = initialPosition;
+
+            int lives = PlayerPrefs.GetInt(LIVES, 0);
+
+            PlayerPrefs.SetInt(LIVES, lives - 1);
+
+            if (lives <= 1)
+            {
+                EndGame();
+            }
+            else
+            {
+                uiController.UpdateLives();
+
+            }
+            PlayerPrefs.SetInt(IS_HURT, 0);
+        }
+
+    }
+
+    private void EndGame()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    // Fill with the data from json
+    void PopulateDictionary()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("Data/PlatformGame");
+
+        GameCards cardJson = JsonUtility.FromJson<GameCards>(jsonFile.text);
+
+        cardDictionary = new Dictionary<string, GameCard>();
+
+        foreach (GameCard card in cardJson.cardInfo)
+        {
+            cardDictionary.Add(card.image, card);
+        }
+    }
+
+    public void ShowCard(string cardName, Sprite sprite)
+    {
+        GameCard card;
+        if (!cardDictionary.TryGetValue(cardName, out card))
+        {
+            card = new GameCard();
+        }
+
+        // ShowPanel(string title, string subtitle, string description, string buttonDescription)
+        textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
     }
 
 }

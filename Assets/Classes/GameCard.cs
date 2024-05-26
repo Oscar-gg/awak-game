@@ -1,12 +1,12 @@
 [System.Serializable]
-public class MemoryGameCard
+public class GameCard
 {
     public string title;
     public string subtitle;
     public string description;
     public string image;
 
-    public MemoryGameCard()
+    public GameCard()
     {
         title = "Felicidades";
         subtitle = "Carta encontrada";
