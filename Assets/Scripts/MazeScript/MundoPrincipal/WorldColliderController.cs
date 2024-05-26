@@ -42,16 +42,16 @@ public class WorldColliderController : MonoBehaviour
             else
             {
                 Debug.Log("El mundo " + worldIndex + " está bloqueado.");
-                // Aquí puedes agregar lógica adicional, como mostrar un mensaje al jugador.
+                
             }
         }
     }
 
     private void EnterWorld()
     {
-        // Aquí va la lógica para cargar el mundo
+        
         Debug.Log("Entrar al mundo " + worldIndex);
-        // Por ejemplo, podrías usar una escena diferente para cada mundo:
+        
         // SceneManager.LoadScene("World" + worldIndex);
     }
 }
