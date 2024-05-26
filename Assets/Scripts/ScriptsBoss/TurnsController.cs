@@ -38,7 +38,7 @@ public class TurnsController : MonoBehaviour
 
     public void NextTurn()
     {
-        updateHints(HintCounter);
+        
 
         FighterStats currentFighterStats = fighterStats[0];
         fighterStats.Remove(currentFighterStats);
@@ -52,6 +52,7 @@ public class TurnsController : MonoBehaviour
             if(currentUnit.tag == "Hero")
             {
                 this.battleMenu.SetActive(true);
+                updateHintsComunication(HintCounter);
 
             } else
             {
@@ -65,21 +66,27 @@ public class TurnsController : MonoBehaviour
         }
     }
 
-    public void updateHints(int hintNum)
+    public void updateHintsComunication(int hintNum)
     {
         switch (hintNum)
         {
             case 0:
-                hints.text = "Hint: Pegale duro";
+                hints.text = "Hint: Es el principal medio de comunicación tanto interno, externo, como para obtener información";
                 break;
             case 1:
-                hints.text = "Hint: Pegale mas duro";
+                hints.text = "Hint: Maneja las conversaciones de los distintos proyectos";
                 break;
             case 2:
-                hints.text = "Hint: dale con la silla";
+                hints.text = "Hint: Es donde se guarda la mayor parte de las cosas";
                 break;
             case 3:
-                hints.text = "Hint: Asi se hace!";
+                hints.text = "Hint: Dispositivo donde se recomienda tener las aplicaciones de comunicación descargadas";
+                break;
+            case 4:
+                hints.text = "Hint: Es la estructura de las comunicaciones de AWAQ";
+                break;
+            case 5:
+                hints.text = "Hint: Se colabora en un ambiente que no conoce fronteras ni nacionalidades";
                 break;
         }
 

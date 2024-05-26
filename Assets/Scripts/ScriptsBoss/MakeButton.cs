@@ -55,7 +55,6 @@ public class MakeButton : MonoBehaviour
             hero.GetComponent<FighterAction>().SelectAttack("Jerarquia");
         }
 
-
         else
         {
             Debug.Log("NormalAttack");
