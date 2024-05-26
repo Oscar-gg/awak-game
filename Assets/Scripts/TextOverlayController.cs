@@ -16,10 +16,14 @@ public class TextOverlayController : MonoBehaviour
     Text subtitle;
     Text description;
     Text buttonDescription;
+    Image renderImage;
 
 
-    public void ShowPanel(string title, string subtitle, string description, string buttonDescription)
+    public void ShowPanel(string title, string subtitle, string description, string buttonDescription, Sprite sp)
     {
+        //Debug.Log(sprite.name);
+        renderImage.overrideSprite = sp;
+        
         this.title.text = title;
         this.subtitle.text = subtitle;
         this.description.text = description;
@@ -30,7 +34,7 @@ public class TextOverlayController : MonoBehaviour
     // Private to only allow self to hide
     public void HidePanel()
     {
-        StartCoroutine(Fade(0.1f, 0, 0.2f, false));
+        StartCoroutine(Fade(0.025f, 0, 0.05f, false));
     }
 
     public void HidePanelInstantly()
@@ -71,10 +75,11 @@ public class TextOverlayController : MonoBehaviour
         // Find reference of panel
         textPanel = GameObject.FindGameObjectWithTag("Explanation");
         CanvasGroup = textPanel.GetComponent<CanvasGroup>();
-        
-        title = textPanel.transform.GetChild(2).gameObject.GetComponent<Text>();
-        subtitle = textPanel.transform.GetChild(3).gameObject.GetComponent<Text>(); ;
-        description = textPanel.transform.GetChild(4).gameObject.GetComponent<Text>(); ;
+        title = GameObject.Find("TextTitle").GetComponent<Text>();
+        subtitle = GameObject.Find("TextSubtitle").GetComponent<Text>(); ;
+        description = GameObject.Find("TextExplanation").GetComponent<Text>(); ;
+        renderImage = GameObject.Find("ImagePanel").GetComponent<Image>();
+        //description = textPanel.transform.GetChild(4).gameObject.GetComponent<Text>(); ;
 
         panelButton = textPanel.GetComponentInChildren<Button>();
         buttonDescription = panelButton.GetComponentInChildren<Text>();

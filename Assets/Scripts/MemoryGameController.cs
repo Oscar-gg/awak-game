@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,19 +31,16 @@ public class MemoryGameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
-    string[][] powerInfo = new string[15][];
+    private Dictionary<string, MemoryGameCard> cardDictionary;
 
 
-private void Awake()
+    private void Awake()
     {
-        puzzles = Resources.LoadAll<Sprite>("Sprites/Skills");
-        puzzles = puzzles.Skip(1).ToArray();
-        //puzzles = Resources.LoadAll<Sprite>("Sprites/IconSet");
-        //puzzles = puzzles.Skip(148).Take(10).ToArray();
-
-        InitializeData();
         Instance = this;
         Instance.SetReferences();
+
+        puzzles = Resources.LoadAll<Sprite>("Sprites/memoryGame");
+        PopulateDictionary();
     }
 
     void SetReferences()
@@ -113,7 +111,6 @@ private void Awake()
             
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
             
-            //cards[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
             StartCoroutine(cards[secondGuessIndex].gameObject.GetComponent<Rotate>().FlipCard(gamePuzzles[secondGuessIndex]));
 
             StartCoroutine(CheckIfPuzzlesMatch());
@@ -156,8 +153,14 @@ private void Awake()
 
             int powerIndex = int.Parse(cards[firstGuessIndex].name);
 
-            Debug.Log(uiController);
-            uiController.ShowPanel(powerInfo[powerIndex][0], powerInfo[powerIndex][1], powerInfo[powerIndex][2], powerInfo[powerIndex][3]);
+            MemoryGameCard card;
+            if (!cardDictionary.TryGetValue(firstGuessPuzzle, out card))
+            {
+                card = new MemoryGameCard();
+            }
+
+            //ShowPanel(string title, string subtitle, string description, string buttonDescription)
+            uiController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", cards[firstGuessIndex].image.sprite);
 
 
             CheckGameFinished();
@@ -196,12 +199,18 @@ private void Awake()
         }
     }
 
-    void InitializeData()
+    // Fill with the data from json
+    void PopulateDictionary()
     {
-        // Assigning arrays to each element
-        for (int i = 0; i < powerInfo.Length; i++)
+        TextAsset jsonFile = Resources.Load<TextAsset>("Data/MemoryGame");
+
+        MemoryGameCards cardJson = JsonUtility.FromJson<MemoryGameCards>(jsonFile.text);
+
+        cardDictionary = new Dictionary<string, MemoryGameCard>();
+
+        foreach (MemoryGameCard card in cardJson.cardInfo)
         {
-            powerInfo[i] = new string[] { "Título "  + (i+1), "Respeto", "Tratar a todas las personas dignamente, sin discriminación por sexo, raza, nacionalidad o religión, considerando siempre sus derechos laborales. Y colaborando e impulsando políticas inclusivas. ", "Continuar " + (i+1) };
+            cardDictionary.Add(card.image, card);
         }
     }
 

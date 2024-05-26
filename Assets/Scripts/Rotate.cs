@@ -2,8 +2,10 @@ using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Rotate : MonoBehaviour
 {
@@ -44,13 +46,10 @@ public class Rotate : MonoBehaviour
         }
     }
 
-    public void Log()
-    {
-        Debug.Log("Xd pa");
-    }
-
     public IEnumerator FlipCard(Sprite newImage)
     {
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+
         Vector3 rotateDir = new Vector3(0, 1, 0);
         rotatingCoro = StartCoroutine(DoRotation(0.05f, 90f, rotateDir));
         yield return new WaitForSeconds(0.5f);

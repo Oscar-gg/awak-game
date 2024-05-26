@@ -12,6 +12,7 @@ public class LightBehaviour : MonoBehaviour
     private bool ligthOn = true;
 
     private Coroutine coroutine;
+    private Coroutine damageCoroutine;
 
     void Start()
     {
@@ -46,12 +47,33 @@ public class LightBehaviour : MonoBehaviour
     private void HideElement()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<Collider2D>().enabled = false;
     }
 
     private void ShowElement()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
+        gameObject.GetComponent<Collider2D>().enabled = true;
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (damageCoroutine == null)
+            {
+                StartCoroutine(DamageRoutine(collision));
+            }
+            
+        }
+    }
+
+    public IEnumerator DamageRoutine(Collision2D collision)
+    {
+        collision.gameObject.GetComponent<Animator>().SetTrigger("isHurt");
+        yield return new WaitForSeconds(1f);
+        collision.gameObject.GetComponent<PlatformController>().collidedRay();
+        damageCoroutine = null;
     }
 
 }
