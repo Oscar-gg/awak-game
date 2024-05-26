@@ -159,7 +159,7 @@ public class MemoryGameController : MonoBehaviour
                 card = new MemoryGameCard();
             }
 
-            //ShowPanel(string title, string subtitle, string description, string buttonDescription)
+            // ShowPanel(string title, string subtitle, string description, string buttonDescription)
             uiController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", cards[firstGuessIndex].image.sprite);
 
 
