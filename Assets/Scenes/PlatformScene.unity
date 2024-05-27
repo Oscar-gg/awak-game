@@ -7824,9 +7824,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1260508390}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ReturnToMenu
+      - m_Target: {fileID: 1384197097}
+        m_TargetAssemblyTypeName: PlatformController, Assembly-CSharp
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
