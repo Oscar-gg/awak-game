@@ -10,6 +10,9 @@ public class PlatformController : MonoBehaviour
     static public readonly string LIVES = "lives";
     static public readonly string IS_HURT = "hurt";
 
+    private int TOTAL_CARDS = 4;
+    private int currentCards = 0;
+
     // Start is called before the first frame update
     public float moveSpeed = 5;
     public float jumpForce = 5;
@@ -28,6 +31,11 @@ public class PlatformController : MonoBehaviour
     Animator animatorController;
 
     Vector3 initialPosition;
+
+    //
+    public GameProgressController gameProgressController; // Referencia al GameProgressController
+    public string nextLevelName; // Nombre de la próxima escena/nivel
+
     private void Awake()
     {
         StopAllCoroutines();
@@ -37,6 +45,22 @@ public class PlatformController : MonoBehaviour
         initialPosition = transform.position;
         textOverlayController.HidePanelInstantly();
         PopulateDictionary();
+        currentCards = 0;
+
+        SetGameProgressController(GameObject.FindObjectOfType<GameProgressController>());
+
+    }
+
+    public void SetGameProgressController(GameProgressController progressController)
+    {
+        if (progressController != null)
+        {
+            gameProgressController = progressController;
+        }
+        else
+        {
+            Debug.LogWarning("GameProgressController recibido es nulo");
+        }
     }
 
     void SetReferences()
@@ -178,9 +202,27 @@ public class PlatformController : MonoBehaviour
 
     }
 
+    //
+    // completar el minijuego y actualizar el progreso
+    public void CompleteMinigame()
+    {
+        if (gameProgressController != null)
+        {
+            gameProgressController.CompleteMinigame();
+        }
+        
+
+        // Cargar la siguiente escena después de completar el minijuego
+        if (!string.IsNullOrEmpty(nextLevelName))
+        {
+            SceneManager.LoadScene(nextLevelName);
+        }
+    }
+
     private void EndGame()
     {
-        SceneManager.LoadScene("MenuScene");
+        
+        SceneManager.LoadScene("MundoSeguridad"); // Luego cargar la siguiente escena
     }
 
     // Fill with the data from json
@@ -207,12 +249,35 @@ public class PlatformController : MonoBehaviour
         }
 
         // ShowPanel(string title, string subtitle, string description, string buttonDescription)
-        textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
+        //textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
+        textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite, EndIfWin);
     }
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("MundoSeguridad");
+    }
+
+    public void UpdateCards()
+    {
+        currentCards++;
+    }
+
+    public void EndIfWin()
+    {
+        if (currentCards == TOTAL_CARDS)
+        {
+
+            if (gameProgressController != null)
+            {
+                gameProgressController.CompleteMinigame(); // Completa el progreso del juego
+            }
+            else
+            {
+                Debug.LogWarning("GameProgressController no encontrado");
+            }
+            SceneManager.LoadScene("MundoSeguridad");
+        }
     }
 
 }

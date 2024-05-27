@@ -21,7 +21,10 @@ public class MinigameController : MonoBehaviour
     {
         if (!minigameCompleted) // Verifica si el minijuego ya se ha completado
         {
-            progressController.CompleteMinigame(); // Llama al método CompleteMinigame del GameProgressController
+            if (progressController != null)
+            {
+                progressController.CompleteMinigame(); // Llama al método CompleteMinigame del GameProgressController
+            }
             minigameCompleted = true; // Marca el minijuego como completado para evitar llamadas duplicadas
             SceneManager.LoadScene(nextSceneName);
         }

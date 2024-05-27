@@ -32,17 +32,14 @@ public class GameProgressController : MonoBehaviour
 
     public void UnlockNextWorld()
     {
-        // Calcula la cantidad de mundos que se deben desbloquear
         int worldsToUnlock = Mathf.FloorToInt(currentProgress / minigamesPerWorld);
 
-        // Itera sobre los mundos que se deben desbloquear
         for (int i = 0; i < worldsToUnlock; i++)
         {
-            // Verifica si el mundo aún no está desbloqueado y está dentro del rango
             if (i < worldsUnlocked.Length && !worldsUnlocked[i])
             {
                 worldsUnlocked[i] = true;
-                UpdateWorldUI(); // Actualiza la interfaz para mostrar que el mundo ha sido desbloqueado
+                UpdateWorldUI();
             }
         }
     }
