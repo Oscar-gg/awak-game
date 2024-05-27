@@ -19,6 +19,7 @@ public class FighterAction : MonoBehaviour
     [SerializeField]
     private GameObject seguridadPrefab;
 
+    //Comunicacion
     [SerializeField]
     private GameObject OutlookPrefab;
 
@@ -36,6 +37,51 @@ public class FighterAction : MonoBehaviour
 
     [SerializeField]
     private GameObject JerarquiaPrefab;
+
+    //Seguridad
+    [SerializeField]
+    private GameObject ConfidencialidadPrefab;
+
+    [SerializeField]
+    private GameObject ContrasenaPrefab;
+
+    [SerializeField]
+    private GameObject HackersPrefab;
+
+    [SerializeField]
+    private GameObject PhishingPrefab;
+
+    //Etica
+    [SerializeField]
+    private GameObject RespetoPrefab;
+
+    [SerializeField]
+    private GameObject IntegridadPrefab;
+
+    [SerializeField]
+    private GameObject ResponsabilidadPrefab;
+
+    [SerializeField]
+    private GameObject ProfesionalidadPrefab;
+
+    [SerializeField]
+    private GameObject CompromisoPrefab;
+
+    [SerializeField]
+    private GameObject TransparenciaPrefab;
+
+    [SerializeField]
+    private GameObject DialogoPrefab;
+
+    [SerializeField]
+    private GameObject EquipoPrefab;
+
+
+
+
+
+
+
 
     private GameObject currentAttack;
 
@@ -90,7 +136,7 @@ public class FighterAction : MonoBehaviour
             seguridadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueSeguridad");
 
-        }//start
+        }//Inicio Comuninacion
         else if (btn.CompareTo("Outlook") == 0)
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
@@ -108,7 +154,7 @@ public class FighterAction : MonoBehaviour
             MobilePrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueMobile");
 
-        }//start2
+        }
         else if (btn.CompareTo("Rainbow") == 0)
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
@@ -126,7 +172,7 @@ public class FighterAction : MonoBehaviour
             MulticulturalPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueMulticultural");
 
-        }//start3
+        }
         else if (btn.CompareTo("SharePoint") == 0)
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
@@ -143,8 +189,117 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellSeis);
             JerarquiaPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueJerarquia");
+        }
+        //Final comuniacaion
+        //Inicio Seguridad
+        else if (btn.CompareTo("Confidencialidad") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("ConfidencialidadSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellUno);
+            ConfidencialidadPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueConfidencialidad");
 
         }
+        else if (btn.CompareTo("Contrasena") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("ContrasenaSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellDos);
+            ContrasenaPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueContrasena");
+
+        }
+        else if (btn.CompareTo("Hackers") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("HackersSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellTres);
+            HackersPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueHackers");
+
+        }
+        else if (btn.CompareTo("Phishing") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("PhishingSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellCuatro);
+            PhishingPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaquePhishing");
+        }
+        //Final Seguridad
+        //Inicio Etica
+        else if (btn.CompareTo("Respeto") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("RespetoSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellUno);
+            respetoPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueRespeto");
+
+        }
+        else if (btn.CompareTo("Integridad") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("IntegridadSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellDos);
+            IntegridadPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueIntegridad");
+
+        }
+        else if (btn.CompareTo("Responsabilidad") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("ResponsabilidadSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellTres);
+            respetoPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueResponsabilidad");
+
+        }
+        else if (btn.CompareTo("Profesionalidad") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("ProfesionalidadSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellCuatro);
+            MulticulturalPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueProfesionalidad");
+        }
+        else if (btn.CompareTo("Compromiso") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("CompromisoSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellUno);
+            CompromisoPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueCompromiso");
+
+        }
+        else if (btn.CompareTo("Transparencia") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("TransparenciaSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellDos);
+            TransparenciaPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueTransparencia");
+
+        }
+        else if (btn.CompareTo("Dialogo") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("DialogoSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellTres);
+            DialogoPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueDialogo");
+
+        }
+        else if (btn.CompareTo("Equipo") == 0)
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("EquipoSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellCuatro);
+            EquipoPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueEquipo");
+        }
+        //Final Etica
 
         else
         {

@@ -63,8 +63,9 @@ public class LightBehaviour : MonoBehaviour
             if (damageCoroutine == null)
             {
                 damageCoroutine = StartCoroutine(DamageRoutine(collision));
+                FindObjectOfType<BossAudioManager>().PlaySound("damage");
             }
-            
+
         }
     }
 

@@ -23,6 +23,7 @@ public class CardCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlatformController.Instance.ShowCard(sp.name, sp);
+            FindObjectOfType<BossAudioManager>().PlaySound("Collect");
             GameObject.Destroy(this.gameObject);
         }
     }
