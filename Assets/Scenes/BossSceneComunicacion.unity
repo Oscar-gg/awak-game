@@ -861,6 +861,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8288443148879200986, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
   m_PrefabInstance: {fileID: 3429683135763786959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508518430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508518432}
+  - component: {fileID: 508518431}
+  m_Layer: 0
+  m_Name: MiniGameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &508518431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508518430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2be650c7c6a5d4aa9ca6537252aa6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: MenuScene
+--- !u!4 &508518432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508518430}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.7687383, y: -10.970854, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532111642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5175,6 +5220,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7107815402331248427, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
   m_PrefabInstance: {fileID: 1917871829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1942580574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942580576}
+  - component: {fileID: 1942580575}
+  m_Layer: 0
+  m_Name: GameProgressController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1942580575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942580574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec364154cebc8a743b4b9c4a925adecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldsUnlocked: 
+  totalMinigames: 6
+  initialProgress: 0
+  minigamesPerWorld: 2
+  currentProgress: 0
+  progressBar: {fileID: 0}
+  progressText: {fileID: 0}
+--- !u!4 &1942580576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942580574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.7687383, y: -10.970854, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1945568216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5282,6 +5378,8 @@ MonoBehaviour:
   fighterStats: {fileID: 0}
   fighterAction: {fileID: 0}
   bosslife: 0
+  nextLevelName: 
+  gameProgressController: {fileID: 0}
 --- !u!4 &1989178888
 Transform:
   m_ObjectHideFlags: 0
@@ -6686,3 +6784,5 @@ SceneRoots:
   - {fileID: 768339658}
   - {fileID: 1947898337}
   - {fileID: 2143811187}
+  - {fileID: 1942580576}
+  - {fileID: 508518432}

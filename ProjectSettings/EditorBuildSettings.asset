@@ -41,4 +41,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoComunicacion.unity
     guid: 7a47e1d9322893c4eadf5fd8e4474f73
+  - enabled: 1
+    path: Assets/Scenes/BossSceneEtica.unity
+    guid: 11d202976b925ba46957a1633b32af34
+  - enabled: 1
+    path: Assets/Scenes/BossSceneSeguridad.unity
+    guid: 92a90ed59fe05b6489746d7621eed7f6
+  - enabled: 1
+    path: Assets/Scenes/MundoSeguridad.unity
+    guid: b007434c6b47cb248a9cb1f99d7d8785
   m_configObjects: {}

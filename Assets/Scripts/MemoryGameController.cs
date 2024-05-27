@@ -4,6 +4,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.VFX;
 
@@ -33,9 +34,15 @@ public class MemoryGameController : MonoBehaviour
 
     private Dictionary<string, GameCard> cardDictionary;
 
+    //
+    public string nextLevelName; // Nombre de la próxima escena/nivel
+
+    public GameProgressController gameProgressController;
+
 
     private void Awake()
     {
+        SetGameProgressController(GameObject.FindObjectOfType<GameProgressController>());
         Instance = this;
         Instance.SetReferences();
 
@@ -193,6 +200,9 @@ public class MemoryGameController : MonoBehaviour
         {
             Debug.Log("Game finished");
             Debug.Log("It took you " + countGuesses + " attempts to finish the game");
+
+            //
+            CompleteGame();
         }
     }
 
@@ -221,5 +231,35 @@ public class MemoryGameController : MonoBehaviour
             cardDictionary.Add(card.image, card);
         }
     }
+
+    public void CompleteGame()
+    {
+        if (gameProgressController != null)
+        {
+            gameProgressController.CompleteMinigame(); // Completa el progreso del juego
+        }
+        else
+        {
+            Debug.LogWarning("GameProgressController no encontrado");
+        }
+
+        // Carga la escena específica después de completar el minijuego
+        SceneManager.LoadScene("MundoComunicacion");
+    }
+
+    public void SetGameProgressController(GameProgressController progressController)
+    {
+        if (progressController != null)
+        {
+            gameProgressController = progressController;
+        }
+        else
+        {
+            Debug.LogWarning("GameProgressController recibido es nulo.");
+        }
+    }
+
+
+
 
 }

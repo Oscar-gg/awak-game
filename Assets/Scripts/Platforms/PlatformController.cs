@@ -28,6 +28,11 @@ public class PlatformController : MonoBehaviour
     Animator animatorController;
 
     Vector3 initialPosition;
+
+    //
+    public GameProgressController gameProgressController; // Referencia al GameProgressController
+    public string nextLevelName; // Nombre de la próxima escena/nivel
+
     private void Awake()
     {
         StopAllCoroutines();
@@ -178,9 +183,27 @@ public class PlatformController : MonoBehaviour
 
     }
 
+    //
+    // completar el minijuego y actualizar el progreso
+    public void CompleteMinigame()
+    {
+        if (gameProgressController != null)
+        {
+            gameProgressController.CompleteMinigame();
+        }
+        
+
+        // Cargar la siguiente escena después de completar el minijuego
+        if (!string.IsNullOrEmpty(nextLevelName))
+        {
+            SceneManager.LoadScene(nextLevelName);
+        }
+    }
+
     private void EndGame()
     {
-        SceneManager.LoadScene("MenuScene");
+        
+        SceneManager.LoadScene("MundoSeguridad"); // Luego cargar la siguiente escena
     }
 
     // Fill with the data from json

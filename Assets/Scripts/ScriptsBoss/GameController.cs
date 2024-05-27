@@ -17,14 +17,12 @@ public class GameController : MonoBehaviour
     public int bosslife;
 
     //
+    public string nextLevelName; // Nombre de la próxima escena/nivel
+
     public GameProgressController gameProgressController;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        gameProgressController = FindObjectOfType<GameProgressController>(); // Encuentra y referencia el GameProgressController
-
-    }
+    
 
     private void Awake()
     {
@@ -35,12 +33,18 @@ public class GameController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    void Start()
+    {
+        gameProgressController = FindObjectOfType<GameProgressController>(); // Encuentra y referencia el GameProgressController
+
+    }
+
     public void ActivateWinScene()
     {
-        SceneManager.LoadScene("WinScene");
-
         //Agregado
         CompleteMinigame(); // Actualiza el progreso al ganar
+
+        SceneManager.LoadScene("WinScene");  
     }
 
     public void ActivateLoseScene()
@@ -107,6 +111,9 @@ public class GameController : MonoBehaviour
 
     public void ActivateEndWinScene()
     {
+        //
+        CompleteMinigame(); // Actualiza el progreso
+
         SceneManager.LoadScene("WinScene");
         playerControllerAna.UpdateOutPlayerController();
         playerControllerAna.UpdateAnimation(PlayerAnimation.AnaWin);
