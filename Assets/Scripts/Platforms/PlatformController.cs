@@ -46,6 +46,21 @@ public class PlatformController : MonoBehaviour
         textOverlayController.HidePanelInstantly();
         PopulateDictionary();
         currentCards = 0;
+
+        SetGameProgressController(GameObject.FindObjectOfType<GameProgressController>());
+
+    }
+
+    public void SetGameProgressController(GameProgressController progressController)
+    {
+        if (progressController != null)
+        {
+            gameProgressController = progressController;
+        }
+        else
+        {
+            Debug.LogWarning("GameProgressController recibido es nulo");
+        }
     }
 
     void SetReferences()
@@ -240,7 +255,7 @@ public class PlatformController : MonoBehaviour
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("MundoSeguridad");
     }
 
     public void UpdateCards()
@@ -252,7 +267,16 @@ public class PlatformController : MonoBehaviour
     {
         if (currentCards == TOTAL_CARDS)
         {
-            SceneManager.LoadScene("MenuScene");
+
+            if (gameProgressController != null)
+            {
+                gameProgressController.CompleteMinigame(); // Completa el progreso del juego
+            }
+            else
+            {
+                Debug.LogWarning("GameProgressController no encontrado");
+            }
+            SceneManager.LoadScene("MundoSeguridad");
         }
     }
 

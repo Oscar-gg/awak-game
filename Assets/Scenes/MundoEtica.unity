@@ -4209,7 +4209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &668232443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4223,7 +4223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MundoEtica
-  sp: {fileID: 0}
 --- !u!114 &668232444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4237,7 +4236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: PlatformScene
-  sp: {fileID: 0}
 --- !u!114 &668232445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4251,7 +4249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MemoryScene
-  sp: {fileID: 0}
 --- !u!114 &668232446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,7 +4262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossScene
-  sp: {fileID: 0}
 --- !u!114 &668232447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4279,7 +4275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: LabeScene
-  sp: {fileID: 0}
 --- !u!4 &668232448
 Transform:
   m_ObjectHideFlags: 0
@@ -4308,7 +4303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossSceneEtica
-  sp: {fileID: 0}
 --- !u!1 &681760917
 GameObject:
   m_ObjectHideFlags: 0

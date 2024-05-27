@@ -5958,6 +5958,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183997157}
   m_CullTransparentMesh: 1
+--- !u!1 &1202079861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202079863}
+  - component: {fileID: 1202079862}
+  m_Layer: 0
+  m_Name: GameControllerProgress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1202079862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202079861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec364154cebc8a743b4b9c4a925adecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldsUnlocked: 
+  totalMinigames: 6
+  initialProgress: 0
+  minigamesPerWorld: 2
+  currentProgress: 0
+  progressBar: {fileID: 0}
+  progressText: {fileID: 0}
+--- !u!4 &1202079863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202079861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7062297, y: -3.213202, z: 6.857044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204212196
 GameObject:
   m_ObjectHideFlags: 0
@@ -8719,6 +8770,51 @@ Transform:
   - {fileID: 276161912}
   m_Father: {fileID: 1204212197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.17}
+--- !u!1 &1895625458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1895625460}
+  - component: {fileID: 1895625459}
+  m_Layer: 0
+  m_Name: GameHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1895625459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895625458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2be650c7c6a5d4aa9ca6537252aa6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: MundoSeguridad
+--- !u!4 &1895625460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895625458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7062297, y: -3.213202, z: 6.857044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919018573
 GameObject:
   m_ObjectHideFlags: 0
@@ -9879,4 +9975,5 @@ SceneRoots:
   - {fileID: 707638967}
   - {fileID: 1740778743}
   - {fileID: 1372472938}
-  - {fileID: 942953507}
+  - {fileID: 1202079863}
+  - {fileID: 1895625460}
