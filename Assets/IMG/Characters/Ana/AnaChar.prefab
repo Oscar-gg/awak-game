@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3107096295917554734}
   - component: {fileID: 842759034589943927}
   - component: {fileID: 2900770581572524579}
-  - component: {fileID: 145954561871189873}
+  - component: {fileID: 6117860589990382401}
   m_Layer: 0
   m_Name: AnaChar
   m_TagString: Player
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &145954561871189873
+--- !u!114 &6117860589990382401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3776503733803601886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd75aa755bd58b4aa9334bb8cbeca5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 427bc42c25361be45a80479f8a833df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sr: {fileID: 842759034589943927}
+  respetoPrefab: {fileID: 0}
+  honestidadPrefab: {fileID: 0}
+  seguridadPrefab: {fileID: 0}

@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public UIController uiController;
     public BossController bossController;
     public PlayerControllerAna playerControllerAna;
+    public FighterStats fighterStats;
+    public FighterAction fighterAction;
 
     public int bosslife;
 
