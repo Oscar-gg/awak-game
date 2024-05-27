@@ -1,0 +1,40 @@
+{
+    "cardInfo" : [
+            {
+                "title" : "Explicación",
+                "subtitle" : "Estructura Proyectizada",
+                "description" : "Awaq cuenta con una estructura proyectizada, donde las comunicaciones son constantes y eficientes y no hay que pasar por una jerarquía extensa.",
+                "image": "Proyectizada"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Outlook",
+                "description" : "En esta aplicación se reciben correos internos como externos. Además, se usa para registrarte en páginas externas de AWAQ para actividades relacionadas.",
+                "image": "Outlook"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Multiculturalidad",
+                "description" : " Se colabora en un ambiente libre para todos, donde se respetan creencias, culturas y nacionalidades. Priorizando siempre el respeto.",
+                "image": "Multicultural"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Móvil",
+                "description" : "Se aconseja tener todas las aplicaciones de comunicación descargadas en el móvil para tener un acceso más fácil a las mismas.",
+                "image": "Mobile"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Rainbow",
+                "description" : "Mantiene todos tus contactos enganchados en conversaciones para poder colaborar en distintos proyectos donde puedas participar.",
+                "image": "Rainbow"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Sharepoint",
+                "description" : "Se utiliza como método de almacenamiento y repositorio.",
+                "image": "Sharepoint"
+            }
+    ]
+}

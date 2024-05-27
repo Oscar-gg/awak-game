@@ -1,0 +1,28 @@
+{
+    "cardInfo" : [
+            {
+                "title" : "Explicación",
+                "subtitle" : "Confidencialidad",
+                "description" : "Garantizar que la información sensible se mantenga privada y solo esté accesible para aquellos autorizados a verla.",
+                "image": "Confidential"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Contraseña fuerte",
+                "description" : "En esta aplicación se reciben correos internos como externos. Además, se usa para registrarte en páginas externas de AWAQ para actividades relacionadas.",
+                "image": "Password"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Defensa contra hackers",
+                "description" : " Comprobar remitentes, analizar mensajes y buscar inconsistencia de correos o mensajes sospechosos que se reciben, además de reportarlo y alertar a seguridad@somosawaq.org.",
+                "image": "Hackers"
+            },
+            {
+                "title" : "Explicación",
+                "subtitle" : "Detección de phishing",
+                "description" : " El phishing sucede cuando terceros se hacen pasar por otra entidad y nos solicitan credenciales para robar información, se puede reducir al comprobar el remitente, verificar gramática y no haciendo clic en enlaces no autorizados.",
+                "image": "Phishing"
+            }
+    ]
+}
