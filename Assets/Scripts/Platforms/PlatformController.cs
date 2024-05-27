@@ -10,6 +10,9 @@ public class PlatformController : MonoBehaviour
     static public readonly string LIVES = "lives";
     static public readonly string IS_HURT = "hurt";
 
+    private int TOTAL_CARDS = 4;
+    private int currentCards = 0;
+
     // Start is called before the first frame update
     public float moveSpeed = 5;
     public float jumpForce = 5;
@@ -37,6 +40,7 @@ public class PlatformController : MonoBehaviour
         initialPosition = transform.position;
         textOverlayController.HidePanelInstantly();
         PopulateDictionary();
+        currentCards = 0;
     }
 
     void SetReferences()
@@ -207,12 +211,26 @@ public class PlatformController : MonoBehaviour
         }
 
         // ShowPanel(string title, string subtitle, string description, string buttonDescription)
-        textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
+        //textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
+        textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite, EndIfWin);
     }
 
     public void GoToMenu()
     {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void UpdateCards()
+    {
+        currentCards++;
+    }
+
+    public void EndIfWin()
+    {
+        if (currentCards == TOTAL_CARDS)
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,28 @@ public class TextOverlayController : MonoBehaviour
     Text description;
     Text buttonDescription;
     Image renderImage;
+    Action buttonRes;
 
 
     public void ShowPanel(string title, string subtitle, string description, string buttonDescription, Sprite sp)
     {
+        buttonRes = IgnoreAction;
         //Debug.Log(sprite.name);
         renderImage.overrideSprite = sp;
         
+        this.title.text = title;
+        this.subtitle.text = subtitle;
+        this.description.text = description;
+        this.buttonDescription.text = buttonDescription;
+        StartCoroutine(Fade(0.025f, 1, 0.05f, true));
+    }
+
+    public void ShowPanel(string title, string subtitle, string description, string buttonDescription, Sprite sp, Action action)
+    {
+        buttonRes = action;
+        //Debug.Log(sprite.name);
+        renderImage.overrideSprite = sp;
+
         this.title.text = title;
         this.subtitle.text = subtitle;
         this.description.text = description;
@@ -35,6 +51,7 @@ public class TextOverlayController : MonoBehaviour
     public void HidePanel()
     {
         StartCoroutine(Fade(0.025f, 0, 0.05f, false));
+        buttonRes();
     }
 
     public void HidePanelInstantly()
@@ -86,6 +103,11 @@ public class TextOverlayController : MonoBehaviour
 
         // Attach fade out callback to button
         panelButton.onClick.AddListener(() => HidePanel());
+    }
+
+    void IgnoreAction()
+    {
+
     }
 
 }

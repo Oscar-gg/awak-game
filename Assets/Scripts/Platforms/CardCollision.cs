@@ -24,6 +24,7 @@ public class CardCollision : MonoBehaviour
         {
             PlatformController.Instance.ShowCard(sp.name, sp);
             FindObjectOfType<BossAudioManager>().PlaySound("Collect");
+            collision.gameObject.GetComponent<PlatformController>().UpdateCards();
             GameObject.Destroy(this.gameObject);
         }
     }
