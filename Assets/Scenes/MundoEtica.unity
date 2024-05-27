@@ -4029,7 +4029,7 @@ GameObject:
   - component: {fileID: 659572551}
   - component: {fileID: 659572550}
   m_Layer: 0
-  m_Name: SquareJefePrueba
+  m_Name: SquareJefe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8b3df4ca766844add8f77df5916be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: MenuScene
+  scene: BossSceneEtica
   popupMessage: "\xBFDeseas luchar contra el jefe?"
 --- !u!50 &659572551
 Rigidbody2D:
@@ -4202,6 +4202,7 @@ GameObject:
   - component: {fileID: 668232445}
   - component: {fileID: 668232444}
   - component: {fileID: 668232443}
+  - component: {fileID: 668232449}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -4222,6 +4223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MundoEtica
+  sp: {fileID: 0}
 --- !u!114 &668232444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4235,6 +4237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: PlatformScene
+  sp: {fileID: 0}
 --- !u!114 &668232445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4248,6 +4251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MemoryScene
+  sp: {fileID: 0}
 --- !u!114 &668232446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4261,6 +4265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossScene
+  sp: {fileID: 0}
 --- !u!114 &668232447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4274,6 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: LabeScene
+  sp: {fileID: 0}
 --- !u!4 &668232448
 Transform:
   m_ObjectHideFlags: 0
@@ -4289,6 +4295,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668232449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668232442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: BossSceneEtica
+  sp: {fileID: 0}
 --- !u!1 &681760917
 GameObject:
   m_ObjectHideFlags: 0
@@ -16075,6 +16095,7 @@ MonoBehaviour:
   worldsUnlocked: 
   totalMinigames: 6
   initialProgress: 0
+  minigamesPerWorld: 2
   currentProgress: 0
   progressBar: {fileID: 1240297486}
   progressText: {fileID: 42990980}

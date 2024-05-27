@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 337995244}
   - component: {fileID: 337995243}
   m_Layer: 0
-  m_Name: SquareJefePrueba
+  m_Name: SquareJefe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8b3df4ca766844add8f77df5916be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: MenuScene
+  scene: BossSceneComunicacion
   popupMessage: "\xBFDeseas luchar contra el jefe?"
 --- !u!50 &337995244
 Rigidbody2D:
@@ -4139,6 +4139,7 @@ MonoBehaviour:
   worldsUnlocked: 
   totalMinigames: 6
   initialProgress: 0
+  minigamesPerWorld: 2
   currentProgress: 0
   progressBar: {fileID: 50700165}
   progressText: {fileID: 1792412187}
@@ -15473,7 +15474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1273622664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15481,12 +15482,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273622663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: LabeScene
+  sp: {fileID: 0}
 --- !u!114 &1273622665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15494,12 +15496,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273622663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MundoEtica
+  sp: {fileID: 0}
 --- !u!114 &1273622666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15507,12 +15510,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273622663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: PlatformScene
+  sp: {fileID: 0}
 --- !u!114 &1273622667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15526,6 +15530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MemoryScene
+  sp: {fileID: 0}
 --- !u!114 &1273622668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15538,7 +15543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: BossScene
+  sceneName: BossSceneComunicacion
+  sp: {fileID: 0}
 --- !u!4 &1273622669
 Transform:
   m_ObjectHideFlags: 0
@@ -15561,12 +15567,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273622663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d0107e6d30bc0498e343e83cf4c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MundoComunicacion
+  sp: {fileID: 0}
 --- !u!1 &1324807325
 GameObject:
   m_ObjectHideFlags: 0
