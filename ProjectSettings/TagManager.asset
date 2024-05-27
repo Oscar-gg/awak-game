@@ -7,6 +7,17 @@ TagManager:
   - Hero
   - Enemy
   - Dead
+  - Explanation
+  - cofre3
+  - salir
+  - cofre1
+  - cofre2
+  - cofre4
+  - cofre5
+  - cofre6
+  - cofre7
+  - cofre8
+  - cofre9
   layers:
   - Default
   - TransparentFX
