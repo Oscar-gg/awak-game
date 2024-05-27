@@ -75,5 +75,6 @@ public class TempCoroutineRunner : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         popup.SetActive(true);
-        Destroy(gameObject); 
+        Destroy(gameObject);
+    }
 }

@@ -208,4 +208,9 @@ public class PlatformController : MonoBehaviour
         textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite);
     }
 
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
 }
