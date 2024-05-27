@@ -6,6 +6,7 @@ public class GameProgressController : MonoBehaviour
     public bool[] worldsUnlocked;
     public int totalMinigames = 6; // Total de minijuegos
     public float initialProgress = 0f; // Progreso inicial
+    public int minigamesPerWorld = 2; // Número de minijuegos por mundo
 
     public float currentProgress = 0f;
     public Image progressBar; // Barra de progreso UI
@@ -26,6 +27,23 @@ public class GameProgressController : MonoBehaviour
         {
             worldsUnlocked[worldIndex] = true;
             UpdateWorldUI();
+        }
+    }
+
+    public void UnlockNextWorld()
+    {
+        // Calcula la cantidad de mundos que se deben desbloquear
+        int worldsToUnlock = Mathf.FloorToInt(currentProgress / minigamesPerWorld);
+
+        // Itera sobre los mundos que se deben desbloquear
+        for (int i = 0; i < worldsToUnlock; i++)
+        {
+            // Verifica si el mundo aún no está desbloqueado y está dentro del rango
+            if (i < worldsUnlocked.Length && !worldsUnlocked[i])
+            {
+                worldsUnlocked[i] = true;
+                UpdateWorldUI(); // Actualiza la interfaz para mostrar que el mundo ha sido desbloqueado
+            }
         }
     }
 
