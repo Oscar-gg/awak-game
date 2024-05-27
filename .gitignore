@@ -17,6 +17,7 @@
 /[Mm]emoryCaptures/
 
 Assets/Scripts/AzureAdAuth.asset
+Assets/Scripts/AzureAdAuth.asset.meta
 .env
 
 # Recordings can get excessive in size

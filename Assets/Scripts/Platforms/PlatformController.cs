@@ -64,7 +64,9 @@ public class PlatformController : MonoBehaviour
         {
             if (jumpsRemaining > 0)
             {
+
                 rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Emular salto agregando vector de fuerza
+                FindObjectOfType<BossAudioManager>().PlaySound("Jump");
                 jumpsRemaining--; // Reducir cantidad de saltos disponibles
             }
         }

@@ -91,7 +91,11 @@ public class MemoryGameController : MonoBehaviour
 
         if (!firstGuess)
         {
+
             firstGuess = true;
+
+            FindObjectOfType<BossAudioManager>().PlaySound("flip");
+
 
             firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
 
@@ -101,11 +105,13 @@ public class MemoryGameController : MonoBehaviour
 
         } else if (!secondGuess)
         {
+            FindObjectOfType<BossAudioManager>().PlaySound("flip");
 
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             
             if (secondGuessIndex == firstGuessIndex)
                 return;
+            
 
             secondGuess = true;
             
@@ -139,6 +145,8 @@ public class MemoryGameController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         if (firstGuessPuzzle == secondGuessPuzzle)
         {
+            FindObjectOfType<BossAudioManager>().PlaySound("match");
+
             yield return new WaitForSeconds(0.5f);
             
             cards[firstGuessIndex].interactable = false;
