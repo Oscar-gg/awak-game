@@ -7,6 +7,10 @@ public class GameProgressController : MonoBehaviour
     public int totalMinigames = 6; // Total de minijuegos
     public float initialProgress = 0f; // Progreso inicial
 
+
+    public int levelsCompleted = 0; // Número de niveles completados
+    public int levelsPerWorld = 2; // Número de niveles para desbloquear un nuevo mundo
+
     public float currentProgress = 0f;
     public Image progressBar; // Barra de progreso UI
     public Text progressText; // Texto que muestra el progreso
@@ -30,13 +34,21 @@ public class GameProgressController : MonoBehaviour
     }
 
     public void CompleteMinigame()
-    {
-        Debug.Log("Minigame completed!");
-        currentProgress += 1f;
-        if (currentProgress > totalMinigames) currentProgress = totalMinigames;
-        SaveProgress(currentProgress); // Pasamos el progreso actual como argumento
-        UpdateProgressUI();
-    }
+{
+    Debug.Log("Minigame completed!");
+    currentProgress += 1f;
+    levelsCompleted++; // Incrementa el número de niveles completados
+    if (currentProgress > totalMinigames) currentProgress = totalMinigames;
+    SaveProgress(currentProgress); // Pasamos el progreso actual como argumento
+    UpdateProgressUI();
+
+    //// Verifica si se debe desbloquear un nuevo mundo
+    //if (levelsCompleted % levelsPerWorld == 0)
+    //{
+    //    UnlockNextWorld(); // Desbloquea un nuevo mundo
+    //}
+}
+
 
 
 
