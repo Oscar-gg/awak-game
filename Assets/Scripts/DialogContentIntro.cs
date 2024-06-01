@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
 
 public class DialogContentIntro : MonoBehaviour
 {
@@ -14,13 +16,8 @@ public class DialogContentIntro : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        DialogController dialogController = FindObjectOfType<DialogController>();
-
-        string[] dialogs = { "Bienvenido a AWAQ Estaciones Biológicas. Espero te encuentres muy bien.",
-                             "Aquí en AWAQ nos encargamos de la conservación de los ecosistemas.",
-                             "Esto lo logramos por medio de proyectos de reforestación y de biomonitorización."};
-
-        dialogController.ShowPanel("Instructor Awaq", dialogs, sp, changeScene);
+        DialogLoader.InitializeClass(FindObjectOfType<DialogController>(), GameObject.Find("ButtonExplanation").GetComponent<Button>(), changeScene);
+        DialogLoader.DisplayDialog();
     }
 
     public void changeScene()

@@ -52,6 +52,16 @@ public class DialogController : MonoBehaviour
         this.dialogs = dialogs;
         currentDialog = 0;
         this.dialog.text = "";
+
+        if (dialogs.Length > 1)
+        {
+            nextText.text = "Siguiente";
+        } else
+        {
+            nextText.text = "Finalizar";
+        }
+       
+
         PreviousButton(false);
         StartCoroutine(Fade(0.025f, 1, 0.05f, true, true));
     }
@@ -111,6 +121,7 @@ public class DialogController : MonoBehaviour
     private void ClickedNext()
     {
         currentDialog++;
+        currentDialog = Mathf.Min(currentDialog, dialogs.Length);
         UpdatePreviousButton();
 
         // Finalizar
@@ -149,16 +160,18 @@ public class DialogController : MonoBehaviour
 
     IEnumerator UpdateText()
     {
-        
         dialog.text = "";
         
         yield return new WaitForSeconds(DELAY_TO_WRITE);
-        
-        foreach (char Character in dialogs[currentDialog])
-        {
-            dialog.text += Character;
-            yield return new WaitForSeconds(DIALOG_SPEED);
+           
+        if (currentDialog < dialogs.Length) {
+            foreach (char Character in dialogs[currentDialog])
+            {
+                dialog.text += Character;
+                yield return new WaitForSeconds(DIALOG_SPEED);
+            }
         }
+        
         
         dialogCoro = null;
         
