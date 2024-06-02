@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement; //cambio de escenas
 
 public class LoseScript : MonoBehaviour
 {
+
+    private string ActualScene;
     public Text resultText;
     public GameObject anaSprite;
     // Start is called before the first frame update
@@ -32,6 +34,52 @@ public class LoseScript : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
+
+
+    public void ExitBoss()
+    {
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "LoseSceneComunicacion")
+        {
+            SceneManager.LoadScene("MundoComunicacion");
+        }
+        else if (ActualScene == "LoseSceneEtica")
+        {
+            SceneManager.LoadScene("MundoEtica");
+        }
+        else if (ActualScene == "LoseSceneSeguridad")
+        {
+            SceneManager.LoadScene("MundoSeguridad");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+    }
+
+    public void ReintentarBoss()
+    {
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "LoseSceneComunicacion")
+        {
+            SceneManager.LoadScene("BossSceneComunicacion");
+        }
+        else if (ActualScene == "LoseSceneEtica")
+        {
+            SceneManager.LoadScene("BossSceneEtica");
+        }
+        else if (ActualScene == "LoseSceneSeguridad")
+        {
+            SceneManager.LoadScene("BossSceneSeguridad");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+    }
+
 
     // Update is called once per frame
     void Update()

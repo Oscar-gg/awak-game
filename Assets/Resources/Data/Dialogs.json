@@ -1,0 +1,96 @@
+{
+    "dialogs":
+    [
+        {
+            "scene_name": "introScene",
+            "dialogs": ["Bienvenido a AWAQ Estaciones Biológicas. Espero te encuentres muy bien.",
+                        "Aquí en AWAQ nos encargamos de la conservación de los ecosistemas.",
+                        "Esto lo logramos por medio de proyectos de reforestación y de biomonitorización."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "LabeScene",
+            "dialogs": ["Tendrás que explorar esta mazmorra con valentía, para poder recolectar los conceptos de Ética, los cuales ayudan a mantener un buen ambiente en AWAQ.",
+                        "Cada que recolectes uno, se te explicará su importancia.",
+                        "¡Trata de aprendértela, que la ocuparás más adelante!"],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "MemoryScene",
+            "dialogs": ["En este minijuego tendremos que reforzar la memoria para aprender de las herramientas que utilizamos en Awaq.",
+                        "¡Con la ayuda de estas herramientas podemos unirnos y ser más fuertes!"],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "MenuScene",
+            "dialogs": ["Este es el menú. Aquí verás los niveles.",
+                        "Tendrás que completarlos para poder superar tu travesía en AWAQ.",
+                        "Explora como gustes, pero recuerda que es muy importante completar los niveles."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "MundoComunicacion",
+            "dialogs": ["Aquí aprenderás como es que nos comunicamos tanto interna como externamente en AWAQ.",
+                        "Además, aprenderás de las políticas para tener una conversación respetuosa."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "MundoEtica",
+            "dialogs": ["En esta parte aprenderás los principios éticos y pautas de conducta que se usan para mantener un buen orden y ambiente en AWAQ.",
+                        "¡Buena suerte!"],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "MundoSeguridad",
+            "dialogs": ["Las buenas prácticas de la seguridad como la seguridad cibernética son muy importantes para mantener lejos a las amenazas.", 
+                        "Para ello te diremos varias manejar en que puedes evitar los ataques de estas y protegerte mejor."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "PlatformScene",
+            "dialogs": ["Aquí vas a tener que demostrar tus habilidades pasando este juego de plataforma.", 
+                        "Recolecta los conceptos de Seguridad. Cada que lo hagas, se te explicará su importancia.",
+                        "¡Trata de aprendértelos, que los ocuparás más adelante!"],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "WinScene",
+            "dialogs": ["dialog2", "dialog3"],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "BossSceneComunicacion",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },        
+        {
+            "scene_name": "BossSceneEtica",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "BossSceneSeguridad",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        }
+
+    ]
+}
