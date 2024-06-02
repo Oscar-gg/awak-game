@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
 
     public int bosslife;
 
-    //
+    private string ActualScene;
+
     public string nextLevelName; // Nombre de la próxima escena/nivel
 
     public GameProgressController gameProgressController;
@@ -103,7 +104,26 @@ public class GameController : MonoBehaviour
 
     public void ActivateEndLoseScene()
     {
-        SceneManager.LoadScene("LoseScene");
+
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "BossSceneComunicacion")
+        {
+            SceneManager.LoadScene("LoseSceneComunicacion");
+        }
+        else if (ActualScene == "BossSceneEtica")
+        {
+            SceneManager.LoadScene("LoseSceneEtica");
+        }
+        else if (ActualScene == "BossSceneSeguridad")
+        {
+            SceneManager.LoadScene("LoseSceneSeguridad");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+
         playerControllerAna.UpdateOutPlayerController();
         playerControllerAna.UpdateAnimation(PlayerAnimation.AnaLose);
 
@@ -111,10 +131,28 @@ public class GameController : MonoBehaviour
 
     public void ActivateEndWinScene()
     {
-        //
+
         CompleteMinigame(); // Actualiza el progreso
 
-        SceneManager.LoadScene("WinScene");
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "BossSceneComunicacion")
+        {
+            SceneManager.LoadScene("WinSceneComunicacion");
+        }
+        else if (ActualScene == "BossSceneEtica")
+        {
+            SceneManager.LoadScene("WinSceneEtica");
+        }
+        else if (ActualScene == "BossSceneSeguridad")
+        {
+            SceneManager.LoadScene("WinSceneSeguridad");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+
         playerControllerAna.UpdateOutPlayerController();
         playerControllerAna.UpdateAnimation(PlayerAnimation.AnaWin);
 

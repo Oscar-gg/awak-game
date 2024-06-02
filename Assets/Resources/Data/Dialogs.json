@@ -66,6 +66,30 @@
             "dialogs": ["dialog2", "dialog3"],
             "character_name": "Instructor Awaq",
             "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "BossSceneComunicacion",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },        
+        {
+            "scene_name": "BossSceneEtica",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "BossSceneSeguridad",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y buscar el hechizo que más se adecue a su descripción.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
         }
 
     ]

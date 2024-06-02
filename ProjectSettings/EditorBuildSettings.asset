@@ -50,4 +50,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoSeguridad.unity
     guid: b007434c6b47cb248a9cb1f99d7d8785
+  - enabled: 1
+    path: Assets/Scenes/LoseSceneComunicacion.unity
+    guid: 93e4c4168ef4f6747b3b734ddaabbe33
+  - enabled: 1
+    path: Assets/Scenes/LoseSceneEtica.unity
+    guid: 6706d1af9093da64499b2bd7cce43172
+  - enabled: 1
+    path: Assets/Scenes/LoseSceneSeguridad.unity
+    guid: c7f4a51655010914aa48556284b38d43
+  - enabled: 1
+    path: Assets/Scenes/WinSceneComunicacion.unity
+    guid: 544f204315309644ba37941f03802e1e
+  - enabled: 1
+    path: Assets/Scenes/WinSceneEtica.unity
+    guid: a6e6967939088fb4cbe8e74056a211fb
+  - enabled: 1
+    path: Assets/Scenes/WinSceneSeguridad.unity
+    guid: 4580301e09070234da38ac4b8e1c9835
   m_configObjects: {}

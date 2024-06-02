@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe91b245523c4384583e1e9b8ed9746d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resultText: {fileID: 1575768778}
+  WinText: {fileID: 1575768778}
   anaSprite: {fileID: 1466344861}
 --- !u!1 &795581836
 GameObject:
@@ -461,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 376}
-  m_SizeDelta: {x: -1222.61, y: -1212.69}
+  m_AnchoredPosition: {x: 0, y: 383.59}
+  m_SizeDelta: {x: -865.71, y: -1098.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795581838
 MonoBehaviour:
@@ -667,7 +667,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 663109830}
         m_TargetAssemblyTypeName: WinScript, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: WinBoss
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1050,7 +1050,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 663109830}
         m_TargetAssemblyTypeName: WinScript, Assembly-CSharp
-        m_MethodName: StartToPlay
+        m_MethodName: ContinueBoss
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1211,8 +1211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.16, y: 0}
-  m_SizeDelta: {x: 940.36, y: 198.05}
+  m_AnchoredPosition: {x: 1.16, y: -3.78}
+  m_SizeDelta: {x: 1426.34, y: 486.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575768778
 MonoBehaviour:
@@ -1236,7 +1236,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9e4110f52397ddd4cba345a16549b28b, type: 3}
-    m_FontSize: 60
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5

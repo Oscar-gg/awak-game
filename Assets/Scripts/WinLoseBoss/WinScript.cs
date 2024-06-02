@@ -8,13 +8,17 @@ using UnityEngine.SceneManagement; //cambio de escenas
 
 public class WinScript : MonoBehaviour
 {
-    public Text resultText;
+    private string ActualScene;
+
+    public Text WinText;
+
     public GameObject anaSprite;
     // Start is called before the first frame update
     void Start()
     {
         setWinAnimation();
-        resultText.text = "¡Felicitaciones, tu siguiente aventura aguarda!";
+        GetLevelText();
+
     }
     void setWinAnimation()
     {
@@ -32,6 +36,70 @@ public class WinScript : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
+
+    public void WinBoss()
+    {
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "WinSceneComunicacion")
+        {
+            SceneManager.LoadScene("MundoComunicacion");
+        }
+        else if (ActualScene == "LoseSceneEtica")
+        {
+            SceneManager.LoadScene("MundoEtica");
+        }
+        else if (ActualScene == "WinSceneSeguridad")
+        {
+            SceneManager.LoadScene("MundoSeguridad");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+    }
+
+    public void WinEtica()
+    {
+        SceneManager.LoadScene("MundoEtica");
+    }
+
+    public void WinSeguridad()
+    {
+        SceneManager.LoadScene("MundoSeguridad");
+    }
+
+    public void WinComunicacion()
+    {
+        SceneManager.LoadScene("MundoComunicacion");
+    }
+    public void ContinueBoss()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public void GetLevelText()
+    {
+        ActualScene = SceneManager.GetActiveScene().name;
+
+        if (ActualScene == "WinSceneComunicacion")
+        {
+            WinText.text = "Parece ser que un nuevo poder ha despertado en ti, el poder de comunicarte efectivamente con todos los Rangers de AWAQ. Gracias a esta vas a poder llevar a cabo todos los proyectos que tengas. Pero tu aventura continua, ¡sigue adelante!\r\n";
+        }
+        else if (ActualScene == "WinSceneEtica")
+        {
+            WinText.text = "Tienes la suficiente capacidad, valentía y ética para poder ser una gran persona y Ranger durante toda tu travesía en AWAQ. Pero aun tu aventura no termina, ¡sigue adelante!\r\n";
+        }
+        else if (ActualScene == "WinSceneSeguridad")
+        {
+            WinText.text = "Ahora eres capaz de proteger tu seguridad y evitar cualquiera amenaza durante tu travesía en AWAQ. Podrás hacer todas tus actividades de manera más segura. Pero esto no es todo, tu aventura continua, ¡sigue adelante!\r\n";
+        }
+        else
+        {
+            WinText.text = "Felicitaciones, tu siguiente aventura aguarda!";
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
