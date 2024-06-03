@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     private float cameraInitialPosY;
     private float playerInitialPosY;
 
-    private int currCameraPos = 0;
+    private int currCameraPosY = 0;
 
     private static readonly float MOVEMENT_UNIT = 1.5f;
     private static readonly float MOVEMENT_DELAY = 0.05f;
@@ -29,10 +29,11 @@ public class CameraMovement : MonoBehaviour
         m_Camera = GetComponent<Camera>();
         player = GameObject.Find("AnaPlatforms");
         cameraInitialPosY = m_Camera.transform.position.y;
+
         playerInitialPosY = player.transform.position.y;
     }
 
-    IEnumerator MoveCamera(int finalPose)
+    IEnumerator MoveCameraY(int finalPose)
     {
         float targetPose = cameraInitialPosY + MOVEMENT_UNIT * finalPose;
 
@@ -54,31 +55,30 @@ public class CameraMovement : MonoBehaviour
             float delta = Mathf.Abs(targetPose - m_Camera.transform.position.y) * DISTANCE_ADDED_SPEED;
             yield return new WaitForSeconds(MOVEMENT_DELAY / (1 + delta));
         }
-
+        cameraMovement = null;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
     {
         float heightDiff = player.transform.position.y - playerInitialPosY;
-        int nextPose = (int)(heightDiff / MOVEMENT_UNIT);
-        nextPose = Mathf.Min(nextPose, MAX_POS);
-        
-        if (nextPose != currCameraPos)
+
+        int nextPoseY = (int)(heightDiff / MOVEMENT_UNIT);
+        nextPoseY = Mathf.Min(nextPoseY, MAX_POS);
+
+   
+
+        if (nextPoseY != currCameraPosY)
         {
             if (cameraMovement != null)
             {
                 StopCoroutine(cameraMovement);
             }
-            cameraMovement = StartCoroutine(MoveCamera(nextPose));
-            currCameraPos = nextPose;
+            cameraMovement = StartCoroutine(MoveCameraY(nextPoseY));
+            currCameraPosY = nextPoseY;
+
         }
 
-        
     }
 }
