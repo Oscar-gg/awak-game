@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class GameProgressController : MonoBehaviour
 {
     public bool[] worldsUnlocked;
-    public int totalMinigames = 6; // Total de minijuegos
+    public int totalMinigames = 8; // Total de minijuegos
     public float initialProgress = 0f; // Progreso inicial
     public int minigamesPerWorld = 2; // Número de minijuegos por mundo
 
@@ -38,6 +38,8 @@ public class GameProgressController : MonoBehaviour
         {
             if (i < worldsUnlocked.Length && !worldsUnlocked[i])
             {
+                Debug.Log(worldsUnlocked);
+                Debug.Log(worldsToUnlock);
                 worldsUnlocked[i] = true;
                 UpdateWorldUI();
             }
@@ -75,16 +77,16 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
-    private void ResetProgress()
-    {
-        Debug.Log("Resetting progress");
-        PlayerPrefs.DeleteKey("CurrentProgress");  // Borra el progreso anterior
-        for (int i = 0; i < worldsUnlocked.Length; i++)
-        {
-            PlayerPrefs.DeleteKey("WorldUnlocked_" + i);  // Borra el estado de desbloqueo de los mundos
-        }
-        PlayerPrefs.Save();
-    }
+    //private void ResetProgress()
+    //{
+    //    Debug.Log("Resetting progress");
+    //    PlayerPrefs.DeleteKey("CurrentProgress");  // Borra el progreso anterior
+    //    for (int i = 0; i < worldsUnlocked.Length; i++)
+    //    {
+    //        PlayerPrefs.DeleteKey("WorldUnlocked_" + i);  // Borra el estado de desbloqueo de los mundos
+    //    }
+    //    PlayerPrefs.Save();
+    //}
 
     private void UpdateProgressUI()
     {
@@ -94,23 +96,33 @@ public class GameProgressController : MonoBehaviour
             progressBar.fillAmount = currentProgress / totalMinigames;
             Debug.Log("ProgressBar updated: " + progressBar.fillAmount);
         }
+        else
+        {
+            Debug.LogWarning("ProgressBar is null!");
+        }
+
         if (progressText != null)
         {
             float percentage = (currentProgress / totalMinigames) * 100f;
             progressText.text = percentage.ToString("F1") + "%";
             Debug.Log("ProgressText updated: " + progressText.text);
         }
+        else
+        {
+            Debug.LogWarning("ProgressText is null!");
+        }
     }
+
 
 
 
 
     private void UpdateWorldUI()
     {
-        WorldColliderController[] worldControllers = FindObjectsOfType<WorldColliderController>();
+        WorldController[] worldControllers = FindObjectsOfType<WorldController>();
         foreach (var controller in worldControllers)
         {
-            controller.UpdateWorldState();
+            controller.UpdateWorld();
         }
     }
 

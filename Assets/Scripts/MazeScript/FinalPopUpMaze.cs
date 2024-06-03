@@ -10,11 +10,11 @@ public class FinalPopUpMaze : MonoBehaviour
 {
     public GameObject FinalPopMaze;
     private MinigameController completionHandler;
-    private int totalCofres = 1;
+    private int totalCofres = 9; //Cantidad total de cofres que se deberan de recoger 
     private List<string> collidedCofres = new List<string>();
     public float delayBeforeShowingPopup = 1f; 
 
-    //private MinigameCompletionHandler completionHandler; // Agregar a todas las funciones de los minijuegos
+    
 
     void Start()
     {

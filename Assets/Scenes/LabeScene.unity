@@ -7006,7 +7006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &90814322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7652,7 +7652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &272902020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8591,6 +8591,7 @@ MonoBehaviour:
   worldsUnlocked: 
   totalMinigames: 6
   initialProgress: 0
+  minigamesPerWorld: 2
   currentProgress: 0
   progressBar: {fileID: 0}
   progressText: {fileID: 0}
@@ -8941,7 +8942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinalPopMaze: {fileID: 531852633}
-  delayBeforeShowingPopup: 10
+  delayBeforeShowingPopup: 6
 --- !u!1001 &570120025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52496,7 +52497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!114 &715943540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53871,7 +53872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &1199960068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54440,7 +54441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &1367661798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55647,7 +55648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &1684734100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56659,7 +56660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &1929186842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57032,6 +57033,8 @@ MonoBehaviour:
   fighterStats: {fileID: 0}
   fighterAction: {fileID: 0}
   bosslife: 0
+  nextLevelName: 
+  gameProgressController: {fileID: 0}
 --- !u!4 &1956198070
 Transform:
   m_ObjectHideFlags: 0
@@ -57659,7 +57662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpPrefab: {fileID: 646687679}
   popupMessageText: {fileID: 273596215}
-  finalPopUpMaze: {fileID: 0}
+  finalPopUpMaze: {fileID: 531852638}
 --- !u!61 &2137504045
 BoxCollider2D:
   m_ObjectHideFlags: 0

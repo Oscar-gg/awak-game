@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoSeguridad.unity
     guid: b007434c6b47cb248a9cb1f99d7d8785
+  - enabled: 1
+    path: Assets/Scenes/MundoTEDI.unity
+    guid: bd2e54196780e7c4fada3af728f47ca0
   m_configObjects: {}
