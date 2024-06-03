@@ -99,6 +99,8 @@ public class MenuPausa : MonoBehaviour
     {
         // Asegurarse de que el menú de pausa esté desactivado al iniciar
         menuPausa.SetActive(false);
-        menuGlosario.SetActive(false);
+        
+        if (menuGlosario != null)
+            menuGlosario.SetActive(false);
     }
 }
