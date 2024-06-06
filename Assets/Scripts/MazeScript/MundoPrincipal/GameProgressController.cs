@@ -14,11 +14,8 @@ public class GameProgressController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("GameProgressController started");
         LoadProgress();
-        Debug.Log("Progress loaded: " + currentProgress);
         UpdateProgressUI();
-        Debug.Log("UI updated: " + (currentProgress * 100f).ToString("F1") + "%");
     }
 
     public void UnlockWorld(int worldIndex)
@@ -77,16 +74,6 @@ public class GameProgressController : MonoBehaviour
         }
     }
 
-    //private void ResetProgress()
-    //{
-    //    Debug.Log("Resetting progress");
-    //    PlayerPrefs.DeleteKey("CurrentProgress");  // Borra el progreso anterior
-    //    for (int i = 0; i < worldsUnlocked.Length; i++)
-    //    {
-    //        PlayerPrefs.DeleteKey("WorldUnlocked_" + i);  // Borra el estado de desbloqueo de los mundos
-    //    }
-    //    PlayerPrefs.Save();
-    //}
 
     private void UpdateProgressUI()
     {
