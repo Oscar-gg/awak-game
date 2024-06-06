@@ -21,11 +21,11 @@ public class Credits : MonoBehaviour
 
     List<string[]> credits = new List<string[]>()
     {
-        new string[] { "Development and Programming", "banana" },  // First array with strings "apple" and "banana"
-        new string[] { "Design", "gradsspe" },
-        new string[] { "Graphics and Art", "grape" },   // Second array with strings "orange" and "grape"
-        new string[] { "Audio", "gradsspe" },
-        new string[] { "Special Thanks", "gradsspe" },
+        new string[] { "Development and Programming", "Oscar Arreola\nAxel Iparrea\n Axel Grande\nPablo García \nAlejandra Coeto" },  // First array with strings "apple" and "banana"
+        new string[] { "Design", "Story: Axel Grande" },
+        new string[] { "Graphics and Art", "Characters: RPG Maker \nbackgrounds: RPG Maker \n Map design: Axel Iparrea \n Buttons and components: Oscar Arreola, Axel Iparrea, Alejandra Coeto \nTypography: Ubuntu Sans" },   // Second array with strings "orange" and "grape"
+        new string[] { "Audio", "Sound Effects: \n Music: " },
+        new string[] { "Special Thanks", "Claudia Solís \nCristina González \nErnesto Cantú" },
         new string[] { "Developed in Unity", "" }
     };
 
