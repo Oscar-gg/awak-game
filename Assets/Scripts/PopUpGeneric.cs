@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 public class PopupGeneric : MonoBehaviour
 {
     public Text popupMessageText;
-    private string travelScene;
+    public string travelScene;
+    private CanvasGroup CanvasGroup;
 
-    private void Start()
+    private void Awake()
     {
         // Desactivar el panel pop-up al inicio del juego
-        gameObject.SetActive(false);
-
-        Button salir = gameObject.transform.Find("salir").GetComponent<Button>();
+        CanvasGroup = GetComponent<CanvasGroup>();
+        Button salir = GameObject.FindWithTag("SalirPopup").GetComponent<Button>();
         salir.onClick.AddListener(() => ClosePopup());
+        
+        Button entrar = GameObject.FindWithTag("EntrarPopup").GetComponent<Button>();
 
-        Button entrar = gameObject.transform.Find("entrar").GetComponent<Button>();
         entrar.onClick.AddListener(() => OnEnterButtonClicked());
+        Hide();
     }
 
     public void ShowPopup(string message, string scene)
@@ -24,7 +26,12 @@ public class PopupGeneric : MonoBehaviour
         // Mostrar el panel pop-up con el mensaje especificado
         popupMessageText.text = message;
         travelScene = scene;
-        gameObject.SetActive(true);
+        Show();
+    }   
+
+    public void ShowPopup()
+    {
+        Show();
     }
 
     public void OnEnterButtonClicked()
@@ -36,6 +43,20 @@ public class PopupGeneric : MonoBehaviour
 
     private void ClosePopup()
     {
-        gameObject.SetActive(false);
+        Hide();
+    }
+
+    public void Hide()
+    {
+        CanvasGroup.alpha = 0;
+        CanvasGroup.interactable = false;
+        CanvasGroup.blocksRaycasts = false;
+    }
+
+    public void Show()
+    {
+        CanvasGroup.alpha = 1;
+        CanvasGroup.interactable = true;
+        CanvasGroup.blocksRaycasts = true;
     }
 }

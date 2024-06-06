@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 90468869}
   m_Layer: 0
   m_Name: salir
-  m_TagString: Untagged
+  m_TagString: SalirPopup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,6 +2193,7 @@ GameObject:
   - component: {fileID: 671190573}
   - component: {fileID: 671190572}
   - component: {fileID: 671190574}
+  - component: {fileID: 671190575}
   m_Layer: 0
   m_Name: PopUpGeneric
   m_TagString: Untagged
@@ -2274,6 +2275,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupMessageText: {fileID: 555677076}
+  travelScene: 
+--- !u!225 &671190575
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671190569}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &736321514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,7 +3545,7 @@ GameObject:
   - component: {fileID: 1117352419}
   m_Layer: 0
   m_Name: entrar
-  m_TagString: Untagged
+  m_TagString: EntrarPopup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10478,7 +10492,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089397301}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

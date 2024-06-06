@@ -37,5 +37,18 @@ public class AttackScript : MonoBehaviour
         
     }
 
+    public void NoAttack(GameObject victim)
+    {
+
+        attackerStats = owner.GetComponent<FighterStats>();
+        targetStats = victim.GetComponent<FighterStats>();
+
+        damage = 0;
+
+        //owner.GetComponent<Animator>().Play(animationName);
+        targetStats.ReceiveDamage(damage);
+
+    }
+
 }
 

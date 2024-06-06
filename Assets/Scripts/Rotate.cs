@@ -1,11 +1,7 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.RuleTile.TilingRuleOutput;
+
 
 public class Rotate : MonoBehaviour
 {

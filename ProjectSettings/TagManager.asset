@@ -18,6 +18,9 @@ TagManager:
   - cofre7
   - cofre8
   - cofre9
+  - MemoryCard
+  - EntrarPopup
+  - SalirPopup
   layers:
   - Default
   - TransparentFX
