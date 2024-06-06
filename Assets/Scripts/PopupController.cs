@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class PopupController : MonoBehaviour
 {
     public GameObject popupPanel;
     public Text popupMessageText;
     private GameObject parentPanel;
+    CanvasGroup CanvasGroup;
 
     private void Start()
     {
@@ -55,5 +57,12 @@ public class PopupController : MonoBehaviour
         //parentPanel.SetActive(false);
         //this.gameObject.transform.parent.gameObject.SetActive(false);
         popupPanel.SetActive(false);
+    }
+
+   
+
+    public void Show()
+    {
+
     }
 }

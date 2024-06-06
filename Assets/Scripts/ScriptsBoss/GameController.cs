@@ -13,10 +13,13 @@ public class GameController : MonoBehaviour
     public PlayerControllerAna playerControllerAna;
     public FighterStats fighterStats;
     public FighterAction fighterAction;
+    public TurnsController turnsController;
 
     public int bosslife;
 
     private string ActualScene;
+
+    private string ActualID;
 
     public string nextLevelName; // Nombre de la próxima escena/nivel
 
@@ -158,9 +161,6 @@ public class GameController : MonoBehaviour
 
     }
 
-
-    
-
     public void CompleteMinigame()
     {
         if (gameProgressController != null)
@@ -171,6 +171,13 @@ public class GameController : MonoBehaviour
         {
             Debug.LogWarning("GameProgressController no encontrado");
         }
+    }
+
+    public string ObtainIDHint()
+    {
+        ActualID = turnsController.GetAttackID();
+        return ActualID;
+
     }
 
     // Update is called once per frame

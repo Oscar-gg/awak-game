@@ -5,6 +5,7 @@ using System.Transactions;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.Sprites;
 
 public class TurnsController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class TurnsController : MonoBehaviour
 
     private string ActualScene;
 
+    private string attackID;
+
     int HintCounter = 0;
 
     [SerializeField]
@@ -22,6 +25,7 @@ public class TurnsController : MonoBehaviour
     private void Awake()
     {
         ActualScene = SceneManager.GetActiveScene().name;
+        this.battleMenu.SetActive(false);
     }
 
     private void Start()
@@ -46,6 +50,7 @@ public class TurnsController : MonoBehaviour
 
     public void NextTurn()
     {
+        this.battleMenu.SetActive(false);
         FighterStats currentFighterStats = fighterStats[0];
         fighterStats.Remove(currentFighterStats);
 
@@ -90,23 +95,29 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0:
+            case 0: //outlook
                 hints.text = "Hint: Es el principal medio de comunicación tanto interno, externo, como para obtener información";
+                UpdateAttackID("C1");
                 break;
-            case 1:
+            case 1: //rainbow
                 hints.text = "Hint: Maneja las conversaciones de los distintos proyectos";
+                UpdateAttackID("C2");
                 break;
-            case 2:
+            case 2: //sharepoint
                 hints.text = "Hint: Es donde se guarda la mayor parte de las cosas";
+                UpdateAttackID("C3");
                 break;
-            case 3:
+            case 3: //movil
                 hints.text = "Hint: Dispositivo donde se recomienda tener las aplicaciones de comunicación descargadas";
+                UpdateAttackID("C4");
                 break;
-            case 4:
+            case 4: //jerarquizada
                 hints.text = "Hint: Es la estructura de las comunicaciones de AWAQ";
+                UpdateAttackID("C5");
                 break;
-            case 5:
+            case 5: //multicultural
                 hints.text = "Hint: Se colabora en un ambiente que no conoce fronteras ni nacionalidades";
+                UpdateAttackID("C6");
                 break;
         }
 
@@ -118,29 +129,37 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0:
+            case 0: //Respeto
                 hints.text = "Hint: Ser inclusivo y tratar a las personas dignamente";
+                UpdateAttackID("E1");
                 break;
-            case 1:
+            case 1: //integridad
                 hints.text = "Hint: Busca un beneficio grupal, basándose en valores como la imparcialidad";
+                UpdateAttackID("E2");
                 break;
-            case 2:
+            case 2: //responsabilidad
                 hints.text = "Hint: Manejo y conciencia de tus obligaciones, siempre teniendo un enfoque honesto";
+                UpdateAttackID("E3");
                 break;
-            case 3:
+            case 3: //Profesionalidad
                 hints.text = "Hint: Compromiso con la calidad y excelencia mediante la mejora constante";
+                UpdateAttackID("E4");
                 break;
-            case 4:
+            case 4: //Compromiso
                 hints.text = "Hint: Fidelidad y devoción a la organización";
+                UpdateAttackID("E5");
                 break;
-            case 5:
+            case 5: //transparencia
                 hints.text = "Hint: Dar los resultados de manera veraz y sin ambigüedad cuando sean solicitados";
+                UpdateAttackID("E6");
                 break;
-            case 6:
+            case 6: //Dialogo
                 hints.text = "Hint: Comunicación de conocimientos de manera efectiva, así como respetuosa";
+                UpdateAttackID("E7");
                 break;
-            case 7:
+            case 7: //teamwork
                 hints.text = "Hint: Colaboración para un objetivo en común";
+                UpdateAttackID("E8");
                 break;
         }
 
@@ -151,22 +170,35 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0:
+            case 0: //confidencialidad
                 hints.text = "Hint: Acceso a la información que le corresponde a cada uno";
+                UpdateAttackID("S1");
                 break;
-            case 1:
+            case 1: //Contrasena
                 hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
-                break;
-            case 2:
+                UpdateAttackID("S2");
+                break; 
+            case 2: // Hackers
                 hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
+                UpdateAttackID("S3");
                 break;
-            case 3:
+            case 3://phishing
                 hints.text = "Hint: Conjunto de técnicas para detectar entidades fraudulentas";
+                UpdateAttackID("S4");
                 break;
         }
 
         HintCounter++;
     }
 
+    public void UpdateAttackID(string _id)
+    {
+        attackID = _id;
+    }
+
+    public string GetAttackID()
+    {
+        return attackID;
+    }
 
 }
