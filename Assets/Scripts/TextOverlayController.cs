@@ -44,13 +44,13 @@ public class TextOverlayController : MonoBehaviour
         this.subtitle.text = subtitle;
         this.description.text = description;
         this.buttonDescription.text = buttonDescription;
-        StartCoroutine(Fade(0.025f, 1, 0.05f, true));
+        StartCoroutine(Fade(0.025f, 1, 0.025f, true));
     }
 
     // Private to only allow self to hide
     public void HidePanel()
     {
-        StartCoroutine(Fade(0.025f, 0, 0.05f, false));
+        StartCoroutine(Fade(0.025f, 0, 0.025f, false));
         buttonRes();
     }
 

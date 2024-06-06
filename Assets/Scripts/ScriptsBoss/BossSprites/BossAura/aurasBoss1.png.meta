@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: 8e38181a83f60c749adf33c69847585b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: aurasBoss1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 441.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0032667c19bad8d40b863da828a907ce
+      internalID: -510175349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 441.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fbc373090baed41b8c3ecd9566f391
+      internalID: 517123444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 441.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a782c272941929046bd01cb44a9e76bb
+      internalID: -1652639407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 441.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9257701192f3b6043bdd18bc7de57e9c
+      internalID: 983613028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e83a0a0c88d3724298657565f939351
+      internalID: 1067450455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 368.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd5bd59e90a61a4aa653b5aa24799d8
+      internalID: -1401759047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 368.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697bb9bfe14d26e4c827412c5c250505
+      internalID: 1676000089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_7
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 368.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fa8590962526c49b4350a6a3341782
+      internalID: -384712967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 295.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54363bab802fefe448afee13c9fce86d
+      internalID: -273058399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_9
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 295.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06520b4f478f00548b1714f9b9d30060
+      internalID: -617321065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_10
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 295.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca1120f9d10f184ab9c3bd51b5cfcfc
+      internalID: -1847023188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_11
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 295.4286
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc62d82abf937704d818175d1f472e11
+      internalID: 1262762511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768e7d9d6617e534d805e38d3ac4d110
+      internalID: -1063294969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 222.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ac5def60f896943805463832a0c28b
+      internalID: 199259667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 222.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6089669649b4d543a66e3c167ccd4bf
+      internalID: -1370345749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 222.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05199953f619dae498e959cc708d5520
+      internalID: 1670668085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bacfb96a342d404a98c42d5f0dd62a3
+      internalID: 1066677977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 149.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412677e1edf712a46bcc75ce8aa24567
+      internalID: 1608052988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_18
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 149.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59717e4c47066bb4481638a6a7e937d1
+      internalID: -651752933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 149.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdc66e6de9de70498e0d326ac5b888b
+      internalID: -74003526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831c08e45f7432d4ba3cfeb508be3846
+      internalID: 806683258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_21
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 76.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f735d81202ea1b42b68b5a321d5586f
+      internalID: -1800617740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_22
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 76.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939434e3079ea3d438f92b4a23178a00
+      internalID: 1546402776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 76.42857
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76ceaaf21040164898ee49b25f8383f
+      internalID: 40893332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.4285736
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b406043f777f2c4f8e33bc83693f56e
+      internalID: -849420667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_25
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 3.4285736
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e435b4f0d228d4f41875a724aa9e9930
+      internalID: -39906260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 3.4285736
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd597839c4823c8488ad220438b6ce92
+      internalID: 1798842032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aurasBoss1_27
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 3.4285736
+        width: 60.25
+        height: 73.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfec64b8f036ed438ddffefa9525e8f
+      internalID: -1251246181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      aurasBoss1_0: -510175349
+      aurasBoss1_1: 517123444
+      aurasBoss1_10: -1847023188
+      aurasBoss1_11: 1262762511
+      aurasBoss1_12: -1063294969
+      aurasBoss1_13: 199259667
+      aurasBoss1_14: -1370345749
+      aurasBoss1_15: 1670668085
+      aurasBoss1_16: 1066677977
+      aurasBoss1_17: 1608052988
+      aurasBoss1_18: -651752933
+      aurasBoss1_19: -74003526
+      aurasBoss1_2: -1652639407
+      aurasBoss1_20: 806683258
+      aurasBoss1_21: -1800617740
+      aurasBoss1_22: 1546402776
+      aurasBoss1_23: 40893332
+      aurasBoss1_24: -849420667
+      aurasBoss1_25: -39906260
+      aurasBoss1_26: 1798842032
+      aurasBoss1_27: -1251246181
+      aurasBoss1_3: 983613028
+      aurasBoss1_4: 1067450455
+      aurasBoss1_5: -1401759047
+      aurasBoss1_6: 1676000089
+      aurasBoss1_7: -384712967
+      aurasBoss1_8: -273058399
+      aurasBoss1_9: -617321065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
