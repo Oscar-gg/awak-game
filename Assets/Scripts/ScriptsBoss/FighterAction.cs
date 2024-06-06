@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using static PlayerControllerAna;
 
@@ -8,7 +9,6 @@ public class FighterAction : MonoBehaviour
 {
     private GameObject enemy;
     private GameObject hero;
-
 
     [SerializeField]
     private GameObject respetoPrefab;
@@ -76,16 +76,16 @@ public class FighterAction : MonoBehaviour
     [SerializeField]
     private GameObject EquipoPrefab;
 
+    [SerializeField]
+    private GameObject battleMenu;
 
-
-
-
-
-
+    private string IDHint;
 
     private GameObject currentAttack;
 
     public Animator SpellAnimatorController;
+
+    public Animator AuraAnimatorController;
 
 
     void Awake()
@@ -100,9 +100,17 @@ public class FighterAction : MonoBehaviour
         SpellIdle, SpellUno, SpellDos, SpellTres, SpellCuatro, SpellCinco, SpellSeis,SpellSiete, SpellOcho, SpellNueve, SpellDiez, SpellOnce, SpellBossIdle, SpellBossUno, SpellBossDos
     }
 
+    public enum AuraAnimations
+    {
+        AuraBoss2, AuraRojo, AuraVerde
+    }
+
 
     public void SelectAttack(string btn)
     {
+        IDHint = GameController.Instance.ObtainIDHint();
+        Debug.Log(IDHint);
+
         UpdateSpellAnimation(SpellsAnimations.SpellIdle);
         GameObject victim = hero;
         if (tag == "Hero")
@@ -137,7 +145,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueSeguridad");
 
         }//Inicio Comuninacion
-        else if (btn.CompareTo("Outlook") == 0)
+        else if (btn.CompareTo("Outlook") == 0 && IDHint == "C1")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("OutlookSound");
@@ -146,7 +154,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueOutlook");
 
         }
-        else if (btn.CompareTo("Mobile") == 0)
+        else if (btn.CompareTo("Mobile") == 0 && IDHint == "C4")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("MobilSound");
@@ -155,7 +163,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueMobile");
 
         }
-        else if (btn.CompareTo("Rainbow") == 0)
+        else if (btn.CompareTo("Rainbow") == 0 && IDHint == "C2")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("RainbowSound");
@@ -164,7 +172,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueRainbow");
 
         }
-        else if (btn.CompareTo("Multicultural") == 0)
+        else if (btn.CompareTo("Multicultural") == 0 && IDHint == "C6")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("MulticulturalSound");
@@ -173,7 +181,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueMulticultural");
 
         }
-        else if (btn.CompareTo("SharePoint") == 0)
+        else if (btn.CompareTo("SharePoint") == 0 && IDHint == "C3")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("SharePointSound");
@@ -182,7 +190,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueSharePoint");
 
         }
-        else if (btn.CompareTo("Jerarquia") == 0)
+        else if (btn.CompareTo("Jerarquia") == 0 && IDHint == "C5")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("JerarquiaSound");
@@ -192,7 +200,7 @@ public class FighterAction : MonoBehaviour
         }
         //Final comuniacaion
         //Inicio Seguridad
-        else if (btn.CompareTo("Confidencialidad") == 0)
+        else if (btn.CompareTo("Confidencialidad") == 0 && IDHint == "S1")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("ConfidencialidadSound");
@@ -201,7 +209,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueConfidencialidad");
 
         }
-        else if (btn.CompareTo("Contrasena") == 0)
+        else if (btn.CompareTo("Contrasena") == 0 && IDHint == "S2")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("ContrasenaSound");
@@ -210,7 +218,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueContrasena");
 
         }
-        else if (btn.CompareTo("Hackers") == 0)
+        else if (btn.CompareTo("Hackers") == 0 && IDHint == "S3")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("HackersSound");
@@ -219,7 +227,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueHackers");
 
         }
-        else if (btn.CompareTo("Phishing") == 0)
+        else if (btn.CompareTo("Phishing") == 0 && IDHint == "S4")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("PhishingSound");
@@ -229,7 +237,7 @@ public class FighterAction : MonoBehaviour
         }
         //Final Seguridad
         //Inicio Etica
-        else if (btn.CompareTo("Respeto") == 0)
+        else if (btn.CompareTo("Respeto") == 0 && IDHint == "E1")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("RespetoSound");
@@ -238,7 +246,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueRespeto");
 
         }
-        else if (btn.CompareTo("Integridad") == 0)
+        else if (btn.CompareTo("Integridad") == 0 && IDHint == "E2")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("IntegridadSound");
@@ -247,7 +255,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueIntegridad");
 
         }
-        else if (btn.CompareTo("Responsabilidad") == 0)
+        else if (btn.CompareTo("Responsabilidad") == 0 && IDHint == "E3")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("ResponsabilidadSound");
@@ -256,7 +264,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueResponsabilidad");
 
         }
-        else if (btn.CompareTo("Profesionalidad") == 0)
+        else if (btn.CompareTo("Profesionalidad") == 0 && IDHint == "E4")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("ProfesionalidadSound");
@@ -264,7 +272,7 @@ public class FighterAction : MonoBehaviour
             MulticulturalPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueProfesionalidad");
         }
-        else if (btn.CompareTo("Compromiso") == 0)
+        else if (btn.CompareTo("Compromiso") == 0 && IDHint == "E5")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("CompromisoSound");
@@ -273,7 +281,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueCompromiso");
 
         }
-        else if (btn.CompareTo("Transparencia") == 0)
+        else if (btn.CompareTo("Transparencia") == 0 && IDHint == "E6")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("TransparenciaSound");
@@ -282,7 +290,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueTransparencia");
 
         }
-        else if (btn.CompareTo("Dialogo") == 0)
+        else if (btn.CompareTo("Dialogo") == 0 && IDHint == "E7")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("DialogoSound");
@@ -291,7 +299,7 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueDialogo");
 
         }
-        else if (btn.CompareTo("Equipo") == 0)
+        else if (btn.CompareTo("Equipo") == 0 && IDHint == "E8")
         {
             GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
             FindObjectOfType<BossAudioManager>().PlaySound("EquipoSound");
@@ -299,15 +307,19 @@ public class FighterAction : MonoBehaviour
             EquipoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueEquipo");
         }
-        //Final Etica
+        //Final Etic
 
         else
         {
-            Debug.Log("ataque");
+            Debug.Log("fallaste");
+            respetoPrefab.GetComponent<AttackScript>().NoAttack(victim);
+            BossAuraAnimation(AuraAnimations.AuraVerde);
         }
 
         Invoke("ResetAnimation", 1);
-       
+        Invoke("ResetAuraAnimation", 1);
+        this.battleMenu.SetActive(false);
+
     }
 
     public void SelectAttackBoss(string btn)
@@ -459,6 +471,34 @@ public class FighterAction : MonoBehaviour
         SpellAnimatorController.SetBool("SpellBossIdle", true);
         SpellAnimatorController.SetBool("SpellBossUno", false);
         SpellAnimatorController.SetBool("SpellBossDos", false);
+    }
+
+    public void BossAuraAnimation(AuraAnimations nameAuraAnimation)
+    {
+        switch (nameAuraAnimation)
+        {
+            case AuraAnimations.AuraBoss2:
+                AuraAnimatorController.SetBool("AuraBoss2", true);
+                AuraAnimatorController.SetBool("AuraBossRojo", false);
+                AuraAnimatorController.SetBool("AuraBossVerde", false);
+                break;
+            case AuraAnimations.AuraRojo:
+                AuraAnimatorController.SetBool("AuraBoss2", false);
+                AuraAnimatorController.SetBool("AuraBossRojo", true);
+                break;
+            case AuraAnimations.AuraVerde:
+                AuraAnimatorController.SetBool("AuraBoss2", false);
+                AuraAnimatorController.SetBool("AuraBossVerde", true);
+                break;
+
+        }
+    }
+
+    public void ResetAuraAnimation()
+    {
+        AuraAnimatorController.SetBool("AuraBoss2", true);
+        AuraAnimatorController.SetBool("AuraBossRojo", false);
+        AuraAnimatorController.SetBool("AuraBossVerde", false);
     }
 
     public void ReturnIdle()
