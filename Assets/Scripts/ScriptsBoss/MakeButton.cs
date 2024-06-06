@@ -20,6 +20,7 @@ public class MakeButton : MonoBehaviour
 
     private void attachCallback(string btn)
     {
+        
         if(btn.CompareTo("respetoBtn") == 0)
         {
             hero.GetComponent<FighterAction>().SelectAttack("respeto");
@@ -101,7 +102,7 @@ public class MakeButton : MonoBehaviour
         }
         else if (btn.CompareTo("DialogoBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Dalogo");
+            hero.GetComponent<FighterAction>().SelectAttack("Dialogo");
         }
         else if (btn.CompareTo("EquipoBtn") == 0)
         {
