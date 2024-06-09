@@ -5,7 +5,6 @@ public class MiniGame
     private string name;
     private int time;
     private int points;
-    private bool completed;
     private bool isBoss;
 
     public int IdGame
@@ -31,25 +30,18 @@ public class MiniGame
         set { points = value; }
     }
 
-    public bool Completed
-    {
-        get { return completed; }
-        set { completed = value; }
-    }
-
     public bool IsBoss
     {
         get { return isBoss; }
         set { isBoss = value; }
     }
 
-    public MiniGame(int idGame, string name, int time, int points, bool completed, bool isBoss)
+    public MiniGame(int idGame, string name, int time, int points, bool isBoss)
     {
         this.idGame = idGame;
         this.name = name;
         this.time = time;
         this.points = points;
-        this.completed = completed;
         this.isBoss = isBoss;
     }
 }
