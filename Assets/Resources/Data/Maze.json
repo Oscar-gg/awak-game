@@ -1,0 +1,58 @@
+{
+    "cardInfo": [
+        {
+            "title": "Explicación",
+            "subtitle": "Respeto",
+            "description": "Tratar a todas las personas dignamente, sin discriminación por sexo, raza, nacionalidad o religión. Colaborar e impulsar políticas inclusivas",
+            "image": "Respeto"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Principales principios éticos",
+            "description": "1) Respeto\n2) Integridad\n3) Responsabilidad\n4) Profesionalidad\n5) Compromiso\n6) Transparencia\n7) Diálogo",
+            "image": ""
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Integridad",
+            "description": "Actuar con imparcialidad, justicia y buena fe. Evitando cualquier beneficio personal de los recursos públicos.",
+            "image": "Integridad"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Responsabilidad",
+            "description": "Respetar la legislación, actuar honestamente y ejemplarmente, teniendo en cuenta las consecuencias. Reconociendo errores, solucionándolos y evitando su repetición.",
+            "image": "Responsabilidad"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Profesionalidad",
+            "description": "Dedicación, entrega y compromiso con la calidad y mejora continua. Buscando la excelencia profesional mediante la mejora de conocimientos y capacidades.",
+            "image": "Profesionalidad"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Compromiso",
+            "description": "Lealtad y compromiso con la organización, así como los proyectos y programas en los que se esté comprometido.",
+            "image": "Compromiso"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Transparencia",
+            "description": "Acreditar de forma veraz y completa los resultados y criterios seguidos, respondiendo diligentemente a las demandas de información.",
+            "image": "Transparencia"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Diálogo",
+            "description": "Trabajar en equipo, compartir conocimiento y fomentar la participación y la comunicación efectiva. Reconocer el derecho a opinar de los involucrados, excluyendo cualquier muestra de superioridad.",
+            "image": "Dialogo"
+        },
+        {
+            "title": "Explicación",
+            "subtitle": "Trabajo en equipo",
+            "description": "Respeto a la diferente cultura, diálogo y trabajo en equipo, para lograr el cumplimiento de las metas establecidas.",
+            "image": "Teamwork"
+        }
+    ]
+}
