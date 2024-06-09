@@ -143,7 +143,7 @@ public class PlayerProgress : MonoBehaviour
             MiniGame m = zones[i].GetMiniGame(miniGame);
             if (m != null)
             {
-                return m.IdGame <= levelsCompleted;
+                return m.IdGame <= levelsCompleted + 1;
             }
         }
 

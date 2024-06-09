@@ -20,19 +20,13 @@ public class Testing : MonoBehaviour
 
     IEnumerator Process()
     {
-        yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.MAZE, 300, 100));
-        yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.ASSOCIATION, 100, 100));
-        yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.TEDI_BOSS, 50, 100));
-        yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.COMMUNICATIONS_BOSS, 1, 100));
-
+        //yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.MAZE, 300, 100));
+        //yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.ASSOCIATION, 100, 100));
+        //yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.TEDI_BOSS, 50, 100));
+        //yield return StartCoroutine(PlayerProgress.Instance.UpdateProgess(MiniGameNames.COMMUNICATIONS_BOSS, 1, 100));
+        yield return new WaitForSeconds(1);
         Debug.Log("Points: " + PlayerProgress.Instance.GetPoints());
         //Debug.Log(PlayerProgress.Instance.GetProgress());
         progreso.text = PlayerProgress.Instance.GetProgress() * 100 + "%";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
