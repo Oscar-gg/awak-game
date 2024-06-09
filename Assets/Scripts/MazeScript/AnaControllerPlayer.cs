@@ -14,12 +14,19 @@ public class AnaControllerPlayer : MonoBehaviour
 
     private Animator animator;
 
+
+    bool moveLeft;
+    bool moveRight;
+    bool moveUp;
+    bool moveDown;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         solidObjectsLayer = LayerMask.GetMask("SolidObjects");
     }
+
 
     private void Update()
     {
@@ -28,7 +35,7 @@ public class AnaControllerPlayer : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            
+
 
             if (input.x != 0) input.y = 0;
 
@@ -48,6 +55,12 @@ public class AnaControllerPlayer : MonoBehaviour
         }
     }
 
+
+
+
+
+
+
     IEnumerator Move(Vector3 targetPos)
     {
         isMoving = true;
@@ -60,6 +73,8 @@ public class AnaControllerPlayer : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
+
+    
 
     private bool IsWalkable(Vector3 targetPos)
     {
