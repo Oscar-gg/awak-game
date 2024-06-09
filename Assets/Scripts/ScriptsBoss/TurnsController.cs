@@ -19,6 +19,10 @@ public class TurnsController : MonoBehaviour
 
     int HintCounter = 0;
 
+    private string BossPhase;
+
+    public DefenseManager defManager;
+
     [SerializeField]
     private GameObject battleMenu;
 
@@ -43,6 +47,7 @@ public class TurnsController : MonoBehaviour
 
         fighterStats.Sort();
         this.battleMenu.SetActive(false);
+
 
 
         NextTurn();
@@ -79,11 +84,18 @@ public class TurnsController : MonoBehaviour
                     hints.text = "Hint: oh vaya, parece que faltan hints";
                 }
 
+            } else if (defManager.Answer == "Correcto")
+            {
+                this.battleMenu.SetActive(true);
+            }
+            else if(defManager.Answer == "Incorrecto")
+            {
+                string attackType = Random.Range(0, 2) == 1 ? "seguridad" : "respeto";
+                currentUnit.GetComponent<FighterAction>().SelectAttackBoss(attackType);
             } else
             {
                 string attackType = Random.Range(0, 2) == 1 ? "seguridad" : "respeto";
                 currentUnit.GetComponent<FighterAction>().SelectAttackBoss(attackType);
-
             }
         } else
         {

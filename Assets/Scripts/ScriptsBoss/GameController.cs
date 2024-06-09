@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public FighterStats fighterStats;
     public FighterAction fighterAction;
     public TurnsController turnsController;
+    public DefenseManager defenseManager;
 
     public int bosslife;
 
@@ -179,10 +180,10 @@ public class GameController : MonoBehaviour
         return ActualID;
 
     }
-
-    // Update is called once per frame
-    void Update()
+    public string AnswerQuestion()
     {
-        
+        return defenseManager.GetAnswerQuestion();
+
     }
+
 }

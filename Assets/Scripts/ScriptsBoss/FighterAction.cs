@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 using static PlayerControllerAna;
 
 
@@ -79,6 +80,12 @@ public class FighterAction : MonoBehaviour
     [SerializeField]
     private GameObject battleMenu;
 
+    [SerializeField]
+    private GameObject defenseMenu;
+
+    [SerializeField]
+    private GameObject wrongHint;
+
     private string IDHint;
 
     private GameObject currentAttack;
@@ -94,6 +101,15 @@ public class FighterAction : MonoBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
+    private void Start()
+    {
+        this.defenseMenu.SetActive(false);
+        this.wrongHint.SetActive(false);
+    }
+
+    public void Update()
+    {
+    }
 
     public enum SpellsAnimations
     {
@@ -109,12 +125,12 @@ public class FighterAction : MonoBehaviour
     public void SelectAttack(string btn)
     {
         IDHint = GameController.Instance.ObtainIDHint();
-        Debug.Log(IDHint);
 
         UpdateSpellAnimation(SpellsAnimations.SpellIdle);
         GameObject victim = hero;
         if (tag == "Hero")
         {
+            this.battleMenu.SetActive(true);
             victim = enemy;
         }
         if (btn.CompareTo("respeto") == 0)
@@ -133,8 +149,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellDos);
             honestidadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueHonestidad");
-
-
         }
         else if (btn.CompareTo("seguridad") == 0)
         {
@@ -161,7 +175,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellDos);
             MobilePrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueMobile");
-
         }
         else if (btn.CompareTo("Rainbow") == 0 && IDHint == "C2")
         {
@@ -170,7 +183,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellTres);
             RainbowPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueRainbow");
-
         }
         else if (btn.CompareTo("Multicultural") == 0 && IDHint == "C6")
         {
@@ -179,7 +191,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellCuatro);
             MulticulturalPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueMulticultural");
-
         }
         else if (btn.CompareTo("SharePoint") == 0 && IDHint == "C3")
         {
@@ -188,7 +199,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellCinco);
             SharePointPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueSharePoint");
-
         }
         else if (btn.CompareTo("Jerarquia") == 0 && IDHint == "C5")
         {
@@ -207,7 +217,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellUno);
             ConfidencialidadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueConfidencialidad");
-
         }
         else if (btn.CompareTo("Contrasena") == 0 && IDHint == "S2")
         {
@@ -216,7 +225,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellDos);
             ContrasenaPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueContrasena");
-
         }
         else if (btn.CompareTo("Hackers") == 0 && IDHint == "S3")
         {
@@ -225,7 +233,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellTres);
             HackersPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueHackers");
-
         }
         else if (btn.CompareTo("Phishing") == 0 && IDHint == "S4")
         {
@@ -244,7 +251,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellUno);
             respetoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueRespeto");
-
         }
         else if (btn.CompareTo("Integridad") == 0 && IDHint == "E2")
         {
@@ -253,7 +259,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellDos);
             IntegridadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueIntegridad");
-
         }
         else if (btn.CompareTo("Responsabilidad") == 0 && IDHint == "E3")
         {
@@ -262,7 +267,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellTres);
             respetoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueResponsabilidad");
-
         }
         else if (btn.CompareTo("Profesionalidad") == 0 && IDHint == "E4")
         {
@@ -279,7 +283,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellUno);
             CompromisoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueCompromiso");
-
         }
         else if (btn.CompareTo("Transparencia") == 0 && IDHint == "E6")
         {
@@ -288,7 +291,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellDos);
             TransparenciaPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueTransparencia");
-
         }
         else if (btn.CompareTo("Dialogo") == 0 && IDHint == "E7")
         {
@@ -297,7 +299,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellAnimation(SpellsAnimations.SpellTres);
             DialogoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueDialogo");
-
         }
         else if (btn.CompareTo("Equipo") == 0 && IDHint == "E8")
         {
@@ -308,17 +309,34 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueEquipo");
         }
         //Final Etic
-
         else
         {
-            Debug.Log("fallaste");
-            respetoPrefab.GetComponent<AttackScript>().NoAttack(victim);
-            BossAuraAnimation(AuraAnimations.AuraVerde);
+            this.wrongHint.SetActive(true);
+            Invoke("activateDefense", 2);
+            Invoke("turnOffWrongHint", 2);
         }
 
+        ScoreSystem.scoreValue += 100;
         Invoke("ResetAnimation", 1);
         Invoke("ResetAuraAnimation", 1);
         this.battleMenu.SetActive(false);
+
+    }
+
+
+    public void turnOffDefense()
+    {
+        this.defenseMenu.SetActive(false);
+    }
+
+    public void activateDefense()
+    {
+        this.defenseMenu.SetActive(true);
+    }
+
+    public void turnOffWrongHint()
+    {
+        this.wrongHint.SetActive(false);
 
     }
 
@@ -337,7 +355,6 @@ public class FighterAction : MonoBehaviour
             FindObjectOfType<BossAudioManager>().PlaySound("BossAttackUno");
             respetoPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueBossRespeto");
-
         }
         else if (btn.CompareTo("honestidad") == 0)
         {
@@ -345,7 +362,6 @@ public class FighterAction : MonoBehaviour
             UpdateSpellBossAnimation(SpellsAnimations.SpellBossDos);
             honestidadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueBossHonestidad");
-
         }
         else if (btn.CompareTo("seguridad") == 0)
         {
@@ -354,13 +370,12 @@ public class FighterAction : MonoBehaviour
             FindObjectOfType<BossAudioManager>().PlaySound("BossAttackDos");
             seguridadPrefab.GetComponent<AttackScript>().Attack(victim);
             Debug.Log("AtaqueBossSeguridad");
-
         }
         else
         {
             Debug.Log("ataque");
         }
-
+        ScoreSystem.scoreValue -= 50;
         Invoke("BossAnimation", 1);
 
     }
