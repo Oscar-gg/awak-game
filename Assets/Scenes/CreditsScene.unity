@@ -692,7 +692,7 @@ MonoBehaviour:
   spritesbottom:
   - {fileID: 21300000, guid: 20cdfd2e4a8e5415d9a0d442bbd45dc5, type: 3}
   - {fileID: 21300000, guid: 1cc69b2c28c9e49f1a6d4fa7de828c21, type: 3}
-  - {fileID: 21300000, guid: be4d3465c809d40239965fad47bb5ea0, type: 3}
+  - {fileID: 21300000, guid: 20cdfd2e4a8e5415d9a0d442bbd45dc5, type: 3}
   - {fileID: 21300000, guid: 0a5a5c062c1c64ed6b3f420a4bd9c275, type: 3}
   - {fileID: 21300000, guid: 9f742bf732fbf434480157d00717291c, type: 3}
   - {fileID: 21300000, guid: ba0f409e7b44f48929462e56ec072469, type: 3}
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a1ee2dc9470f4c93bcb05765eeb8dd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe462a120fbff4890a2ee04dd4fee5c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
