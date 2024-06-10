@@ -52,6 +52,10 @@ public class LoseScript : MonoBehaviour
         {
             SceneManager.LoadScene("MundoSeguridad");
         }
+        else if (ActualScene == "LoseSceneTEDI")
+        {
+            SceneManager.LoadScene("MundoTEDI");
+        }
         else
         {
             SceneManager.LoadScene("MenuScene");
@@ -73,6 +77,10 @@ public class LoseScript : MonoBehaviour
         else if (ActualScene == "LoseSceneSeguridad")
         {
             SceneManager.LoadScene("BossSceneSeguridad");
+        }
+        else if (ActualScene == "LoseSceneTEDI")
+        {
+            SceneManager.LoadScene("BossSceneTEDI");
         }
         else
         {
