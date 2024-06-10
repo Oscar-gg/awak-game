@@ -25,7 +25,6 @@ public class WorldColliderController : MonoBehaviour
         unlockedImage = Resources.Load<Sprite>("Sprites/unlock");
         SpriteRenderer[] all = gameObject.GetComponentsInChildren<SpriteRenderer>();
         background = all[1];
-        Debug.Log(all.Length);
         genericPopup = FindObjectOfType<PopupGeneric>();
     }
 

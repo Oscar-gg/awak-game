@@ -2,7 +2,7 @@
     "SceneInfo": [
         {
             "minigame": "LabeScene",
-            "message": "You have won the game!",
+            "message": "Vuelve a intentar el laberinto. ¡Tú puedes!",
             "next_scene": "MundoEtica",
             "previous_scene": "LabeScene"
         },

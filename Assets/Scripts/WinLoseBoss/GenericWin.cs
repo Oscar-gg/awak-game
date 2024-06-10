@@ -25,7 +25,14 @@ public class GenericEnding : MonoBehaviour
 
     void Start()
     {
-        SetData();
+        if (!SetData())
+        {
+            message.text = "No se encontro la escena pasada! Regresa al menú";
+            button.onClick.AddListener(() => {
+                SceneManager.LoadScene(SceneNames.MAP);
+            });
+        }
+
         SetWinAnimation();
     }
     void SetWinAnimation()

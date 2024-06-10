@@ -116,7 +116,7 @@ public class PlayerProgress : MonoBehaviour
             }
             else
             {
-                Debug.Log("partida: " + web.downloadHandler.text);
+                //Debug.Log("partida: " + web.downloadHandler.text);
                 Partida partida = JsonConvert.DeserializeObject<Partida>(web.downloadHandler.text);
                 bool updated = false;
                 for(int i = 0; i < zones.Count && !updated; i++)
@@ -138,6 +138,7 @@ public class PlayerProgress : MonoBehaviour
         bool init = CheckIfInitialized();
         if (!init)
         {
+            Debug.Log("Data not initialized!");
             return false;
         }
 
@@ -147,6 +148,7 @@ public class PlayerProgress : MonoBehaviour
             MiniGame m = zones[i].GetMiniGame(miniGame);
             if (m != null)
             {
+                Debug.Log(m.IdGame + " " + m.Name + " " + levelsCompleted);
                 return m.IdGame <= levelsCompleted + 1;
             }
         }
@@ -310,6 +312,10 @@ public class PlayerProgress : MonoBehaviour
                 yield return web.SendWebRequest();
 
                 List<MiniGame> minigames = JsonConvert.DeserializeObject<List<MiniGame>>(web.downloadHandler.text);
+
+                //foreach(MiniGame m in minigames){
+                //    Debug.Log(m.IdGame + " " + m.Name + " " + m.Points);
+                //}
 
                 // Actualizar aquellos minijuegos que tengan datos guardados.
                 for (int j = 0; j < minigames.Count; j++)

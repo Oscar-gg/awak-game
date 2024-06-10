@@ -67,7 +67,7 @@ public class Zone
             if (miniGames[i].IdGame == id)
             {
                 miniGames[i].Points = puntaje;
-                miniGames[i].IdGame = tiempo;
+                miniGames[i].Time = tiempo;
                 return true;
             }
         }

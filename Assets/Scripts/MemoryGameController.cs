@@ -1,12 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.VFX;
 
 public class MemoryGameController : MonoBehaviour
 {
@@ -27,7 +23,7 @@ public class MemoryGameController : MonoBehaviour
     private int countGuesses;
     private int countCorrectGuesses;
     private int gameGuesses;
-
+    
     private int firstGuessIndex, secondGuessIndex;
 
     private string firstGuessPuzzle, secondGuessPuzzle;
@@ -39,6 +35,9 @@ public class MemoryGameController : MonoBehaviour
 
     public GameProgressController gameProgressController;
 
+    private Coroutine timeCoro;
+
+    private int playTime = 0;
 
     private void Awake()
     {
@@ -48,6 +47,7 @@ public class MemoryGameController : MonoBehaviour
 
         puzzles = Resources.LoadAll<Sprite>("Sprites/memoryGame");
         PopulateDictionary();
+        playTime = 0;
     }
 
     void SetReferences()
@@ -72,6 +72,9 @@ public class MemoryGameController : MonoBehaviour
 
         memoryGameUI.SetText(0, gameGuesses);
         uiController.HidePanelInstantly();
+
+        timeCoro = StartCoroutine(CountTime());
+        PlayerProgress.Instance.GetProgress();
     }
 
     void GetButtons()
@@ -95,10 +98,10 @@ public class MemoryGameController : MonoBehaviour
     public void PickCard()
     {
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-
         if (!firstGuess)
         {
 
+            countGuesses++;
             firstGuess = true;
 
             FindObjectOfType<BossAudioManager>().PlaySound("flip");
@@ -112,6 +115,7 @@ public class MemoryGameController : MonoBehaviour
 
         } else if (!secondGuess)
         {
+            countGuesses++;
             FindObjectOfType<BossAudioManager>().PlaySound("flip");
 
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
@@ -192,6 +196,16 @@ public class MemoryGameController : MonoBehaviour
         firstGuess = secondGuess = false;
     }
 
+    private IEnumerator CountTime()
+    {
+
+        while (true)
+        {
+            playTime++;
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     void CheckGameFinished()
     {
         countCorrectGuesses++;
@@ -201,7 +215,6 @@ public class MemoryGameController : MonoBehaviour
             Debug.Log("Game finished");
             Debug.Log("It took you " + countGuesses + " attempts to finish the game");
 
-            //
             CompleteGame();
         }
     }
@@ -234,17 +247,19 @@ public class MemoryGameController : MonoBehaviour
 
     public void CompleteGame()
     {
-        if (gameProgressController != null)
-        {
-            gameProgressController.CompleteMinigame(); // Completa el progreso del juego
-        }
-        else
-        {
-            Debug.LogWarning("GameProgressController no encontrado");
-        }
+        StartCoroutine(FinishRoutine());
+    }
 
-        // Carga la escena específica después de completar el minijuego
-        SceneManager.LoadScene("MundoComunicacion");
+    private IEnumerator FinishRoutine()
+    {
+        StopCoroutine(timeCoro);
+
+        countGuesses /= 2;
+        int points = 1000 + 2000 / countGuesses + 2000 / playTime;
+        StopCoroutine(timeCoro);
+        yield return PlayerProgress.Instance.UpdateProgess(MiniGameNames.MEMORY_GAME, points, playTime);
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneNames.WIN_G);
     }
 
     public void SetGameProgressController(GameProgressController progressController)

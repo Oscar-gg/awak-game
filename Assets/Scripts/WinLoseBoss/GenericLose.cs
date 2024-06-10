@@ -27,7 +27,17 @@ public class GenericLose : MonoBehaviour
     void Start()
     {
         setLoseAnimation();
-        SetData();
+        if (!SetData())
+        {
+            message.text = "No se encontro la escena pasada! Regresa al menú";
+            exitButton.onClick.AddListener(() => {
+                SceneManager.LoadScene(SceneNames.MAP);
+            });
+
+            retryButton.onClick.AddListener(() => {
+                SceneManager.LoadScene(SceneNames.MAP);
+            });
+        }
     }
     void setLoseAnimation()
     {

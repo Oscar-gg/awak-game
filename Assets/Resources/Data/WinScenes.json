@@ -2,7 +2,7 @@
     "SceneInfo": [
         {
             "minigame": "LabeScene",
-            "message": "You have won the game!",
+            "message": "Has superado el laberinto. Es difícil no perderse en el camino de la ética, pero tú lo has logrado. ¡Felicidades!",
             "next_scene": "MundoEtica",
             "previous_scene": ""
         },
