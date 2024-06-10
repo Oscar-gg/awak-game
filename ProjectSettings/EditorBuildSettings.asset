@@ -83,4 +83,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: c2b4ecb1aae8a5e429eb454edcd9c166
+  - enabled: 1
+    path: Assets/Scenes/BossSceneTEDI.unity
+    guid: 05dae158b4ddf094ea4d9f88546909b5
+  - enabled: 1
+    path: Assets/Scenes/WinSceneTEDI.unity
+    guid: e69968eac9532544ea59b6fef637b3c2
+  - enabled: 1
+    path: Assets/Scenes/LoseSceneTEDI.unity
+    guid: e43107e88cc6e0946bd2bcc667737925
   m_configObjects: {}
