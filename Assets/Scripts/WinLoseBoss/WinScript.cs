@@ -43,19 +43,19 @@ public class WinScript : MonoBehaviour
 
         if (ActualScene == "WinSceneComunicacion")
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("MundoComunicacion");
         }
         else if (ActualScene == "LoseSceneEtica")
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("MundoEtica");
         }
         else if (ActualScene == "WinSceneSeguridad")
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("MundoSeguridad");
         }
         else if (ActualScene == "WinSceneTEDI")
         {
-            SceneManager.LoadScene("MenuScene");
+            SceneManager.LoadScene("MundoTEDI");
         }
         else
         {
