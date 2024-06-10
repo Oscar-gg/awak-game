@@ -86,6 +86,7 @@ public class LoseScript : MonoBehaviour
         {
             SceneManager.LoadScene("MenuScene");
         }
+
     }
 
 

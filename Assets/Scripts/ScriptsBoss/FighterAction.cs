@@ -86,6 +86,30 @@ public class FighterAction : MonoBehaviour
     [SerializeField]
     private GameObject wrongHint;
 
+    //TEDI
+    [SerializeField]
+    private GameObject HTMLPrefab;
+
+    [SerializeField]
+    private GameObject CCSPrefab;
+
+    [SerializeField]
+    private GameObject TypeScriptPrefab;
+
+    [SerializeField]
+    private GameObject ReactPrefab;
+
+    [SerializeField]
+    private GameObject TailwindPrefab;
+
+    [SerializeField]
+    private GameObject GitHubPrefab;
+
+    [SerializeField]
+    private GameObject SCRUMPrefab;
+
+
+
     private string IDHint;
 
     private GameObject currentAttack;
@@ -309,6 +333,64 @@ public class FighterAction : MonoBehaviour
             Debug.Log("AtaqueEquipo");
         }
         //Final Etic
+        //InicioTEDI
+        else if (btn.CompareTo("HTML") == 0 && IDHint == "T1")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("HTMLSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellUno);
+            HTMLPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueHTML");
+        }
+        else if (btn.CompareTo("CSS") == 0 && IDHint == "T2")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("CSSSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellDos);
+            CCSPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueCSS");
+        }
+        else if (btn.CompareTo("TypeScript") == 0 && IDHint == "T3")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("TypeScriptSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellTres);
+            TypeScriptPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueTypeScript");
+        }
+        else if (btn.CompareTo("React") == 0 && IDHint == "T4")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("ReactSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellCuatro);
+            ReactPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueReact");
+        }
+        else if (btn.CompareTo("Tailwind") == 0 && IDHint == "T5")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("TailwindSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellUno);
+            TailwindPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueTailwind");
+        }
+        else if (btn.CompareTo("GitHub") == 0 && IDHint == "T6")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("GitHubSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellDos);
+            GitHubPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueGitHub");
+        }
+        else if (btn.CompareTo("SCRUM") == 0 && IDHint == "T7")
+        {
+            GameController.Instance.UpdateAnaAnimation(PlayerAnimation.AnaFight);
+            FindObjectOfType<BossAudioManager>().PlaySound("SCRUMSound");
+            UpdateSpellAnimation(SpellsAnimations.SpellTres);
+            SCRUMPrefab.GetComponent<AttackScript>().Attack(victim);
+            Debug.Log("AtaqueSCRUM");
+        }
+        //FinalTEDI
         else
         {
             this.wrongHint.SetActive(true);
