@@ -21,6 +21,7 @@ TagManager:
   - MemoryCard
   - EntrarPopup
   - SalirPopup
+  - DialogPanel
   layers:
   - Default
   - TransparentFX
