@@ -109,6 +109,40 @@ public class MakeButton : MonoBehaviour
             hero.GetComponent<FighterAction>().SelectAttack("Equipo");
         }
         //Final Etica
+        //Inicio TEDI
+        else if (btn.CompareTo("RespetoBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Respeto");
+        }
+        else if (btn.CompareTo("IntegridadBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Integridad");
+        }
+        else if (btn.CompareTo("ResponsabilidadBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Responsabilidad");
+        }
+        else if (btn.CompareTo("ProfesionalidadBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Profesionalidad");
+        }
+        else if (btn.CompareTo("CompromisoBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Compromiso");
+        }
+        else if (btn.CompareTo("TransparenciaBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Transparencia");
+        }
+        else if (btn.CompareTo("DialogoBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Dialogo");
+        }
+        else if (btn.CompareTo("EquipoBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Equipo");
+        }
+        //FinalTEDI
 
         else
         {

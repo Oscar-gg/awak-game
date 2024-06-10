@@ -43,15 +43,19 @@ public class WinScript : MonoBehaviour
 
         if (ActualScene == "WinSceneComunicacion")
         {
-            SceneManager.LoadScene("MundoComunicacion");
+            SceneManager.LoadScene("MenuScene");
         }
         else if (ActualScene == "LoseSceneEtica")
         {
-            SceneManager.LoadScene("MundoEtica");
+            SceneManager.LoadScene("MenuScene");
         }
         else if (ActualScene == "WinSceneSeguridad")
         {
-            SceneManager.LoadScene("MundoSeguridad");
+            SceneManager.LoadScene("MenuScene");
+        }
+        else if (ActualScene == "WinSceneTEDI")
+        {
+            SceneManager.LoadScene("MenuScene");
         }
         else
         {
@@ -88,11 +92,15 @@ public class WinScript : MonoBehaviour
         }
         else if (ActualScene == "WinSceneEtica")
         {
-            WinText.text = "Tienes la suficiente capacidad, valentía y ética para poder ser una gran persona y Ranger durante toda tu travesía en AWAQ. Pero aun tu aventura no termina, ¡sigue adelante!\r\n";
+            WinText.text = "Tienes la suficiente capacidad, valentía y ética para poder ser una gran persona y Ranger durante toda tu travesía en AWAQ. Pero tu aventura no termina, ¡sigue creciendo para ayudar a las personas junto con AWAQ!\r\n!\r\n";
         }
         else if (ActualScene == "WinSceneSeguridad")
         {
             WinText.text = "Ahora eres capaz de proteger tu seguridad y evitar cualquiera amenaza durante tu travesía en AWAQ. Podrás hacer todas tus actividades de manera más segura. Pero esto no es todo, tu aventura continua, ¡sigue adelante!\r\n";
+        }
+        else if (ActualScene == "WinSceneTEDI")
+        {
+            WinText.text = "Ahora que dominas los poderes de las Tecnologías de la Información, puedes aplicar tus conocimientos como Technology Ranger para ayudar a los demás. Pero tu aventura no termina, ¡sigue creciendo para ayudar a las personas junto con AWAQ!\r\n\r\n";
         }
         else
         {

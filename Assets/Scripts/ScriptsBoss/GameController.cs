@@ -22,6 +22,11 @@ public class GameController : MonoBehaviour
 
     private string ActualID;
 
+    public float updateTimer = 1;
+    public float FloatTime;
+    public int time;
+    int totalUpdateCallsPerSecond;
+
     public string nextLevelName; // Nombre de la próxima escena/nivel
 
     public GameProgressController gameProgressController;
@@ -40,8 +45,15 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+
         gameProgressController = FindObjectOfType<GameProgressController>(); // Encuentra y referencia el GameProgressController
 
+    }
+
+    public void Update()
+    {
+        FloatTime += Time.deltaTime;
+        time = (int)FloatTime;
     }
 
     public void ActivateWinScene()
@@ -123,6 +135,10 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene("LoseSceneSeguridad");
         }
+        else if (ActualScene == "BossSceneTEDI")
+        {
+            SceneManager.LoadScene("LoseSceneTEDI");
+        }
         else
         {
             SceneManager.LoadScene("MenuScene");
@@ -135,7 +151,6 @@ public class GameController : MonoBehaviour
 
     public void ActivateEndWinScene()
     {
-
         CompleteMinigame(); // Actualiza el progreso
 
         ActualScene = SceneManager.GetActiveScene().name;
@@ -143,14 +158,23 @@ public class GameController : MonoBehaviour
         if (ActualScene == "BossSceneComunicacion")
         {
             SceneManager.LoadScene("WinSceneComunicacion");
+            PlayerProgress.Instance.UpdateProgess(MiniGameNames.COMMUNICATIONS_BOSS, ScoreSystem.scoreValue, time);
         }
         else if (ActualScene == "BossSceneEtica")
         {
             SceneManager.LoadScene("WinSceneEtica");
+            PlayerProgress.Instance.UpdateProgess(MiniGameNames.ETHICS_BOSS, ScoreSystem.scoreValue, time);
+
         }
         else if (ActualScene == "BossSceneSeguridad")
         {
             SceneManager.LoadScene("WinSceneSeguridad");
+            PlayerProgress.Instance.UpdateProgess(MiniGameNames.SECURITY_BOSS, ScoreSystem.scoreValue, time);
+        }
+        else if (ActualScene =="BossSceneTEDI" )
+        {
+            SceneManager.LoadScene("WinSceneTEDI");
+            PlayerProgress.Instance.UpdateProgess(MiniGameNames.TEDI_BOSS, ScoreSystem.scoreValue, time);
         }
         else
         {
