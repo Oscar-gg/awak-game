@@ -21,7 +21,7 @@ public class MatchGame : MonoBehaviour
     private const int totalSets = 7;
 
     public Sprite spendLives;
-    public Sprite defaultLifeSprite; // Sprite por defecto para las vidas
+    public Sprite defaultLifeSprite;
     public Image[] livesImage;
 
     private List<Dictionary<string, string>> wordSets = new List<Dictionary<string, string>>()
