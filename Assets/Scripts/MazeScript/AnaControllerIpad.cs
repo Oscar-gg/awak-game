@@ -31,6 +31,8 @@ public class AnaControllerIpad : MonoBehaviour
     //Left Button - button 
     public void PointerDownLeft()
     {
+        Debug.Log("Pressed pointer down");
+
         moveLeft = true;
     }
     public void PointerUpLeft()

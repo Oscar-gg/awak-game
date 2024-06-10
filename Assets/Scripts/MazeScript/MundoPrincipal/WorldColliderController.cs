@@ -1,57 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // Este script es para poder desbloquear los niveles 
 
 
 public class WorldColliderController : MonoBehaviour
 {
-    public int worldIndex; // Índice del mundo que este collider representa
-    public GameObject lockedImage; // Objeto de UI que muestra el candado cerrado
-    private GameProgressController progressController;
+    public string minigameName;
+    public string worldScene;
+    public string popupMessage;
+
+    private Sprite lockedImage; // Objeto de UI que muestra el candado cerrado
+    private Sprite unlockedImage;
+    private SpriteRenderer background;
+    bool unlockedWorld;
+    PopupGeneric genericPopup;
+
+
+    private void Awake()
+    {
+        lockedImage = Resources.Load<Sprite>("Sprites/lock");
+        unlockedImage = Resources.Load<Sprite>("Sprites/unlock");
+        SpriteRenderer[] all = gameObject.GetComponentsInChildren<SpriteRenderer>();
+        background = all[1];
+        Debug.Log(all.Length);
+        genericPopup = FindObjectOfType<PopupGeneric>();
+    }
 
     private void Start()
     {
-        progressController = FindObjectOfType<GameProgressController>();
+        unlockedWorld = PlayerProgress.Instance.CanAccessMiniGame(minigameName);
 
         // Actualizar el estado inicial del mundo
-        UpdateWorldState();
+        UpdateImage();
     }
 
-    public void UpdateWorldState()
+    public void UpdateImage()
     {
-        if (progressController.IsWorldUnlocked(worldIndex))
+        if (unlockedWorld)
         {
-            lockedImage.SetActive(false);
+            GetComponent<SpriteRenderer>().sprite = unlockedImage;
+            background.color = new Color(1f, 1f, 1f, 0f);
         }
         else
         {
-            lockedImage.SetActive(true);
+            GetComponent<SpriteRenderer>().sprite = lockedImage;
+            background.color = new Color(1f, 1f, 1f, 1f);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (unlockedWorld && other.CompareTag("Player"))
         {
-            if (progressController.IsWorldUnlocked(worldIndex))
-            {
-                EnterWorld();
-            }
-            else
-            {
-                Debug.Log("El mundo " + worldIndex + " está bloqueado.");
-                
-            }
+            genericPopup.ShowPopup(popupMessage, worldScene);
         }
-    }
-
-    private void EnterWorld()
-    {
-        
-        Debug.Log("Entrar al mundo " + worldIndex);
-        
-        // SceneManager.LoadScene("World" + worldIndex);
     }
 }

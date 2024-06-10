@@ -42,7 +42,7 @@ public class PlayerProgress : MonoBehaviour
 
     // User data
     private string email;
-    private int id;
+    private int id=-1;
 
     private List<Zone> zones;
 
@@ -54,14 +54,19 @@ public class PlayerProgress : MonoBehaviour
     {
         if (!initialized)
         {
+            initialized = true;
             if (PlayerPrefs.GetString(Preferences.USER_EMAIL_PREF, "") == "" ||
                 PlayerPrefs.GetString(Preferences.USER_PASSWORD_PREF, "") == "")
             {
-                SceneManager.LoadScene(SceneNames.LOGIN);
+                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Email o Usuario vacío");
+                if (SceneManager.GetActiveScene().name != SceneNames.LOGIN)
+                    SceneManager.LoadScene(SceneNames.LOGIN);
+            } else
+            {
+                PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+                yield return StartCoroutine(FetchDatabase());
             }
-
-            yield return StartCoroutine(FetchDatabase());
-            initialized = true;
+            
         }
     }
 
@@ -137,7 +142,6 @@ public class PlayerProgress : MonoBehaviour
         }
 
         int levelsCompleted = GetLevelsCompleted();
-
         for (int i = 0; i < zones.Count; i++)
         {
             MiniGame m = zones[i].GetMiniGame(miniGame);
@@ -188,7 +192,7 @@ public class PlayerProgress : MonoBehaviour
 
     public bool IsValidUser()
     {
-        return name != null && id != -1;
+        return email != null && id != -1;
     }
 
     public int GetPoints()
@@ -225,10 +229,14 @@ public class PlayerProgress : MonoBehaviour
 
         if (id == -1)
         {
-            SceneManager.LoadScene(SceneNames.LOGIN);
+            if (SceneManager.GetActiveScene().name != SceneNames.LOGIN)
+                SceneManager.LoadScene(SceneNames.LOGIN);
+        } else
+        {
+            PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+            yield return StartCoroutine(GetGameData());
         }
 
-        yield return StartCoroutine(GetGameData());
     }
 
     private IEnumerator GetBasicData()
@@ -249,17 +257,20 @@ public class PlayerProgress : MonoBehaviour
         {
             Debug.Log("Error en API: " + web.error);
             PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Error en API: " + web.error);
+            id = -1;
+            email = null;
         }
         else
         {
             if (web.downloadHandler.text == "-1")
             {
-                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Usuario no encontrado");
+                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Usuario no encontrado o contraseña incorrecta.");
                 id = -1;
                 email = null;
             }
             else
             {
+                PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
                 id = Convert.ToInt32(web.downloadHandler.text);
                 email = PlayerPrefs.GetString(Preferences.USER_EMAIL_PREF);
             }
@@ -279,11 +290,13 @@ public class PlayerProgress : MonoBehaviour
 
         if (web.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Error en API: " + web.error);
+            //Debug.Log("Error en API: " + web.error);
+            PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Error en API: " + web.error);
         }
         else
         {
-            Debug.Log(web.downloadHandler.text);
+            PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+
             zones = JsonConvert.DeserializeObject<List<Zone>>(web.downloadHandler.text);
             for (int i = 0; i < zones.Count; i++)
             {
@@ -299,8 +312,6 @@ public class PlayerProgress : MonoBehaviour
                 List<MiniGame> minigames = JsonConvert.DeserializeObject<List<MiniGame>>(web.downloadHandler.text);
 
                 // Actualizar aquellos minijuegos que tengan datos guardados.
-
-
                 for (int j = 0; j < minigames.Count; j++)
                 {
                     string partidaUrl = Endpoints.GetPartida(minigames[j].IdGame, id);
