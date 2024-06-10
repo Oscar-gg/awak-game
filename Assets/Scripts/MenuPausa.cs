@@ -45,6 +45,7 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Renaudar()
@@ -52,13 +53,15 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Glosario()
     {
         Time.timeScale = 0f;
-        botonGlosario.SetActive(false);
+        //botonGlosario.SetActive(false);
         menuGlosario.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void RenaudarGlosario()
@@ -66,6 +69,7 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1f;
         botonGlosario.SetActive(true);
         menuGlosario.SetActive(false);
+        Time.timeScale = 1;
     }
 
 

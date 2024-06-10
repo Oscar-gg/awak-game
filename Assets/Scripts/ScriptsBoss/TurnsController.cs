@@ -19,6 +19,10 @@ public class TurnsController : MonoBehaviour
 
     int HintCounter = 0;
 
+    private string BossPhase;
+
+    public DefenseManager defManager;
+
     [SerializeField]
     private GameObject battleMenu;
 
@@ -45,6 +49,7 @@ public class TurnsController : MonoBehaviour
         this.battleMenu.SetActive(false);
 
 
+
         NextTurn();
     }
 
@@ -67,23 +72,36 @@ public class TurnsController : MonoBehaviour
                 if (ActualScene == "BossSceneComunicacion")
                 {
                     updateHintsComunication(HintCounter);
-                } else if (ActualScene == "BossSceneEtica")
+                }
+                else if (ActualScene == "BossSceneEtica")
                 {
                     updateHintsEtica(HintCounter);
                 }
                 else if (ActualScene == "BossSceneSeguridad")
                 {
                     updateHintsSeguridad(HintCounter);
-                } else
+                }
+                else if (ActualScene == "BossSceneTEDI")
+                {
+                    updateHintsTEDI(HintCounter);
+                }
+                else
                 {
                     hints.text = "Hint: oh vaya, parece que faltan hints";
                 }
 
+            } else if (defManager.Answer == "Correcto")
+            {
+                this.battleMenu.SetActive(true);
+            }
+            else if(defManager.Answer == "Incorrecto")
+            {
+                string attackType = Random.Range(0, 2) == 1 ? "seguridad" : "respeto";
+                currentUnit.GetComponent<FighterAction>().SelectAttackBoss(attackType);
             } else
             {
                 string attackType = Random.Range(0, 2) == 1 ? "seguridad" : "respeto";
                 currentUnit.GetComponent<FighterAction>().SelectAttackBoss(attackType);
-
             }
         } else
         {
@@ -178,6 +196,31 @@ public class TurnsController : MonoBehaviour
                 hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
                 UpdateAttackID("S2");
                 break; 
+            case 2: // Hackers
+                hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
+                UpdateAttackID("S3");
+                break;
+            case 3://phishing
+                hints.text = "Hint: Conjunto de técnicas para detectar entidades fraudulentas";
+                UpdateAttackID("S4");
+                break;
+        }
+
+        HintCounter++;
+    }
+
+    public void updateHintsTEDI(int hintNum)
+    {
+        switch (hintNum)
+        {
+            case 0: //confidencialidad
+                hints.text = "Hint: Acceso a la información que le corresponde a cada uno";
+                UpdateAttackID("S1");
+                break;
+            case 1: //Contrasena
+                hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
+                UpdateAttackID("S2");
+                break;
             case 2: // Hackers
                 hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
                 UpdateAttackID("S3");
