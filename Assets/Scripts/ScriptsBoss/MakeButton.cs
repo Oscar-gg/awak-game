@@ -110,37 +110,33 @@ public class MakeButton : MonoBehaviour
         }
         //Final Etica
         //Inicio TEDI
-        else if (btn.CompareTo("RespetoBtn") == 0)
+        else if (btn.CompareTo("HTMLBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Respeto");
+            hero.GetComponent<FighterAction>().SelectAttack("HTML");
         }
-        else if (btn.CompareTo("IntegridadBtn") == 0)
+        else if (btn.CompareTo("CSSBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Integridad");
+            hero.GetComponent<FighterAction>().SelectAttack("CSS");
         }
-        else if (btn.CompareTo("ResponsabilidadBtn") == 0)
+        else if (btn.CompareTo("TypeScriptBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Responsabilidad");
+            hero.GetComponent<FighterAction>().SelectAttack("TypeScript");
         }
-        else if (btn.CompareTo("ProfesionalidadBtn") == 0)
+        else if (btn.CompareTo("ReactBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Profesionalidad");
+            hero.GetComponent<FighterAction>().SelectAttack("React");
         }
-        else if (btn.CompareTo("CompromisoBtn") == 0)
+        else if (btn.CompareTo("TailwindBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Compromiso");
+            hero.GetComponent<FighterAction>().SelectAttack("Tailwind");
         }
-        else if (btn.CompareTo("TransparenciaBtn") == 0)
+        else if (btn.CompareTo("GitHubBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Transparencia");
+            hero.GetComponent<FighterAction>().SelectAttack("GitHub");
         }
-        else if (btn.CompareTo("DialogoBtn") == 0)
+        else if (btn.CompareTo("SCRUMBtn") == 0)
         {
-            hero.GetComponent<FighterAction>().SelectAttack("Dialogo");
-        }
-        else if (btn.CompareTo("EquipoBtn") == 0)
-        {
-            hero.GetComponent<FighterAction>().SelectAttack("Equipo");
+            hero.GetComponent<FighterAction>().SelectAttack("SCRUM");
         }
         //FinalTEDI
 
