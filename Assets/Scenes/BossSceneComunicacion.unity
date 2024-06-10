@@ -3539,7 +3539,6 @@ RectTransform:
   - {fileID: 902238904}
   - {fileID: 1222236095}
   - {fileID: 888909700}
-  - {fileID: 1601362817}
   - {fileID: 1945568217}
   - {fileID: 1810816157}
   - {fileID: 163272029}
@@ -4680,7 +4679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7490196, g: 0.93333334, b: 0.7372549, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9278,7 +9277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7504005, g: 0.9339623, b: 0.73571557, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10042,81 +10041,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
---- !u!1 &1601362816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1601362817}
-  - component: {fileID: 1601362819}
-  - component: {fileID: 1601362818}
-  m_Layer: 5
-  m_Name: Protect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1601362817
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601362816}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 710938469}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 619, y: -751.99}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1601362818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601362816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1601362819
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601362816}
-  m_CullTransparentMesh: 1
 --- !u!1 &1602519673
 GameObject:
   m_ObjectHideFlags: 0
@@ -11289,6 +11213,13 @@ MonoBehaviour:
   battleMenu: {fileID: 0}
   defenseMenu: {fileID: 2004690472}
   wrongHint: {fileID: 500121805}
+  HTMLPrefab: {fileID: 0}
+  CCSPrefab: {fileID: 0}
+  TypeScriptPrefab: {fileID: 0}
+  ReactPrefab: {fileID: 0}
+  TailwindPrefab: {fileID: 0}
+  GitHubPrefab: {fileID: 0}
+  SCRUMPrefab: {fileID: 0}
   SpellAnimatorController: {fileID: 1019733060}
   AuraAnimatorController: {fileID: 1602519675}
 --- !u!1 &1834126702
@@ -12165,6 +12096,9 @@ MonoBehaviour:
   turnsController: {fileID: 768339657}
   defenseManager: {fileID: 0}
   bosslife: 0
+  updateTimer: 1
+  FloatTime: 0
+  time: 0
   nextLevelName: 
   gameProgressController: {fileID: 0}
 --- !u!4 &1989178888

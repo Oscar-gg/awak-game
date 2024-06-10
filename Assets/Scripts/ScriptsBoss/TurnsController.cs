@@ -213,21 +213,33 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0: //confidencialidad
-                hints.text = "Hint: Acceso a la información que le corresponde a cada uno";
-                UpdateAttackID("S1");
+            case 0: //scrum
+                hints.text = "Hint: Metodología enfocada la colaboración mediante iteraciones cortas, junto con reuniones regulares";
+                UpdateAttackID("T7");
                 break;
-            case 1: //Contrasena
-                hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
-                UpdateAttackID("S2");
+            case 1: //typescrips
+                hints.text = "Hint: Extensión de JavaScript  que ayuda a la mantenibilidad de proyectos y a detectar errores";
+                UpdateAttackID("T3");
                 break;
-            case 2: // Hackers
-                hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
-                UpdateAttackID("S3");
+            case 2: // css
+                hints.text = "Hint: Lenguaje de estilo empleado para el diseño y apariencia de la web";
+                UpdateAttackID("T2");
                 break;
-            case 3://phishing
-                hints.text = "Hint: Conjunto de técnicas para detectar entidades fraudulentas";
-                UpdateAttackID("S4");
+            case 3://tailwind
+                hints.text = "Hint: Framework que permite aplicar estilos, siendo que facilita el diseño sin CSS personalizado";
+                UpdateAttackID("T5");
+                break;
+            case 4://github
+                hints.text = "Hint: Permite alojar, compartir y colaborar en proyectos de software";
+                UpdateAttackID("T6");
+                break;
+            case 5://html
+                hints.text = "Hint: Se utiliza para presentar contenido web. Es su estructura básica";
+                UpdateAttackID("T1");
+                break;
+            case 6://React
+                hints.text = "Hint: Es una biblioteca para construir interfaces de usuario interactivas";
+                UpdateAttackID("T4");
                 break;
         }
 

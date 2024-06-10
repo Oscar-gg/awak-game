@@ -96,6 +96,16 @@
             "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
             "character_name": "Instructor Awaq",
             "character_image": "awak_face_"
+        },
+        {
+            "scene_name": "BossSceneTEDI",
+            "dialogs": ["Prepárate para el combate, aquí tendrás que enfrentarte contra este jefe que amenaza la integridad de las estaciones biológicas de AWAQ.", 
+            "Para ello vas a tener que ver la “hint” que aparece en la parte superior izquierda, y seleccionar el hechizo que más se adecue a su descripción.",
+            "Si fallas el hechizo, se te hará una pregunta que deberás responder correctamente para evitar el daño, si no el jefe te atacara y te quitara vida.",
+            "Por cada ataque que le logres dar, se te darán puntos, y por cada que recibas se te quitarán, ¡mucho éxito en tu combate Ranger!.",
+            "Recuerda que puedes repasar las descripciones en el botón con el icono de signo de interrogación en caso de que ocupes algo de apoyo."],
+            "character_name": "Instructor Awaq",
+            "character_image": "awak_face_"
         }
 
     ]
