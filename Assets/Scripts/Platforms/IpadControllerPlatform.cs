@@ -299,9 +299,7 @@ public class IpadControllerPlatform : MonoBehaviour
     {
         int points = 1000 + PlayerPrefs.GetInt(LIVES, 0) * 100 + 2000 / tiempojugado;
         StopCoroutine(timeCoro);
-        Debug.Log("time: " + tiempojugado);
         yield return PlayerProgress.Instance.UpdateProgess(MiniGameNames.PLATAFORMS, points, tiempojugado);
-        Debug.Log("after winning");
 
         PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
 

@@ -1,6 +1,8 @@
 public static class Endpoints
 {
-    public const string HOST_URL = "https://192.168.1.119:44321/api/";
+
+    public const string IP = "192.168.30.187";
+    public static readonly string HOST_URL = $"https://{IP}:44321/api/";
 
     private const string USER_CONTROLLER = "Usuarios";
     private const string PARTIDA_CONTROLLER = "Partida";
@@ -11,6 +13,7 @@ public static class Endpoints
     {
        return HOST_URL + $"{USER_CONTROLLER}/getId/{mail}/{password}";
     }
+
     public static string GetZonas(int id)
     {
         return HOST_URL + $"{ZONE_CONTROLLER}/byUserId/{id}";

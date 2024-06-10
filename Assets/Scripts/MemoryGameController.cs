@@ -273,8 +273,4 @@ public class MemoryGameController : MonoBehaviour
             Debug.LogWarning("GameProgressController recibido es nulo");
         }
     }
-
-
-
-
 }
