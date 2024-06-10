@@ -441,7 +441,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d6706c22b19a6e246b1e703b82de8fe6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24ce04f2d9b740740a3be81b7b330ac2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1571,6 +1571,7 @@ MonoBehaviour:
   playerControllerAna: {fileID: 0}
   fighterStats: {fileID: 0}
   fighterAction: {fileID: 0}
+  turnsController: {fileID: 0}
   bosslife: 0
   nextLevelName: 
   gameProgressController: {fileID: 0}
