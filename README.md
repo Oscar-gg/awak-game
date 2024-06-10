@@ -38,7 +38,7 @@ git commit -m "Your message"
 
 | Name | Github | Email |
 | --- | --- | --- |
-| Axel Iparrea | [@axeliparrea](https://github.com/axeliparrea) | @a00836682@tec.mx |
+| Axel Iparrea | [@axeliparrea](https://github.com/axeliparrea) | a00836682@tec.mx |
 | Pablo García | [@pagmtz03](https://github.com/pagmtz03) | a01412895@tec.mx |
 | Axel Grande | [@4xlRose](https://github.com/4xlRose) | a01611811@tec.mx |
 | Oscar Arreola | [@Oscar-gg](https://github.com/Oscar-gg) | a01178076@tec.mx |
