@@ -68,6 +68,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinSceneSeguridad.unity
     guid: 4580301e09070234da38ac4b8e1c9835
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: c6579f46512b84c5d8bc3ab1d321411d
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 5cfd70ddb0822487080dfce309e2f28c
+  - enabled: 1
+    path: Assets/Scenes/StartCreditsScene.unity
+    guid: af62367568c774fb1be5a44755f69b7b
+  - enabled: 1
     path: Assets/Scenes/MundoTEDI.unity
     guid: bd2e54196780e7c4fada3af728f47ca0
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: c2b4ecb1aae8a5e429eb454edcd9c166
   m_configObjects: {}
