@@ -220,7 +220,7 @@ public class PlayerProgress : MonoBehaviour
                 return m.IdGame;
         }
 
-        throw new Exception("Minigame " + miniGameName + "not found!");
+        throw new Exception("Minigame " + miniGameName + " not found!");
     }
 
     private IEnumerator FetchDatabase()

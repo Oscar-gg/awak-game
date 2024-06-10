@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -36,6 +38,9 @@ public class IpadControllerPlatform : MonoBehaviour
     public GameProgressController gameProgressController;
     public string nextLevelName;
 
+    private int tiempojugado;
+    private Coroutine timeCoro;
+
     private void Awake()
     {
         StopAllCoroutines();
@@ -46,7 +51,7 @@ public class IpadControllerPlatform : MonoBehaviour
         textOverlayController.HidePanelInstantly();
         PopulateDictionary();
         currentCards = 0;
-
+        tiempojugado = 0;
         SetGameProgressController(GameObject.FindObjectOfType<GameProgressController>());
     }
 
@@ -104,6 +109,9 @@ public class IpadControllerPlatform : MonoBehaviour
     void Start()
     {
 
+        timeCoro = StartCoroutine(ContarTiempo());
+        // Make sure db is initialized
+        PlayerProgress.Instance.IsValidUser();
     }
 
     void Update()
@@ -243,8 +251,11 @@ public class IpadControllerPlatform : MonoBehaviour
 
     private void EndGame()
     {
-        SceneManager.LoadScene("MundoSeguridad");
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneNames.LOSE_G);
     }
+
+    
 
     void PopulateDictionary()
     {
@@ -267,13 +278,7 @@ public class IpadControllerPlatform : MonoBehaviour
         {
             card = new GameCard();
         }
-
         textOverlayController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sprite, EndIfWin);
-    }
-
-    public void GoToMenu()
-    {
-        SceneManager.LoadScene("MundoSeguridad");
     }
 
     public void UpdateCards()
@@ -285,15 +290,31 @@ public class IpadControllerPlatform : MonoBehaviour
     {
         if (currentCards == TOTAL_CARDS)
         {
-            if (gameProgressController != null)
-            {
-                gameProgressController.CompleteMinigame();
-            }
-            else
-            {
-                Debug.LogWarning("GameProgressController no encontrado");
-            }
-            SceneManager.LoadScene("MundoSeguridad");
+            StartCoroutine(FinishRoutine());
+            
+        }
+    }
+
+    private IEnumerator FinishRoutine()
+    {
+        int points = 1000 + PlayerPrefs.GetInt(LIVES, 0) * 100 + 2000 / tiempojugado;
+        StopCoroutine(timeCoro);
+        Debug.Log("time: " + tiempojugado);
+        yield return PlayerProgress.Instance.UpdateProgess(MiniGameNames.PLATAFORMS, points, tiempojugado);
+        Debug.Log("after winning");
+
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene(SceneNames.WIN_G);
+    }
+
+    private IEnumerator ContarTiempo()
+    {
+
+        while (true)
+        {
+            tiempojugado++;
+            yield return new WaitForSeconds(1);
         }
     }
 }

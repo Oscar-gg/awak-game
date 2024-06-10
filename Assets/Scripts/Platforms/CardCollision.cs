@@ -22,9 +22,9 @@ public class CardCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlatformController.Instance.ShowCard(sp.name, sp);
+            IpadControllerPlatform.Instance.ShowCard(sp.name, sp);
             FindObjectOfType<BossAudioManager>().PlaySound("Collect");
-            collision.gameObject.GetComponent<PlatformController>().UpdateCards();
+            collision.gameObject.GetComponent<IpadControllerPlatform>().UpdateCards();
             GameObject.Destroy(this.gameObject);
         }
     }

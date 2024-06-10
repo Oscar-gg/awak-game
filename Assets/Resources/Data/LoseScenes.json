@@ -1,0 +1,29 @@
+{
+    "SceneInfo": [
+        {
+            "minigame": "LabeScene",
+            "message": "You have won the game!",
+            "next_scene": "MundoEtica",
+            "previous_scene": "LabeScene"
+        },
+        {
+            "minigame": "MemoryScene",
+            "message": "You have won the game!",
+            "next_scene": "MundoComunicacion",
+            "previous_scene": "MemoryScene"
+        },
+        {
+            "minigame": "PlatformScene",
+            "message": "Has perdido el minijuego porque tocaste tres rayos. Intenta de nuevo, ¡tú puedes!",
+            "next_scene": "MundoSeguridad",
+            "previous_scene": "PlatformScene"
+        },
+        {
+            "minigame": "TEDI_minigame",
+            "message": "You have won the game!",
+            "next_scene": "MundoTEDI",
+            "previous_scene": "TEDI_minigame"
+        }
+    ]
+}
+

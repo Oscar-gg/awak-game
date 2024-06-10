@@ -57,5 +57,7 @@ public class WorldColliderController : MonoBehaviour
         {
             genericPopup.ShowPopup(popupMessage, worldScene);
         }
+
+
     }
 }

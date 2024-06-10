@@ -1,0 +1,29 @@
+{
+    "SceneInfo": [
+        {
+            "minigame": "LabeScene",
+            "message": "You have won the game!",
+            "next_scene": "MundoEtica",
+            "previous_scene": ""
+        },
+        {
+            "minigame": "MemoryScene",
+            "message": "You have won the game!",
+            "next_scene": "MundoComunicacion",
+            "previous_scene": ""
+        },
+        {
+            "minigame": "PlatformScene",
+            "message": "¡Felicidades, has sobrepasado las plataformas! Ahora puedes continuar al siguiente nivel.",
+            "next_scene": "MundoSeguridad",
+            "previous_scene": ""
+        },
+        {
+            "minigame": "PlatformScene",
+            "message": "You have won the game!",
+            "next_scene": "MundoTEDI",
+            "previous_scene": ""
+        }
+    ]
+}
+
