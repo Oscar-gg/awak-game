@@ -8,32 +8,105 @@ public class MatchGame : MonoBehaviour
 {
     public Button[] leftButtons;
     public Button[] rightButtons;
-    public Text livesText;
-    public int lives = 3;
+    // public Text livesText;
+    public Text dictionaryText;
+    public int lives = 5;
     public Color selectedColor = Color.yellow;
     public Color defaultColor = Color.white;
     public Color incorrectColor = Color.red;
 
     private Button selectedLeftButton = null;
     private Button selectedRightButton = null;
+    private int currentSetIndex = 0;
+    private const int totalSets = 7;
 
-    private Dictionary<string, string> wordPairs = new Dictionary<string, string>()
+    public Sprite spendLives;
+    public Sprite defaultLifeSprite; // Sprite por defecto para las vidas
+    public Image[] livesImage;
+
+    private List<Dictionary<string, string>> wordSets = new List<Dictionary<string, string>>()
     {
-        {"pater", "father"},
-        {"mater", "mother"},
-        {"filius", "son"},
-        {"filia", "daughter"},
-        {"Domini", "Lord"}
+        new Dictionary<string, string>()
+        {
+            {"<h1>", "Encabezado importante"},
+            {"<p>", "Párrafo"},
+            {"<img>", "Imagen"},
+            {"<a>", "Hipervínculo"},
+            {"<div>", "División"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"color", "Color del texto"},
+            {"margin", "Margen del elemento"},
+            {"padding", "Relleno del elemento"},
+            {"font-size", "Tamaño de fuente"},
+            {"background-color", "Color de fondo"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"let", "Variable local"},
+            {"const", "Constante local"},
+            {"=>", "Función flecha"},
+            {"interface", "Interfaz de TypeScript"},
+            {"type", "Alias de tipo"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"useState", "Hook de estado"},
+            {"useEffect", "Hook de efectos"},
+            {"Component", "Clase base de componentes"},
+            {"JSX", "Sintaxis JavaScript XML"},
+            {"props", "Propiedades de componentes"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"flex", "Contexto de flexbox"},
+            {"justify-center", "Centrar horizontalmente"},
+            {"bg-blue-500", "Fondo azul"},
+            {"text-xl", "Texto extra grande"},
+            {"p-4", "Relleno de 1rem"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"git init", "Inicializa repositorio"},
+            {"git commit", "Guarda cambios"},
+            {"git push", "Sube cambios"},
+            {"git pull", "Actualiza repositorio"},
+            {"git clone", "Copia repositorio"}
+        },
+        new Dictionary<string, string>()
+        {
+            {"Product Backlog", "Lista de tareas"},
+            {"Sprint", "Iteración de trabajo"},
+            {"Daily Scrum", "Reunión diaria"},
+            {"Sprint Review", "Revisión de sprint"},
+            {"Scrum Master", "Facilitador del equipo"}
+        }
+    };
+
+    private string[] dictionaryTitles = new string[]
+    {
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "GitHub",
+        "SCRUM"
     };
 
     private void Start()
     {
         SetupButtons();
-        UpdateLivesText();
+        // UpdateLivesText();
+        UpdateDictionaryText();
+        UpdateLivesImage();
     }
 
     private void SetupButtons()
     {
+        Dictionary<string, string> wordPairs = wordSets[currentSetIndex];
+
         List<string> leftWords = new List<string>(wordPairs.Keys);
         List<string> rightWords = new List<string>(wordPairs.Values);
 
@@ -45,6 +118,7 @@ public class MatchGame : MonoBehaviour
             leftButtons[i].GetComponentInChildren<Text>().text = leftWords[i];
             leftButtons[i].onClick.AddListener(() => OnLeftButtonClick(leftButtons[i]));
             leftButtons[i].image.color = defaultColor;
+            leftButtons[i].interactable = true;
         }
 
         for (int i = 0; i < rightButtons.Length; i++)
@@ -52,6 +126,7 @@ public class MatchGame : MonoBehaviour
             rightButtons[i].GetComponentInChildren<Text>().text = rightWords[i];
             rightButtons[i].onClick.AddListener(() => OnRightButtonClick(rightButtons[i]));
             rightButtons[i].image.color = defaultColor;
+            rightButtons[i].interactable = true;
         }
     }
 
@@ -92,9 +167,10 @@ public class MatchGame : MonoBehaviour
         Text leftText = selectedLeftButton.GetComponentInChildren<Text>();
         Text rightText = selectedRightButton.GetComponentInChildren<Text>();
 
+        Dictionary<string, string> wordPairs = wordSets[currentSetIndex];
+
         if (wordPairs[leftText.text] == rightText.text)
         {
-            // Correct match
             selectedLeftButton.interactable = false;
             selectedRightButton.interactable = false;
             selectedLeftButton.image.color = Color.green;
@@ -102,10 +178,10 @@ public class MatchGame : MonoBehaviour
         }
         else
         {
-            // Incorrect match
             StartCoroutine(IncorrectMatch());
             lives--;
-            UpdateLivesText();
+            // UpdateLivesText();
+            UpdateLivesImage();
         }
 
         selectedLeftButton = null;
@@ -113,7 +189,22 @@ public class MatchGame : MonoBehaviour
 
         if (CheckWinCondition())
         {
-            SceneManager.LoadScene("WinScene");
+            currentSetIndex++;
+            if (currentSetIndex < totalSets)
+            {
+                if (lives < 5)
+                {
+                    lives++;
+                    // UpdateLivesText();
+                    UpdateLivesImage();
+                }
+                UpdateDictionaryText();
+                SetupButtons();
+            }
+            else
+            {
+                SceneManager.LoadScene("WinScene");
+            }
         }
 
         if (lives <= 0)
@@ -133,11 +224,34 @@ public class MatchGame : MonoBehaviour
         selectedRightButton.image.color = defaultColor;
     }
 
-    private void UpdateLivesText()
+    /* private void UpdateLivesText()
     {
         if (livesText != null)
         {
-            livesText.text = "Lives: " + lives;
+            livesText.text = "Vidas: " + lives;
+        }
+    } */
+
+    public void UpdateLivesImage()
+    {
+        for (int i = 0; i < livesImage.Length; i++)
+        {
+            if (i < lives)
+            {
+                livesImage[i].sprite = defaultLifeSprite;
+            }
+            else
+            {
+                livesImage[i].sprite = spendLives;
+            }
+        }
+    }
+
+    private void UpdateDictionaryText()
+    {
+        if (dictionaryText != null)
+        {
+            dictionaryText.text = dictionaryTitles[currentSetIndex];
         }
     }
 
