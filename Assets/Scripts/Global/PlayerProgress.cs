@@ -328,7 +328,7 @@ public class PlayerProgress : MonoBehaviour
 
     private bool CheckIfInitialized()
     {
-        if (!initialized)
+        if (!initialized || zones == null)
         {
             PlayerPrefs.SetString(Preferences.RETURN_SCENE_PREF, SceneManager.GetActiveScene().name);
             SceneManager.LoadScene(SceneNames.LOADING);
