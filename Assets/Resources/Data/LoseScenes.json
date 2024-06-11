@@ -8,7 +8,7 @@
         },
         {
             "minigame": "MemoryScene",
-            "message": "You have won the game!",
+            "message": "Buen intento Ranger, esta vez no lo lograste, pero ¡sigue intentando, en AWAQ creemos en ti!",
             "next_scene": "MundoComunicacion",
             "previous_scene": "MemoryScene"
         },
@@ -20,7 +20,7 @@
         },
         {
             "minigame": "TEDI_minigame",
-            "message": "You have won the game!",
+            "message": "Buen intento Ranger, esta vez no lo lograste, pero ¡sigue intentando, en AWAQ creemos en ti!",
             "next_scene": "MundoTEDI",
             "previous_scene": "TEDI_minigame"
         }

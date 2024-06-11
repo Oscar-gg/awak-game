@@ -1,8 +1,8 @@
 public static class Endpoints
 {
 
-    public const string IP = "192.168.30.187";
-    public static readonly string HOST_URL = $"https://{IP}:44321/api/";
+    public const string IP = "cat-enough-narwhal.ngrok-free.app";
+    public static readonly string HOST_URL = $"https://{IP}/api/";
 
     private const string USER_CONTROLLER = "Usuarios";
     private const string PARTIDA_CONTROLLER = "Partida";

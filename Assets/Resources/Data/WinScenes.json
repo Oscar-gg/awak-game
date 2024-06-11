@@ -8,7 +8,7 @@
         },
         {
             "minigame": "MemoryScene",
-            "message": "You have won the game!",
+            "message": "¡Buen trabajo Ranger! Lograste dominar todos los conocimientos como poderes, ahora es momento de ponerlos a prueba contra el jefe de este nivel",
             "next_scene": "MundoComunicacion",
             "previous_scene": ""
         },
@@ -20,13 +20,13 @@
         },
         {
             "minigame": "PlatformScene",
-            "message": "You have won the game!",
+            "message": "¡Buen trabajo Ranger! Lograste dominar todos los conocimientos como poderes, ahora es momento de ponerlos a prueba contra el jefe de este nivel",
             "next_scene": "MundoTEDI",
             "previous_scene": ""
         },
         {
             "minigame": "TEDI_Minigame",
-            "message": "You have won the game!",
+            "message": "¡Buen trabajo Ranger! Lograste dominar todos los conocimientos como poderes, ahora es momento de ponerlos a prueba contra el jefe de este nivel",
             "next_scene": "MundoTEDI",
             "previous_scene": ""
         }
