@@ -12,17 +12,25 @@ public class FinalPopUpMaze : MonoBehaviour
     public GameObject FinalPopMaze;
     private MinigameController completionHandler;
     private PlayerProgress progress;
-    private int totalCofres = 1; //Cantidad total de cofres que se deberan de recoger 
+    private int totalCofres = 7; //Cantidad total de cofres que se deberan de recoger 
     private List<string> collidedCofres = new List<string>();
-    public float delayBeforeShowingPopup = 1f; 
+    public float delayBeforeShowingPopup = 1f;
 
+    private int tiempojugado;
+    private Coroutine timeCoro;
 
-    
+    private void Awake()
+    {
+        
+        tiempojugado = 0;
+    }
+
 
     void Start()
     {
         completionHandler = FindObjectOfType<MinigameController>();
         progress = FindObjectOfType<PlayerProgress>();
+        timeCoro = StartCoroutine(ContarTiempo());
 
         if (FinalPopMaze != null)
         {
@@ -55,16 +63,18 @@ public class FinalPopUpMaze : MonoBehaviour
 
     void EndGame()
     {
-        if (completionHandler != null)
-        {
-            completionHandler.CompleteMinigame();
-            SceneManager.LoadScene(10);
-            //StartCoroutine(UpdateProgressCoroutine());
-        }
-        else
-        {
-            Debug.LogError("completionHandler no está asignado.");
-        }
+        StartCoroutine(FinishRoutine());
+
+        //if (completionHandler != null)
+        //{
+        //    completionHandler.CompleteMinigame();
+        //    SceneManager.LoadScene(10);
+        //    //StartCoroutine(UpdateProgressCoroutine());
+        //}
+        //else
+        //{
+        //    Debug.LogError("completionHandler no está asignado.");
+        //}
     }
 
 
@@ -81,7 +91,28 @@ public class FinalPopUpMaze : MonoBehaviour
         }
     }
 
+    private IEnumerator FinishRoutine()
+    {
+        StopCoroutine(timeCoro);
+        int points = 1000 + 100 + 2000 / tiempojugado;
+        yield return PlayerProgress.Instance.UpdateProgess(MiniGameNames.MAZE, points, tiempojugado);
+
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneNames.WIN_G);
+    }
+
+    private IEnumerator ContarTiempo()
+    {
+        while (true)
+        {
+            tiempojugado++;
+            yield return new WaitForSeconds(1);
+        }
+    }
+
 }
+
+
 
 public class TempCoroutineRunner : MonoBehaviour
 {
