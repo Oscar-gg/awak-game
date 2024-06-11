@@ -1,8 +1,4 @@
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
 // Este script es para poder desbloquear los niveles 
 
 

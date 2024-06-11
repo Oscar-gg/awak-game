@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Transactions;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.Sprites;
 
 public class TurnsController : MonoBehaviour
 {
