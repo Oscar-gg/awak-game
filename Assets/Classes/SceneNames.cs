@@ -12,4 +12,6 @@ public static class SceneNames
     public const string BOSS_ETHICS = "BossSceneEtica";
     public const string BOSS_SECURITY = "BossSceneSeguridad";
     public const string BOSS_TEDI = "BossSceneTEDI";
+    public const string MAZE = "LabeScene";
+    
 }

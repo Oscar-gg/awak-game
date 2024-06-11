@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db28c13322d438743a444cd12057832e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameName: "Jefe - Comunicaci\xF3n"
+  minigameName: "Jefe - Comunicacion"
   worldScene: BossSceneComunicacion
   popupMessage: "\xBFDeseas enfrentar al jefe?"
 --- !u!50 &661375711
