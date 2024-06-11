@@ -106,10 +106,15 @@ public class MenuPausa : MonoBehaviour
 
     private void Start()
     {
-        // Asegurarse de que el menú de pausa esté desactivado al iniciar
+        // Asegurarse de que el menï¿½ de pausa estï¿½ desactivado al iniciar
         menuPausa.SetActive(false);
         
         if (menuGlosario != null)
             menuGlosario.SetActive(false);
+    }
+
+    public void GoToLogin()
+    {
+        SceneManager.LoadScene(SceneNames.LOGIN);
     }
 }

@@ -605,7 +605,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2079137507}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: Cerrar
+        m_MethodName: GoToLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2535,7 +2535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &671190570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7145,7 +7145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1563687657
 MonoBehaviour:
   m_ObjectHideFlags: 0
