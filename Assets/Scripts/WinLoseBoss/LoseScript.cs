@@ -31,7 +31,7 @@ public class LoseScript : MonoBehaviour
 
     public void ExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
 
