@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 
 
@@ -10,15 +11,18 @@ public class FinalPopUpMaze : MonoBehaviour
 {
     public GameObject FinalPopMaze;
     private MinigameController completionHandler;
+    private PlayerProgress progress;
     private int totalCofres = 9; //Cantidad total de cofres que se deberan de recoger 
     private List<string> collidedCofres = new List<string>();
     public float delayBeforeShowingPopup = 1f; 
+
 
     
 
     void Start()
     {
         completionHandler = FindObjectOfType<MinigameController>();
+        progress = FindObjectOfType<PlayerProgress>();
 
         if (FinalPopMaze != null)
         {
@@ -55,10 +59,25 @@ public class FinalPopUpMaze : MonoBehaviour
         {
             completionHandler.CompleteMinigame();
             SceneManager.LoadScene(10);
+            StartCoroutine(UpdateProgressCoroutine());
         }
         else
         {
             Debug.LogError("completionHandler no está asignado.");
+        }
+    }
+
+
+    private IEnumerator UpdateProgressCoroutine()
+    {
+        if (progress != null)
+        {
+            // Asegúrate de pasar los parámetros correctos
+            yield return StartCoroutine(progress.UpdateProgess("NombreDelMinijuego", 100, 120));
+        }
+        else
+        {
+            Debug.LogError("progress no está asignado.");
         }
     }
 
@@ -78,3 +97,6 @@ public class TempCoroutineRunner : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
+
+

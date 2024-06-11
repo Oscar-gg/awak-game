@@ -1,11 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Transactions;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.Sprites;
 
 public class TurnsController : MonoBehaviour
 {
@@ -117,25 +113,26 @@ public class TurnsController : MonoBehaviour
                 hints.text = "Hint: Es el principal medio de comunicación tanto interno, externo, como para obtener información";
                 UpdateAttackID("C1");
                 break;
-            case 1: //rainbow
-                hints.text = "Hint: Maneja las conversaciones de los distintos proyectos";
-                UpdateAttackID("C2");
+            case 1:
+                //multicultural
+                hints.text = "Hint: Se colabora en un ambiente que no conoce fronteras ni nacionalidades";
+                UpdateAttackID("C6");
                 break;
             case 2: //sharepoint
                 hints.text = "Hint: Es donde se guarda la mayor parte de las cosas";
                 UpdateAttackID("C3");
                 break;
-            case 3: //movil
-                hints.text = "Hint: Dispositivo donde se recomienda tener las aplicaciones de comunicación descargadas";
-                UpdateAttackID("C4");
-                break;
-            case 4: //jerarquizada
+            case 3: //jerarquizada
                 hints.text = "Hint: Es la estructura de las comunicaciones de AWAQ";
                 UpdateAttackID("C5");
                 break;
-            case 5: //multicultural
-                hints.text = "Hint: Se colabora en un ambiente que no conoce fronteras ni nacionalidades";
-                UpdateAttackID("C6");
+            case 4: //movil
+                hints.text = "Hint: Dispositivo donde se recomienda tener las aplicaciones de comunicación descargadas";
+                UpdateAttackID("C4");
+                break;
+            case 5: //rainbow
+                hints.text = "Hint: Maneja las conversaciones de los distintos proyectos";
+                UpdateAttackID("C2");
                 break;
         }
 
@@ -147,37 +144,37 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0: //Respeto
-                hints.text = "Hint: Ser inclusivo y tratar a las personas dignamente";
-                UpdateAttackID("E1");
+            case 0: //Compromiso
+                hints.text = "Hint: Fidelidad y devoción a la organización";
+                UpdateAttackID("E5");
                 break;
-            case 1: //integridad
-                hints.text = "Hint: Busca un beneficio grupal, basándose en valores como la imparcialidad";
-                UpdateAttackID("E2");
+            case 1://transparencia
+                hints.text = "Hint: Dar los resultados de manera veraz y sin ambigüedad cuando sean solicitados";
+                UpdateAttackID("E6");
                 break;
             case 2: //responsabilidad
                 hints.text = "Hint: Manejo y conciencia de tus obligaciones, siempre teniendo un enfoque honesto";
                 UpdateAttackID("E3");
                 break;
-            case 3: //Profesionalidad
-                hints.text = "Hint: Compromiso con la calidad y excelencia mediante la mejora constante";
-                UpdateAttackID("E4");
+            case 3: //teamwork
+                hints.text = "Hint: Colaboración para un objetivo en común";
+                UpdateAttackID("E8");
                 break;
-            case 4: //Compromiso
-                hints.text = "Hint: Fidelidad y devoción a la organización";
-                UpdateAttackID("E5");
+            case 4://Respeto
+                hints.text = "Hint: Ser inclusivo y tratar a las personas dignamente";
+                UpdateAttackID("E1");
                 break;
-            case 5: //transparencia
-                hints.text = "Hint: Dar los resultados de manera veraz y sin ambigüedad cuando sean solicitados";
-                UpdateAttackID("E6");
+            case 5:  //integridad
+                hints.text = "Hint: Busca un beneficio grupal, basándose en valores como la imparcialidad";
+                UpdateAttackID("E2");
                 break;
             case 6: //Dialogo
                 hints.text = "Hint: Comunicación de conocimientos de manera efectiva, así como respetuosa";
                 UpdateAttackID("E7");
                 break;
-            case 7: //teamwork
-                hints.text = "Hint: Colaboración para un objetivo en común";
-                UpdateAttackID("E8");
+            case 7: //Profesionalidad
+                hints.text = "Hint: Compromiso con la calidad y excelencia mediante la mejora constante";
+                UpdateAttackID("E4");
                 break;
         }
 
@@ -188,21 +185,21 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0: //confidencialidad
+            case 0: //Contrasena
+                hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
+                UpdateAttackID("S2");
+                break;
+            case 1: //confidencialidad
                 hints.text = "Hint: Acceso a la información que le corresponde a cada uno";
                 UpdateAttackID("S1");
                 break;
-            case 1: //Contrasena
-                hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
-                UpdateAttackID("S2");
-                break; 
-            case 2: // Hackers
-                hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
-                UpdateAttackID("S3");
-                break;
-            case 3://phishing
+            case 2: //phishing
                 hints.text = "Hint: Conjunto de técnicas para detectar entidades fraudulentas";
                 UpdateAttackID("S4");
+                break;
+            case 3:// Hackers
+                hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
+                UpdateAttackID("S3");
                 break;
         }
 
@@ -213,21 +210,33 @@ public class TurnsController : MonoBehaviour
     {
         switch (hintNum)
         {
-            case 0: //confidencialidad
-                hints.text = "Hint: Acceso a la información que le corresponde a cada uno";
-                UpdateAttackID("S1");
+            case 0: //scrum
+                hints.text = "Hint: Metodología enfocada la colaboración mediante iteraciones cortas, junto con reuniones regulares";
+                UpdateAttackID("T7");
                 break;
-            case 1: //Contrasena
-                hints.text = "Hint: Clave de seguridad la cual tiene una variedad de caracteres para evitar el acceso a mi información";
-                UpdateAttackID("S2");
+            case 1: //typescrips
+                hints.text = "Hint: Extensión de JavaScript  que ayuda a la mantenibilidad de proyectos y a detectar errores";
+                UpdateAttackID("T3");
                 break;
-            case 2: // Hackers
-                hints.text = "Hint: Conjunto de técnicas para evitar caer en actividad maliciosa digital";
-                UpdateAttackID("S3");
+            case 2: // css
+                hints.text = "Hint: Lenguaje de estilo empleado para el diseño y apariencia de la web";
+                UpdateAttackID("T2");
                 break;
-            case 3://phishing
-                hints.text = "Hint: Conjunto de técnicas para detectar entidades fraudulentas";
-                UpdateAttackID("S4");
+            case 3://tailwind
+                hints.text = "Hint: Framework que permite aplicar estilos, siendo que facilita el diseño sin CSS personalizado";
+                UpdateAttackID("T5");
+                break;
+            case 4://github
+                hints.text = "Hint: Permite alojar, compartir y colaborar en proyectos de software";
+                UpdateAttackID("T6");
+                break;
+            case 5://html
+                hints.text = "Hint: Se utiliza para presentar contenido web. Es su estructura básica";
+                UpdateAttackID("T1");
+                break;
+            case 6://React
+                hints.text = "Hint: Es una biblioteca para construir interfaces de usuario interactivas";
+                UpdateAttackID("T4");
                 break;
         }
 

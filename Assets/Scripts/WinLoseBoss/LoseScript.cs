@@ -31,7 +31,7 @@ public class LoseScript : MonoBehaviour
 
     public void ExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit(); //ES PARA PDOER EXPORTAR EL JUEGO SINO VA A MARCAR ERROR
     }
 
@@ -51,6 +51,10 @@ public class LoseScript : MonoBehaviour
         else if (ActualScene == "LoseSceneSeguridad")
         {
             SceneManager.LoadScene("MundoSeguridad");
+        }
+        else if (ActualScene == "LoseSceneTEDI")
+        {
+            SceneManager.LoadScene("MundoTEDI");
         }
         else
         {
@@ -74,10 +78,15 @@ public class LoseScript : MonoBehaviour
         {
             SceneManager.LoadScene("BossSceneSeguridad");
         }
+        else if (ActualScene == "LoseSceneTEDI")
+        {
+            SceneManager.LoadScene("BossSceneTEDI");
+        }
         else
         {
             SceneManager.LoadScene("MenuScene");
         }
+
     }
 
 

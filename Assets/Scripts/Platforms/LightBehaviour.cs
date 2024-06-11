@@ -88,7 +88,7 @@ public class LightBehaviour : MonoBehaviour
     {
         collision.gameObject.GetComponent<Animator>().SetTrigger("isHurt");
         yield return new WaitForSeconds(1f);
-        collision.gameObject.GetComponent<PlatformController>().collidedRay();
+        collision.gameObject.GetComponent<IpadControllerPlatform>().collidedRay();
         damageCoroutine = null;
     }
 

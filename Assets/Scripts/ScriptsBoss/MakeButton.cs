@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -109,6 +106,36 @@ public class MakeButton : MonoBehaviour
             hero.GetComponent<FighterAction>().SelectAttack("Equipo");
         }
         //Final Etica
+        //Inicio TEDI
+        else if (btn.CompareTo("HTMLBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("HTML");
+        }
+        else if (btn.CompareTo("CSSBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("CSS");
+        }
+        else if (btn.CompareTo("TypeScriptBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("TypeScript");
+        }
+        else if (btn.CompareTo("ReactBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("React");
+        }
+        else if (btn.CompareTo("TailwindBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("Tailwind");
+        }
+        else if (btn.CompareTo("GitHubBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("GitHub");
+        }
+        else if (btn.CompareTo("SCRUMBtn") == 0)
+        {
+            hero.GetComponent<FighterAction>().SelectAttack("SCRUM");
+        }
+        //FinalTEDI
 
         else
         {

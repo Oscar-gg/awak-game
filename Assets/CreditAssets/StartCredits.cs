@@ -39,7 +39,7 @@ public class StartCredits : MonoBehaviour
         audioSource.clip = musicClip;  // Assign the audio clip
         audioSource.loop = true;       // Set looping to play continuously
         audioSource.playOnAwake = false; // Don't play on object creation (optional)
-        audioSource.volume = 1.0f;      // Set volume (0.0f to 1.0f)
+        audioSource.volume = 0.2f;      // Set volume (0.0f to 1.0f)
 
         audioSource.Play();  // Start playing the music
         yield return new WaitForSeconds(8);

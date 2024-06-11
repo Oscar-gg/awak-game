@@ -22,7 +22,12 @@ public class GameController : MonoBehaviour
 
     private string ActualID;
 
-    public string nextLevelName; // Nombre de la próxima escena/nivel
+    public float updateTimer = 1;
+    public float FloatTime;
+    public int time;
+    int totalUpdateCallsPerSecond;
+
+    public string nextLevelName; // Nombre de la prï¿½xima escena/nivel
 
     public GameProgressController gameProgressController;
 
@@ -36,12 +41,20 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("lives", 5);
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        ScoreSystem.scoreValue = 0;
     }
 
     void Start()
     {
-        gameProgressController = FindObjectOfType<GameProgressController>(); // Encuentra y referencia el GameProgressController
 
+        gameProgressController = FindObjectOfType<GameProgressController>(); // Encuentra y referencia el GameProgressController
+        ScoreSystem.scoreValue = 0;
+    }
+
+    public void Update()
+    {
+        FloatTime += Time.deltaTime;
+        time = (int)FloatTime;
     }
 
     public void ActivateWinScene()
@@ -123,6 +136,10 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene("LoseSceneSeguridad");
         }
+        else if (ActualScene == "BossSceneTEDI")
+        {
+            SceneManager.LoadScene("LoseSceneTEDI");
+        }
         else
         {
             SceneManager.LoadScene("MenuScene");
@@ -135,31 +152,39 @@ public class GameController : MonoBehaviour
 
     public void ActivateEndWinScene()
     {
-
-        CompleteMinigame(); // Actualiza el progreso
+        // CompleteMinigame(); // Actualiza el progreso
 
         ActualScene = SceneManager.GetActiveScene().name;
 
         if (ActualScene == "BossSceneComunicacion")
         {
-            SceneManager.LoadScene("WinSceneComunicacion");
+            StartCoroutine(EndRoutine("WinSceneComunicacion", MiniGameNames.COMMUNICATIONS_BOSS, ScoreSystem.scoreValue, time));
         }
         else if (ActualScene == "BossSceneEtica")
         {
-            SceneManager.LoadScene("WinSceneEtica");
+            StartCoroutine(EndRoutine("WinSceneEtica", MiniGameNames.ETHICS_BOSS, ScoreSystem.scoreValue, time));
         }
         else if (ActualScene == "BossSceneSeguridad")
         {
-            SceneManager.LoadScene("WinSceneSeguridad");
+            StartCoroutine(EndRoutine("WinSceneSeguridad", MiniGameNames.SECURITY_BOSS, ScoreSystem.scoreValue, time));
+        }
+        else if (ActualScene =="BossSceneTEDI" )
+        {
+            StartCoroutine(EndRoutine("WinSceneTEDI", MiniGameNames.TEDI_BOSS, ScoreSystem.scoreValue, time));
         }
         else
         {
             SceneManager.LoadScene("MenuScene");
         }
 
-        playerControllerAna.UpdateOutPlayerController();
-        playerControllerAna.UpdateAnimation(PlayerAnimation.AnaWin);
+        // playerControllerAna.UpdateOutPlayerController();
+        // playerControllerAna.UpdateAnimation(PlayerAnimation.AnaWin);
+    }
 
+    private IEnumerator EndRoutine(string scene, string miniGame, int score, int time){
+        Debug.Log("Inside boss end routine: " + scene + ", " + miniGame + ", " + score + ", " + time);
+        yield return PlayerProgress.Instance.UpdateProgess(miniGame, score, time);
+        SceneManager.LoadScene(scene);
     }
 
     public void CompleteMinigame()
