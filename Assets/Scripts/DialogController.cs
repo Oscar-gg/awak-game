@@ -43,6 +43,7 @@ public class DialogController : MonoBehaviour
 
     public void ShowPanel(string character, string[] dialogs, Sprite sp, Action action)
     {
+        StopAllCoroutines();
         characterTalking.overrideSprite = sp;
         characterName.text = character;
         endAction = action;
@@ -50,16 +51,9 @@ public class DialogController : MonoBehaviour
         currentDialog = 0;
         this.dialog.text = "";
 
-        if (dialogs.Length > 1)
-        {
-            nextText.text = "Siguiente";
-        } else
-        {
-            nextText.text = "Finalizar";
-        }
-       
+        UpdateNextText();
+        UpdatePreviousButton();
 
-        PreviousButton(false);
         StartCoroutine(Fade(0.025f, 1, 0.05f, true, true));
     }
 
@@ -84,7 +78,7 @@ public class DialogController : MonoBehaviour
             while (CanvasGroup.alpha < target)
             {
                 CanvasGroup.alpha += alphaStep;
-                yield return new WaitForSeconds(timeStep);
+                yield return new WaitForSecondsRealtime(timeStep);
             }
             CanvasGroup.alpha = target;
             CanvasGroup.blocksRaycasts = true;
@@ -94,7 +88,7 @@ public class DialogController : MonoBehaviour
             while (CanvasGroup.alpha > target)
             {
                 CanvasGroup.alpha -= alphaStep;
-                yield return new WaitForSeconds(timeStep);
+                yield return new WaitForSecondsRealtime(timeStep);
             }
             CanvasGroup.alpha = target;
             CanvasGroup.interactable = false;
@@ -112,6 +106,7 @@ public class DialogController : MonoBehaviour
         currentDialog--;
         currentDialog = Mathf.Max(currentDialog, 0);
         UpdatePreviousButton();
+        UpdateNextText();
         StartDialogCoro();
     }
 
@@ -129,14 +124,21 @@ public class DialogController : MonoBehaviour
             return;
         }
 
+        UpdateNextText();
+
+        StartDialogCoro();
+    }
+
+    private void UpdateNextText()
+    {
         if (currentDialog == dialogs.Length - 1)
         {
             nextText.text = "Finalizar";
-        } else {
+        }
+        else
+        {
             nextText.text = "Siguiente";
         }
-
-        StartDialogCoro();
     }
 
     private void UpdatePreviousButton()
@@ -159,13 +161,13 @@ public class DialogController : MonoBehaviour
     {
         dialog.text = "";
         
-        yield return new WaitForSeconds(DELAY_TO_WRITE);
+        yield return new WaitForSecondsRealtime(DELAY_TO_WRITE);
            
         if (currentDialog < dialogs.Length) {
             foreach (char Character in dialogs[currentDialog])
             {
                 dialog.text += Character;
-                yield return new WaitForSeconds(DIALOG_SPEED);
+                yield return new WaitForSecondsRealtime(DIALOG_SPEED);
             }
         }
         

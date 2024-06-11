@@ -75,16 +75,19 @@ public class MenuPausa : MonoBehaviour
 
     public void SalirMundoComunicacion()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MundoComunicacion");
     }
 
     public void SalirMundoSeguridad()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MundoSeguridad");
     }
 
     public void SalirMundoEtica()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MundoEtica");
     }
 
@@ -96,6 +99,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Cerrar()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScene");
         //Application.Quit();
     }

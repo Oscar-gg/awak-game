@@ -36,7 +36,7 @@ public class PopupGeneric : MonoBehaviour
 
     public void OnEnterButtonClicked()
     {
-        // Aquí puedes agregar la lógica para cambiar de escena
+        
         SceneManager.LoadScene(travelScene);
         ClosePopup();
     }

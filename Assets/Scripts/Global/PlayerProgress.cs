@@ -42,7 +42,7 @@ public class PlayerProgress : MonoBehaviour
 
     // User data
     private string email;
-    private int id;
+    private int id=-1;
 
     private List<Zone> zones;
 
@@ -54,14 +54,19 @@ public class PlayerProgress : MonoBehaviour
     {
         if (!initialized)
         {
+            initialized = true;
             if (PlayerPrefs.GetString(Preferences.USER_EMAIL_PREF, "") == "" ||
                 PlayerPrefs.GetString(Preferences.USER_PASSWORD_PREF, "") == "")
             {
-                SceneManager.LoadScene(SceneNames.LOGIN);
+                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Email o Usuario vacío");
+                if (SceneManager.GetActiveScene().name != SceneNames.LOGIN)
+                    SceneManager.LoadScene(SceneNames.LOGIN);
+            } else
+            {
+                PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+                yield return StartCoroutine(FetchDatabase());
             }
-
-            yield return StartCoroutine(FetchDatabase());
-            initialized = true;
+            
         }
     }
 
@@ -111,7 +116,7 @@ public class PlayerProgress : MonoBehaviour
             }
             else
             {
-                Debug.Log("partida: " + web.downloadHandler.text);
+                //Debug.Log("partida: " + web.downloadHandler.text);
                 Partida partida = JsonConvert.DeserializeObject<Partida>(web.downloadHandler.text);
                 bool updated = false;
                 for(int i = 0; i < zones.Count && !updated; i++)
@@ -133,16 +138,17 @@ public class PlayerProgress : MonoBehaviour
         bool init = CheckIfInitialized();
         if (!init)
         {
+            Debug.Log("Data not initialized!");
             return false;
         }
 
         int levelsCompleted = GetLevelsCompleted();
-
         for (int i = 0; i < zones.Count; i++)
         {
             MiniGame m = zones[i].GetMiniGame(miniGame);
             if (m != null)
             {
+                Debug.Log(m.IdGame + " " + m.Name + " " + levelsCompleted);
                 return m.IdGame <= levelsCompleted + 1;
             }
         }
@@ -188,7 +194,7 @@ public class PlayerProgress : MonoBehaviour
 
     public bool IsValidUser()
     {
-        return name != null && id != -1;
+        return email != null && id != -1;
     }
 
     public int GetPoints()
@@ -216,7 +222,7 @@ public class PlayerProgress : MonoBehaviour
                 return m.IdGame;
         }
 
-        throw new Exception("Minigame " + miniGameName + "not found!");
+        throw new Exception("Minigame " + miniGameName + " not found!");
     }
 
     private IEnumerator FetchDatabase()
@@ -225,10 +231,14 @@ public class PlayerProgress : MonoBehaviour
 
         if (id == -1)
         {
-            SceneManager.LoadScene(SceneNames.LOGIN);
+            if (SceneManager.GetActiveScene().name != SceneNames.LOGIN)
+                SceneManager.LoadScene(SceneNames.LOGIN);
+        } else
+        {
+            PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+            yield return StartCoroutine(GetGameData());
         }
 
-        yield return StartCoroutine(GetGameData());
     }
 
     private IEnumerator GetBasicData()
@@ -249,17 +259,20 @@ public class PlayerProgress : MonoBehaviour
         {
             Debug.Log("Error en API: " + web.error);
             PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Error en API: " + web.error);
+            id = -1;
+            email = null;
         }
         else
         {
             if (web.downloadHandler.text == "-1")
             {
-                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Usuario no encontrado");
+                PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Usuario no encontrado o contraseña incorrecta.");
                 id = -1;
                 email = null;
             }
             else
             {
+                PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
                 id = Convert.ToInt32(web.downloadHandler.text);
                 email = PlayerPrefs.GetString(Preferences.USER_EMAIL_PREF);
             }
@@ -279,11 +292,13 @@ public class PlayerProgress : MonoBehaviour
 
         if (web.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Error en API: " + web.error);
+            //Debug.Log("Error en API: " + web.error);
+            PlayerPrefs.SetString(Preferences.LOGIN_ERROR_PREF, "Error en API: " + web.error);
         }
         else
         {
-            Debug.Log(web.downloadHandler.text);
+            PlayerPrefs.DeleteKey(Preferences.LOGIN_ERROR_PREF);
+
             zones = JsonConvert.DeserializeObject<List<Zone>>(web.downloadHandler.text);
             for (int i = 0; i < zones.Count; i++)
             {
@@ -298,9 +313,11 @@ public class PlayerProgress : MonoBehaviour
 
                 List<MiniGame> minigames = JsonConvert.DeserializeObject<List<MiniGame>>(web.downloadHandler.text);
 
+                //foreach(MiniGame m in minigames){
+                //    Debug.Log(m.IdGame + " " + m.Name + " " + m.Points);
+                //}
+
                 // Actualizar aquellos minijuegos que tengan datos guardados.
-
-
                 for (int j = 0; j < minigames.Count; j++)
                 {
                     string partidaUrl = Endpoints.GetPartida(minigames[j].IdGame, id);
@@ -328,7 +345,7 @@ public class PlayerProgress : MonoBehaviour
 
     private bool CheckIfInitialized()
     {
-        if (!initialized)
+        if (!initialized || zones == null)
         {
             PlayerPrefs.SetString(Preferences.RETURN_SCENE_PREF, SceneManager.GetActiveScene().name);
             SceneManager.LoadScene(SceneNames.LOADING);
