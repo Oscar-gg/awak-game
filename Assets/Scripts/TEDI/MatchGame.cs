@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Player;
-using UnityEngine.U2D;
 
 public class MatchGame : MonoBehaviour
 {
