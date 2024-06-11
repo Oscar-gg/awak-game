@@ -42,64 +42,64 @@ public class MenuPausa : MonoBehaviour
     }
     public void Pausa()
     {
-        Time.timeScale = 0f;
+        // // Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     public void Renaudar()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
 
     public void Glosario()
     {
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
         //botonGlosario.SetActive(false);
         menuGlosario.SetActive(true);
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     public void RenaudarGlosario()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         botonGlosario.SetActive(true);
         menuGlosario.SetActive(false);
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
 
 
     public void SalirMundoComunicacion()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         SceneManager.LoadScene("MundoComunicacion");
     }
 
     public void SalirMundoSeguridad()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         SceneManager.LoadScene("MundoSeguridad");
     }
 
     public void SalirMundoEtica()
     {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         SceneManager.LoadScene("MundoEtica");
     }
 
     public void Reiniciar ()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Cerrar()
     {
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScene");
         //Application.Quit();
     }
