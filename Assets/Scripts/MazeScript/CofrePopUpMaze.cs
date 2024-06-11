@@ -51,14 +51,14 @@ public class CofrePopUpMaze : MonoBehaviour
     }
 
     // Metodo llamado cuando ocurre una colisión
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
 
 
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
 
-            string collidedTag = collision.otherCollider.tag; //Detectar el cofre
+            string collidedTag = gameObject.tag; //Detectar el cofre
             string message = "";
 
             switch (collidedTag)

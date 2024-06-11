@@ -12,7 +12,7 @@ public class FinalPopUpMaze : MonoBehaviour
     public GameObject FinalPopMaze;
     private MinigameController completionHandler;
     private PlayerProgress progress;
-    private int totalCofres = 9; //Cantidad total de cofres que se deberan de recoger 
+    private int totalCofres = 1; //Cantidad total de cofres que se deberan de recoger 
     private List<string> collidedCofres = new List<string>();
     public float delayBeforeShowingPopup = 1f; 
 
@@ -59,7 +59,7 @@ public class FinalPopUpMaze : MonoBehaviour
         {
             completionHandler.CompleteMinigame();
             SceneManager.LoadScene(10);
-            StartCoroutine(UpdateProgressCoroutine());
+            //StartCoroutine(UpdateProgressCoroutine());
         }
         else
         {
