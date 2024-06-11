@@ -844,7 +844,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2449,7 +2449,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3410,7 +3410,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6883,7 +6883,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10754,7 +10754,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11837,7 +11837,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13223,7 +13223,7 @@ PrefabInstance:
       objectReference: {fileID: 1220465548}
     - target: {fileID: 9210550116073314841, guid: 23daa10c1a43afb44bf6631bd775a431, type: 3}
       propertyPath: attackMultiplier
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

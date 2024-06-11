@@ -900,7 +900,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 663109830}
         m_TargetAssemblyTypeName: WinScript, Assembly-CSharp
-        m_MethodName: ContinueBoss
+        m_MethodName: WinBoss
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

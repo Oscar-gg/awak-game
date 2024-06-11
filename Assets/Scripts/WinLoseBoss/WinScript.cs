@@ -55,7 +55,7 @@ public class WinScript : MonoBehaviour
         }
         else if (ActualScene == "WinSceneTEDI")
         {
-            SceneManager.LoadScene("MundoTEDI");
+            SceneManager.LoadScene(SceneNames.CREDITS);
         }
         else
         {

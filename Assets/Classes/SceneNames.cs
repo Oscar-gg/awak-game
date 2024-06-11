@@ -13,5 +13,6 @@ public static class SceneNames
     public const string BOSS_SECURITY = "BossSceneSeguridad";
     public const string BOSS_TEDI = "BossSceneTEDI";
     public const string MAZE = "LabeScene";
-    
+    public const string CREDITS = "StartCreditsScene";
+
 }
