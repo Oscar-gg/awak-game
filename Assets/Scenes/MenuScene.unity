@@ -3923,7 +3923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db28c13322d438743a444cd12057832e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameName: "Asociaci\xF3n"
+  minigameName: Asociacion
   worldScene: MundoTEDI
   popupMessage: "\xBFDeseas entrar al mundo TEDI?"
 --- !u!61 &929847902

@@ -360,15 +360,14 @@ public class MatchGame : MonoBehaviour
             card = new GameCard();
         }
 
-        Debug.Log("IMAGEN SPRITE");
-        Debug.Log(spritesDictionary[power]);
-
         if (!spritesDictionary.TryGetValue(power, out sp))
         {
             sp = spendLives;
         }
 
-        uiController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sp, EndIfWin);
+        Debug.Log(card.title + " " + card.subtitle + " " + card.description);
+
+        uiController.ShowPanel(card.title, power, card.description, "Continuar", sp, EndIfWin);
     }
 
     private void EndIfWin()

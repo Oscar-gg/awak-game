@@ -182,7 +182,7 @@ public class GameController : MonoBehaviour
     }
 
     private IEnumerator EndRoutine(string scene, string miniGame, int score, int time){
-        Debug.Log("Inside boss end routine: " + scene + ", " + miniGame + ",, " + score + ", " + time);
+        Debug.Log("Inside boss end routine: " + scene + ", " + miniGame + ", " + score + ", " + time);
         yield return PlayerProgress.Instance.UpdateProgess(miniGame, score, time);
         SceneManager.LoadScene(scene);
     }
