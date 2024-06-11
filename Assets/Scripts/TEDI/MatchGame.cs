@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Player;
+using UnityEngine.U2D;
 
 public class MatchGame : MonoBehaviour
 {
@@ -23,6 +25,14 @@ public class MatchGame : MonoBehaviour
     public Sprite spendLives;
     public Sprite defaultLifeSprite;
     public Image[] livesImage;
+
+    private Coroutine timeCoro;
+    private int playTime = 0;
+
+    public TextOverlayController uiController;
+    private Dictionary<string, GameCard> cardDictionary;
+    private Dictionary<string, Sprite> spritesDictionary;
+
 
     private List<Dictionary<string, string>> wordSets = new List<Dictionary<string, string>>()
     {
@@ -101,6 +111,20 @@ public class MatchGame : MonoBehaviour
         // UpdateLivesText();
         UpdateDictionaryText();
         UpdateLivesImage();
+        playTime = 0;
+        timeCoro = StartCoroutine(ContarTiempo());
+        uiController.HidePanelInstantly();
+
+    }
+
+    private void Awake()
+    {
+        if (uiController == null)
+        {
+            uiController = FindObjectOfType<TextOverlayController>();
+        }
+        PopulateDictionary();
+        PopulateSprites();
     }
 
     private void SetupButtons()
@@ -190,6 +214,9 @@ public class MatchGame : MonoBehaviour
         if (CheckWinCondition())
         {
             currentSetIndex++;
+
+            ShowPanel(dictionaryTitles[currentSetIndex-1]);
+
             if (currentSetIndex < totalSets)
             {
                 if (lives < 5)
@@ -201,15 +228,11 @@ public class MatchGame : MonoBehaviour
                 UpdateDictionaryText();
                 SetupButtons();
             }
-            else
-            {
-                SceneManager.LoadScene("WinScene");
-            }
         }
 
         if (lives <= 0)
         {
-            SceneManager.LoadScene("LoseScene");
+            EndGame();
         }
     }
 
@@ -275,6 +298,86 @@ public class MatchGame : MonoBehaviour
             int randomIndex = Random.Range(i, list.Count);
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
+        }
+    }
+    private void EndGame()
+    {
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneNames.LOSE_G);
+    }
+
+    private IEnumerator WinFinishRoutine()
+    {
+        StopCoroutine(timeCoro);
+
+        yield return PlayerProgress.Instance.UpdateProgess(MiniGameNames.ASSOCIATION, 1000 + lives * 100, playTime);
+
+        PlayerPrefs.SetString(Preferences.PREVIOUS_GAME, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneNames.WIN_G);
+    }
+
+    private IEnumerator ContarTiempo()
+    {
+        while (true)
+        {
+            playTime++;
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    private void PopulateDictionary()
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>("Data/TEDI_Game");
+
+        GameCards cardJson = JsonUtility.FromJson<GameCards>(jsonFile.text);
+
+        cardDictionary = new Dictionary<string, GameCard>();
+
+        foreach (GameCard card in cardJson.cardInfo)
+        {
+            cardDictionary.Add(card.image, card);
+        }
+    }
+
+    private void PopulateSprites()
+    {
+        Sprite[] sprites = Resources.LoadAll<Sprite>("Sprites/TEDI_Minigame");
+        spritesDictionary = new Dictionary<string, Sprite>();
+
+        foreach (Sprite sprite in sprites)
+        {
+            spritesDictionary.Add(sprite.name, sprite);
+        }
+    }
+
+    private void ShowPanel(string power)
+    {
+        GameCard card;
+        Sprite sp;
+
+        Debug.Log("Power: " + power);
+
+        if (!cardDictionary.TryGetValue(power, out card))
+        {
+            card = new GameCard();
+        }
+
+        Debug.Log("IMAGEN SPRITE");
+        Debug.Log(spritesDictionary[power]);
+
+        if (!spritesDictionary.TryGetValue(power, out sp))
+        {
+            sp = spendLives;
+        }
+
+        uiController.ShowPanel(card.title, card.subtitle, card.description, "Continuar", sp, EndIfWin);
+    }
+
+    private void EndIfWin()
+    {
+        if (currentSetIndex >= totalSets)
+        {
+            StartCoroutine(WinFinishRoutine());
         }
     }
 }

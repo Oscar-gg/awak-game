@@ -51,9 +51,10 @@ public class DialogController : MonoBehaviour
         currentDialog = 0;
         this.dialog.text = "";
 
+        //Debug.Log("In show panel");
         UpdateNextText();
         UpdatePreviousButton();
-
+        
         StartCoroutine(Fade(0.025f, 1, 0.05f, true, true));
     }
 
@@ -72,8 +73,9 @@ public class DialogController : MonoBehaviour
 
     IEnumerator Fade(float alphaStep, float target, float timeStep, bool increase, bool setText=false)
     {
+        Debug.Log("In fade");
         if (increase)
-        {
+        {   
             CanvasGroup.interactable = true;
             while (CanvasGroup.alpha < target)
             {
@@ -112,6 +114,7 @@ public class DialogController : MonoBehaviour
 
     private void ClickedNext()
     {
+        //Debug.Log("Clikced next");
         currentDialog++;
         currentDialog = Mathf.Min(currentDialog, dialogs.Length);
         UpdatePreviousButton();

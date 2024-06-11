@@ -4,43 +4,43 @@
             "title": "Explicación",
             "subtitle": "HTML (HyperText Markup Language)",
             "description": "Es un lenguaje de marcado utilizado para estructurar y presentar contenido en la web. Define la estructura básica de una página web usando etiquetas.",
-            "image": "PoderHTML"
+            "image": "HTML"
         },
         {
             "title": "Explicación",
             "subtitle": "CSS (Cascading Style Sheets)",
             "description": "Es un lenguaje de estilos usado para diseñar y controlar la apariencia de los elementos en una página web, como colores, fuentes y disposición de elementos.",
-            "image": "PoderCSS"
+            "image": "CSS"
         },
         {
             "title": "Explicación",
             "subtitle": "TypeScript",
             "description": "Es una extensión de JavaScript que añade tipos estáticos, lo que ayuda a detectar errores antes de ejecutar el código y mejora la mantenibilidad en proyectos grandes.",
-            "image": "PoderTypeScript"
+            "image": "TypeScript"
         },
         {
             "title": "Explicación",
             "subtitle": "React",
             "description": "Es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario interactivas y reutilizables mediante componentes.",
-            "image": "PoderReact"
+            "image": "React"
         },
         {
             "title": "Explicación",
             "subtitle": "TailwindCSS",
             "description": "Es un framework de CSS que permite aplicar estilos rápidamente a través de clases predefinidas, facilitando el diseño y desarrollo sin escribir CSS personalizado.",
-            "image": "PoderTailwindCSS"
+            "image": "Tailwind CSS"
         },
         {
             "title": "Explicación",
             "subtitle": "GitHub",
             "description": "Es una plataforma que permite alojar, compartir y colaborar en proyectos de software usando Git, un sistema de control de versiones.",
-            "image": "PoderGitHub"
+            "image": "GitHub"
         },
         {
             "title": "Explicación",
             "subtitle": "SCRUM",
             "description": "Es una metodología ágil para gestionar proyectos, enfocada en iteraciones cortas llamadas sprints, con roles definidos y reuniones regulares para mejorar la colaboración y adaptación al cambio.",
-            "image": "PoderScrum"
+            "image": "SCRUM"
         }
     ]
 }

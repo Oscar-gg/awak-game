@@ -23,6 +23,12 @@
             "message": "You have won the game!",
             "next_scene": "MundoTEDI",
             "previous_scene": ""
+        },
+        {
+            "minigame": "TEDI_Minigame",
+            "message": "You have won the game!",
+            "next_scene": "MundoTEDI",
+            "previous_scene": ""
         }
     ]
 }
