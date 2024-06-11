@@ -30,7 +30,7 @@
         {
             "scene_name": "MenuScene",
             "dialogs": ["Este es el menú. Aquí verás todos los niveles que tendrás que completar para obtener los conocimientos de AWAQ",
-                        "Estos conocimientos serán necesarios para vencer a los jefes del cambio climático",
+                        "Estos conocimientos se te darán en forma de poderes, y serán necesarios para vencer a los jefes del cambio climático",
                         "Cada nivel tendrá su propio jefe, así que tendrás que obtener los conocimientos de cada área para vencer a su jefe correspondiente",
                         "Explora como gustes, pero recuerda el mundo espera tu ayuda Ranger."],
             "character_name": "Instructor Awaq",
