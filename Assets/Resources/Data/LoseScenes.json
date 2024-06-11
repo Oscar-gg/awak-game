@@ -19,10 +19,10 @@
             "previous_scene": "PlatformScene"
         },
         {
-            "minigame": "TEDI_minigame",
+            "minigame": "TEDI_Minigame",
             "message": "Buen intento Ranger, esta vez no lo lograste, pero ¡sigue intentando, en AWAQ creemos en ti!",
             "next_scene": "MundoTEDI",
-            "previous_scene": "TEDI_minigame"
+            "previous_scene": "TEDI_Minigame"
         }
     ]
 }
