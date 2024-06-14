@@ -21,6 +21,7 @@ namespace i5.Toolkit.Core.ServiceCore
         private GameObject runnerObject;
 
         private static bool applicationQuitting;
+        private static bool disableServiceManager = false;
 
         /// <summary>
         /// The instance of the service manager
@@ -68,7 +69,7 @@ namespace i5.Toolkit.Core.ServiceCore
 
         private void CreateRunner()
         {
-            if (applicationQuitting)
+            if (applicationQuitting || disableServiceManager)
             {
                 return;
             }
@@ -235,6 +236,11 @@ namespace i5.Toolkit.Core.ServiceCore
                     service.Value.Cleanup();
                 }
             }
+        }
+
+        public static void Disable()
+        {
+            disableServiceManager = true;
         }
     }
 }

@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using i5.Toolkit.Core.OpenIDConnectClient;
+using i5.Toolkit.Core.ServiceCore;
+using System;
+using System.Threading.Tasks;
+using i5.Toolkit.Core.Utilities;
+using Unity.VisualScripting;
 
 public class LoginButton : MonoBehaviour
 {
@@ -32,13 +38,13 @@ public class LoginButton : MonoBehaviour
 
     public void LoginPressed()
     {
-        StartCoroutine(LoginRoutine());
+        StartCoroutine(LoginRoutine(userEmail.text, userPassword.text));
     }
 
-    public IEnumerator LoginRoutine()
+    public IEnumerator LoginRoutine(string email, string password)
     {
-        PlayerPrefs.SetString(Preferences.USER_EMAIL_PREF, userEmail.text);
-        PlayerPrefs.SetString(Preferences.USER_PASSWORD_PREF, userPassword.text);
+        PlayerPrefs.SetString(Preferences.USER_EMAIL_PREF, email);
+        PlayerPrefs.SetString(Preferences.USER_PASSWORD_PREF, password);
         yield return PlayerProgress.Instance.NewLogin();
 
         if (PlayerProgress.Instance.IsValidUser())
@@ -52,5 +58,26 @@ public class LoginButton : MonoBehaviour
                 SceneManager.LoadScene(SceneNames.INTRO);
             }
         }
+    }
+
+    public void SignIn()
+    {
+        SignInWithAzureAd();
+    }
+
+    private async Task SignInWithAzureAd()
+    {
+        ServiceManager.GetService<OpenIDConnectService>().LoginCompleted += OnLoginCompleted;
+        await ServiceManager.GetService<OpenIDConnectService>().OpenLoginPageAsync();
+    }
+
+    private async void OnLoginCompleted(object sender, EventArgs e)
+    {
+        var a = await ServiceManager.GetService<OpenIDConnectService>().GetUserDataAsync();
+
+        ServiceManager.RemoveService<OpenIDConnectService>();
+        ServiceManager.Disable();
+
+        StartCoroutine(LoginRoutine(a.Email, "OAUTH"));
     }
 }

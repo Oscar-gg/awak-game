@@ -6,6 +6,8 @@ namespace i5.Toolkit.Core.Utilities
     public static class PersistenceScene
     {
         private static Scene persistentScene;
+        private static bool deactivatePersistentScene = false;
+
 
         /// <summary>
         /// Gets or creates the persistent scene if it does not exist
@@ -15,7 +17,7 @@ namespace i5.Toolkit.Core.Utilities
         /// <returns>Returns the persistent scene</returns>
         public static Scene GetPersistentScene()
         {
-            if (Application.isPlaying)
+            if (Application.isPlaying && !deactivatePersistentScene)
             {
                 // in play mode we can create 
                 if (persistentScene == null || !persistentScene.isLoaded)
@@ -52,5 +54,12 @@ namespace i5.Toolkit.Core.Utilities
             Scene targetScene = SceneManager.GetActiveScene();
             SceneManager.MoveGameObjectToScene(gameObject, targetScene);
         }
+        public static void ToggleActive()
+        {
+            deactivatePersistentScene = !deactivatePersistentScene;
+        }
+
+
+
     }
 }

@@ -1,7 +1,5 @@
 using i5.Toolkit.Core.OpenIDConnectClient;
 using i5.Toolkit.Core.ServiceCore;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 using CandyCoded.env;
@@ -33,7 +31,6 @@ public class AzureAdOauth : BaseServiceBootstrapper
         oidc.ServerListener.ListeningUri = "http://localhost:52229/";
 #else
         oidc.OidcProvider.ClientData = azureAdClientDataObject.clientData;
-        oidc.RedirectURI = "https://www.tec.mx/";
         oidc.ServerListener.ListeningUri = "http://localhost:52229/";
 #endif
 
@@ -43,7 +40,7 @@ public class AzureAdOauth : BaseServiceBootstrapper
 
     protected override void UnRegisterServices()
     {
-        throw new System.NotImplementedException();
+        
     }
 
 
