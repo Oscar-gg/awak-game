@@ -14,9 +14,9 @@
         },
         {
             "scene_name": "LabeScene",
-            "dialogs": ["Tendrás que explorar esta mazmorra con valentía, para poder recolectar los conceptos de Ética, los cuales ayudan a mantener un buen ambiente en AWAQ",
+            "dialogs": ["Tendrás que explorar esta mazmorra con valentía, para poder recolectar los conceptos de Ética.",
                         "Cada que recolectes uno, se te explicará su importancia.",
-                        "¡Trata de aprendértela, que la ocuparás más adelante!"],
+                        "¡Trata de aprendértelos, que los ocuparás más adelante!"],
             "character_name": "Instructor Awaq",
             "character_image": "awak_face_"
         },

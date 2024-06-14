@@ -55107,6 +55107,7 @@ RectTransform:
   m_Children:
   - {fileID: 846370962}
   - {fileID: 1928249588}
+  - {fileID: 1828949493}
   - {fileID: 531501557}
   - {fileID: 595922756}
   - {fileID: 1676897869}
@@ -61032,7 +61033,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828949488}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -61091,12 +61092,12 @@ RectTransform:
   - {fileID: 363786560}
   - {fileID: 1909011382}
   - {fileID: 92028909}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 823730694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1256.1738, y: 267}
-  m_SizeDelta: {x: 2138.6533, y: 443.80786}
+  m_AnchoredPosition: {x: 62.17383, y: -567}
+  m_SizeDelta: {x: -249.34668, y: -1224.1921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1853545204
 GameObject:
@@ -63365,7 +63366,6 @@ SceneRoots:
   - {fileID: 1956198070}
   - {fileID: 1802613137}
   - {fileID: 823730694}
-  - {fileID: 1828949493}
   - {fileID: 884079252}
   - {fileID: 1773400561}
   - {fileID: 1951379235}
