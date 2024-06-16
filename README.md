@@ -1,6 +1,14 @@
 # Awaq Game implementation
 
-Useful git commands:
+## How to run
+1. In the Endpoints.cs, change the host or url to match with the server where the webapp API is running.
+2. Go to build settings and select the iOS option to run the game on an iPad. Make sure the Debug option is selected and build the game.
+3. Open the project in Xcode.
+4. In the project settings, select "Automatically manage signing" and select your team.
+5. Build the project on an iPad with developer mode.
+6. Accept the developer permissions on settings -> General -> VPN and device administration.
+
+## Useful git commands:
 
 ```bash
 # Clone locally
